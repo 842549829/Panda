@@ -74,7 +74,7 @@ C# Asp.NetCore 8.0
 - [x] 简单模式(OAuth2.0已弃用不在实现)
 	新增postman测试json  放在src/Panda.Net.AuthServer/postman/postman_collection.json
 	如图所示
-	<img src="module/workflow/images/1.png"/>
+	<img src="images/1.png"/>
 ## Panda.Net.HttpApi.Host
 ### 服务中心
 	启动命令 dotnet Panda.Net.HttpApi.Host.dll --urls https://localhost:44368
