@@ -21,38 +21,39 @@ using Volo.Abp.Security.Claims;
 namespace Panda.Net.ReplaceControllers;
 
 
-[ReplaceControllers(typeof(AuthorizeController))]
-[Route("connect/authorize")]
-[ApiExplorerSettings(IgnoreApi = false)]
-public class MyAuthorizeController : AuthorizeController
-{
-    [HttpGet, HttpPost]
-    [IgnoreAntiforgeryToken]
-    [IgnoreAbpSecurityHeader]
-    public override async Task<IActionResult> HandleAsync()
-    {
-        return await base.HandleAsync();
-    }
+// 演示代码先注释
+//[ReplaceControllers(typeof(AuthorizeController))]
+//[Route("connect/authorize")]
+//[ApiExplorerSettings(IgnoreApi = false)]
+//public class MyAuthorizeController : AuthorizeController
+//{
+//    [HttpGet, HttpPost]
+//    [IgnoreAntiforgeryToken]
+//    [IgnoreAbpSecurityHeader]
+//    public override async Task<IActionResult> HandleAsync()
+//    {
+//        return await base.HandleAsync();
+//    }
 
-    [HttpPost]
-    [Authorize]
-    [Route("callback")]
-    public override async Task<IActionResult> HandleCallbackAsync()
-    {
-        return await base.HandleCallbackAsync();
-    }
-}
+//    [HttpPost]
+//    [Authorize]
+//    [Route("callback")]
+//    public override async Task<IActionResult> HandleCallbackAsync()
+//    {
+//        return await base.HandleCallbackAsync();
+//    }
+//}
 
-[ReplaceControllers(typeof(TokenController))]
-[Route("connect/token")]
-[ApiExplorerSettings(IgnoreApi = false)]
-public class MyTokenController : TokenController
-{
-    [HttpGet]
-    [HttpPost]
-    [Produces("application/json", [])]
-    public override async Task<IActionResult> HandleAsync()
-    {
-        return await base.HandleAsync();
-    }
-}
+//[ReplaceControllers(typeof(TokenController))]
+//[Route("connect/token")]
+//[ApiExplorerSettings(IgnoreApi = false)]
+//public class MyTokenController : TokenController
+//{
+//    [HttpGet]
+//    [HttpPost]
+//    [Produces("application/json", [])]
+//    public override async Task<IActionResult> HandleAsync()
+//    {
+//        return await base.HandleAsync();
+//    }
+//}

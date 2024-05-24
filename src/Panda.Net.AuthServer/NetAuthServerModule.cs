@@ -106,10 +106,10 @@ public class NetAuthServerModule : AbpModule
 
 
         // 注入设备代码认证地址
-        Configure<RazorViewEngineOptions>(options =>
-        {
-            options.ViewLocationFormats.Add("/Views/{1}/{0}.cshtml");
-        });
+        //Configure<RazorViewEngineOptions>(options =>
+        //{
+        //    options.ViewLocationFormats.Add("/Views/{1}/{0}.cshtml");
+        //});
 
         // 注册新的GrantTypes模式实现方案
         context.Services.AddScoped<NetTokenExtensionGrant>();
