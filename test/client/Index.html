@@ -1,0 +1,39 @@
+﻿<div class="text-center">
+    <h1 class="display-4">我是客户端</h1>
+     <input type="text" id="messageInput" /><br/> 
+    <input type="button" id="sendButton" value="连接成功" /><br />
+    <ul id="messagesList"></ul>
+</div>
+<script src="signalr.js"></script>
+<script type="text/javascript">
+
+    const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjZDQjU1RUUzMjBGQUIyOUI5RTI0OEZDMkRBRTRCRTYzOTczMDFDOEYiLCJ4NXQiOiJiTFZlNHlENnNwdWVKSV9DMnVTLVk1Y3dISTgiLCJ0eXAiOiJhdCtqd3QifQ.eyJzdWIiOiIzYTExNGViNC04ZDU4LWFiMWQtNDk3MS1mNWFiNWY2MTVkNDUiLCJ1bmlxdWVfbmFtZSI6ImFkbWluIiwib3BlbklkIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4iLCJnaXZlbl9uYW1lIjoiYWRtaW4iLCJmYW1pbHlfbmFtZSI6ImFkbWluIiwicm9sZSI6WyJhZG1pbiIsIua1i-ivleinkuiJsiJdLCJlbWFpbCI6ImFkbWluQGFicC5pbyIsImVtYWlsX3ZlcmlmaWVkIjoiRmFsc2UiLCJwaG9uZV9udW1iZXIiOiIxMzU0NDU1IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjoiRmFsc2UiLCJvaV9wcnN0IjoiTmV0X1dlYiIsIm9pX2F1X2lkIjoiM2ExMWM4YzctNTYwYS1lOWEzLThiMzAtNWIxOTM0NmJlYWRlIiwiY2xpZW50X2lkIjoiTmV0X1dlYiIsIm9pX3Rrbl9pZCI6IjNhMTFjOGM3LTU2ODQtYWIzYy01ZmM0LWUzOTIxMTdlZmIwYSIsImF1ZCI6Ik5ldCIsInNjb3BlIjoiTmV0IG9mZmxpbmVfYWNjZXNzIiwianRpIjoiNzZjNzJlMjgtNjUwMy00NGE1LThmODUtNmM4ZWFjYThiMzEwIiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzNjUvIiwiZXhwIjoxNzEyNDY0MTYyLCJpYXQiOjE3MTI0NjA1NjJ9.F83yFWBK24DAzRJBeP3HNSZ8E6XbX-McZgVk9V2fpdtwOxiXIyLNoYy2VYRm-b7DZC-mm_hTJbDlY2RpRy6TBee6X7-rjYSJtZ2CEjlKgAmyCdQTVZS6Y0LPjyI4v3Y81_cPoYBOTEMeqwMgYDlnWyFiJ4UdAdzwkjqwVfdrXsOzOfnd2dFXQuwVd610Wnb2fUF4qi7OcrNPa8xHsE3_tD5EqscbkaYIvk_cP-ShxhF18JsppspSIkcnRprhf-J4d1As4P5e_qOaqYrCNCXpeZWfsIcEwEhy2xRSyg5p4yYEhBCE3Nt49bZ0b9R8LVtzkDYj20P5vNvtv7JxBT2jpQ";
+    //localStorage.getItem("token");
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:44368/hub?access_token=" + token)
+        .withAutomaticReconnect() // 自动重链
+        .build();
+    document.getElementById("sendButton").disabled = true;
+    connection.on("MessageNotification", function (message) {
+        var li = document.createElement("li");
+        document.getElementById("messagesList").appendChild(li);
+ 
+        console.log(message);
+
+        li.textContent = `${message.title} -------> ${message.content}`;
+    });
+ 
+    connection.start().then(function () {
+        document.getElementById("sendButton").disabled = false;
+    }).catch(function (err) {
+        console.log(err);
+    });
+ 
+    document.getElementById("sendButton").addEventListener("click", function (event) {
+        var message = document.getElementById("messageInput").value;
+        connection.invoke("SendMessage", message).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
+    });
+</script>

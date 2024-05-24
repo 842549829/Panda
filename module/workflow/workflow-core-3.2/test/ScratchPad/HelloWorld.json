@@ -1,0 +1,32 @@
+﻿{
+  "Id": "Test02",
+  "Version": 1,
+  "Description": "",
+  "DataType": "ScratchPad.WfData, ScratchPad",
+  "Steps": [
+    {
+      "Id": "Hello",
+      "StepType": "ScratchPad.HelloWorld, ScratchPad",
+      "NextStepId": "decide"
+    },
+    {
+      "Id": "decide",
+      "StepType": "WorkflowCore.Primitives.Decide, WorkflowCore",
+      "SelectNextStep":
+      {
+        "Print1": "data.Value1 == \"one\"",
+        "Print2": "data.Value1 == \"two\""
+      }
+    },
+    {
+      "Id": "Print1",
+      "StepType": "ScratchPad.CustomMessage, ScratchPad",
+      "Inputs": { "Message": "\"Hello from 1\"" }
+    },
+    {
+      "Id": "Print2",
+      "StepType": "ScratchPad.CustomMessage, ScratchPad",
+      "Inputs": { "Message": "\"Hello from 2\"" }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\common.props" />
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="8.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.Messaging.Application.Contracts\Panda.Messaging.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\Panda.Messaging.Domain\Panda.Messaging.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

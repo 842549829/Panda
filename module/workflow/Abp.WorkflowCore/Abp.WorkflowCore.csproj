@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Abp.Workflow\Abp.Workflow.csproj" />
+		<ProjectReference Include="..\workflow-core-3.2\src\WorkflowCore.DSL\WorkflowCore.DSL.csproj" />
+		<ProjectReference Include="..\workflow-core-3.2\src\WorkflowCore\WorkflowCore.csproj" />
+	</ItemGroup>
+
+</Project>

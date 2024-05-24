@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>WorkflowCore.Sample07</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>WorkflowCore.Sample07</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot;web.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WorkflowCore\WorkflowCore.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.MongoDB\WorkflowCore.Persistence.MongoDB.csproj" />
+    <ProjectReference Include="..\..\extensions\WorkflowCore.WebAPI\WorkflowCore.WebAPI.csproj" />
+    <ProjectReference Include="..\WorkflowCore.Sample04\WorkflowCore.Sample04.csproj" />
+    <ProjectReference Include="..\WorkflowCore.Sample03\WorkflowCore.Sample03.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>

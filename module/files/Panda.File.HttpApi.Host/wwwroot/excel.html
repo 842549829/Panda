@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+<button id="excel">下载Excel</button>
+</body>
+<script>
+    let excel = document.getElementById('excel');
+    excel.addEventListener('click', async function ()
+    {
+        await downloadExcelFile(10, 1000);
+    });
+
+    async function downloadExcelFile(pageIndex, pageSize) {
+        try {
+            // 发起请求获取分页数据
+            const response = await fetch(`/api/files/excel?index=${pageIndex}&size=${pageSize}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                },
+            });
+
+            // 检查响应状态
+            if (!response.ok) {
+                throw new Error(`An error occurred while downloading the file.`);
+            }
+
+            // 创建隐藏的可下载链接
+            const url = window.URL.createObjectURL(new Blob([await response.blob()], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'data.xlsx'); // 设置下载文件名
+            document.body.appendChild(link);
+            link.click(); // 模拟点击下载
+            document.body.removeChild(link); // 下载后移除元素
+        } catch (error) {
+            console.error('Download failed:', error);
+        }
+    }
+</script>
+</html>

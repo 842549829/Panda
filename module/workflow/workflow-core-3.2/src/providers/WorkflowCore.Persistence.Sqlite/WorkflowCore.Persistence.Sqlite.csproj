@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>Workflow Core Sqlite Persistence Provider</AssemblyTitle>
+    <VersionPrefix>1.5.0</VersionPrefix>
+    <Authors>Daniel Gerlag</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>WorkflowCore.Persistence.Sqlite</AssemblyName>
+    <PackageId>WorkflowCore.Persistence.Sqlite</PackageId>
+    <PackageTags>workflow;.NET;Core;state machine;WorkflowCore;Sqlite</PackageTags>
+    <PackageProjectUrl>https://github.com/danielgerlag/workflow-core</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/danielgerlag/workflow-core/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/danielgerlag/workflow-core.git</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <Description>Provides support to persist workflows running on Workflow Core to a Sqlite database.</Description>
+    <Version>3.1.0</Version>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <FileVersion>3.1.0.0</FileVersion>
+    <PackageVersion>3.1.0</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WorkflowCore\WorkflowCore.csproj" />
+    <ProjectReference Include="..\WorkflowCore.Persistence.EntityFramework\WorkflowCore.Persistence.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>

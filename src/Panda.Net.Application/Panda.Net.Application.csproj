@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Panda.Net</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\module\messaging\Panda.Messaging.Application\Panda.Messaging.Application.csproj" />
+		<ProjectReference Include="..\Panda.Net.Domain\Panda.Net.Domain.csproj" />
+		<ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.FluentValidation" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Account.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Identity.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.1.1" />
+	</ItemGroup>
+
+</Project>

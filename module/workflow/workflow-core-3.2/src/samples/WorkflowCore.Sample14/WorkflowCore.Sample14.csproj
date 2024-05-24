@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.EntityFramework\WorkflowCore.Persistence.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.SqlServer\WorkflowCore.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\..\WorkflowCore\WorkflowCore.csproj" />
+  </ItemGroup>
+
+</Project>

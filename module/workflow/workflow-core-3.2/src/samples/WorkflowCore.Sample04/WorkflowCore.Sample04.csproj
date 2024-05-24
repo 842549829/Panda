@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>WorkflowCore.Sample04</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>WorkflowCore.Sample04</PackageId>    
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\providers\WorkflowCore.LockProviders.SqlServer\WorkflowCore.LockProviders.SqlServer.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.MySQL\WorkflowCore.Persistence.MySQL.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.PostgreSQL\WorkflowCore.Persistence.PostgreSQL.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.Sqlite\WorkflowCore.Persistence.Sqlite.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.SqlServer\WorkflowCore.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Providers.AWS\WorkflowCore.Providers.AWS.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Providers.Azure\WorkflowCore.Providers.Azure.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Providers.Redis\WorkflowCore.Providers.Redis.csproj" />
+    <ProjectReference Include="..\..\WorkflowCore\WorkflowCore.csproj" />
+    <ProjectReference Include="..\..\providers\WorkflowCore.Persistence.MongoDB\WorkflowCore.Persistence.MongoDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.3.102.44" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>

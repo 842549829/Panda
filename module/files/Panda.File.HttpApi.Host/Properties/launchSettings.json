@@ -1,0 +1,20 @@
+﻿{
+  "profiles": {
+    "Panda.File.HttpApi.Host": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7762"
+    },
+    "Panda.File.HttpApi.Host.Home": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "home"
+      },
+      "applicationUrl": "https://localhost:7762"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<Import Project="..\..\..\common.props" />
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+		<SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+		<PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.4" />
+		<PackageReference Include="DistributedLock.Redis" Version="1.0.3" />
+		<PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Autofac" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.DistributedLocking" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Swashbuckle" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Http.Client" Version="8.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.File.Application\Panda.File.Application.csproj" />
+	  <ProjectReference Include="..\Panda.File.EntityFrameworkCore\Panda.File.EntityFrameworkCore.csproj" />
+	  <ProjectReference Include="..\Panda.File.HttpApi\Panda.File.HttpApi.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="wwwroot\files\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Update="wwwroot\template\template.xlsx">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+</Project>

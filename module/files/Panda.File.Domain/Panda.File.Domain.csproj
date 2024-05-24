@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.PermissionManagement.Domain" Version="8.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.File.Domain.Shared\Panda.File.Domain.Shared.csproj" />
+	</ItemGroup>
+</Project>

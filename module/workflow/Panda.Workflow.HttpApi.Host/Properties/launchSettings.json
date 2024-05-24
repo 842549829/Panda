@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "Panda.Workflow.HttpApi.Host": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:44598"
+    },
+    "Panda.Workflow.HttpApi.Host.Home": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "home"
+      },
+      "applicationUrl": "https://localhost:44598"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="EPPlus" Version="7.1.2" />
+		<PackageReference Include="MiniExcel" Version="1.31.3" />
+		<PackageReference Include="tusdotnet" Version="2.8.0" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="8.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.File.Application.Contracts\Panda.File.Application.Contracts.csproj" />
+	</ItemGroup>
+</Project>

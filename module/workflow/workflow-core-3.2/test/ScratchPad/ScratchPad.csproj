@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>ScratchPad</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>ScratchPad</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\providers\WorkflowCore.Persistence.PostgreSQL\WorkflowCore.Persistence.PostgreSQL.csproj" />
+    <ProjectReference Include="..\..\src\providers\WorkflowCore.Persistence.SqlServer\WorkflowCore.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\..\src\providers\WorkflowCore.Providers.AWS\WorkflowCore.Providers.AWS.csproj" />
+    <ProjectReference Include="..\..\src\providers\WorkflowCore.Providers.Elasticsearch\WorkflowCore.Providers.Elasticsearch.csproj" />
+    <ProjectReference Include="..\..\src\samples\WorkflowCore.Sample01\WorkflowCore.Sample01.csproj" />
+    <ProjectReference Include="..\..\src\samples\WorkflowCore.Sample02\WorkflowCore.Sample02.csproj" />
+    <ProjectReference Include="..\..\src\samples\WorkflowCore.Sample03\WorkflowCore.Sample03.csproj" />
+    <ProjectReference Include="..\..\src\samples\WorkflowCore.Sample04\WorkflowCore.Sample04.csproj" />
+    <ProjectReference Include="..\..\src\WorkflowCore.DSL\WorkflowCore.DSL.csproj" />
+    <ProjectReference Include="..\..\src\WorkflowCore\WorkflowCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

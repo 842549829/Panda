@@ -1,0 +1,18 @@
+site_name: Workflow Core
+nav:
+    - Home: index.md
+    - Getting started: getting-started.md
+    - External events: external-events.md
+    - Activity workers: activities.md
+    - Error handling: error-handling.md
+    - Control structures: control-structures.md
+    - Saga transactions: sagas.md
+    - JSON / YAML Definitions: json-yaml.md
+    - Persistence: persistence.md
+    - Multi-node clusters: multi-node-clusters.md
+    - ASP.NET Core: using-with-aspnet-core.md
+    - Elasticsearch plugin: elastic-search.md
+    - Test helpers: test-helpers.md
+    - Extensions: extensions.md
+    - Samples: samples.md
+theme: readthedocs
