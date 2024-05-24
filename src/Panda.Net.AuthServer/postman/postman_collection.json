@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "9e4c7e62-a292-4375-bfbf-74d019933e0b",
+		"name": "认证中心测试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8130602"
+	},
+	"item": [
+		{
+			"name": "密码认证登录",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1q2w3E*",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "Net offline_access",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost:44382/signin-oidc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token刷新",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJDN0ZFNjNGOTlCM0ExMjlBMjJGMjk5ODlFMDMyRDcwN0NCM0QyMUI5IiwidHlwIjoib2lfcmVmdCtqd3QiLCJjdHkiOiJKV1QifQ.fnIw-re1IquYYdzOZld6gnLczNGZBE4mRQNz6mXAsCikV7cVUEmxUqqrbigTEM1PxMHchq-ojAKb7LMiTCawQhK2OZCTMCvbV9PdfHpW-DNSu3Z1k4qG4VBYPAdVyadvWo8WOpPVzsP59BUTpRljuzttD2x3qxNosE5QZ7I4ESt3ODKBe1JVSvlIbru8nmxw-Q8YElNhy6rOzbT7ARleemQAerLHqkgF4W3nE3Mxg4avLPrzSRDLBv5geSTmawOgvkZ1JJ_onzGAYg-OuMLwcRRSHgf4j6HZRMHsj7yUk7k19ww8qknBpbBPsVcbu-W3HlkN-nNUzaysGypi9KsyHQ.3tRq673Y4_kn8r6rFWK2hg.96y5vHCOzxlLhL1zyPKc85I4utnj-T-4C3SLaDiv0KzSF9-0k4UBQ4KbRV4VMvHp9k8pO8rOrO3EH7LtPUZSj2Ed-muCwG6j_-zNdkqHfbF7wgJzy2P7KO3IDftcsVKm5m0HIpngYfYQmWXISBbkeVT0Aj4XlRvurDYWrDEdJlZLvV6CvUemm8tIFB7_dDDJ28M_e0SSsoZ-I1t8eRwErUChW_SiLizVkxK3_hPNMXGChUziNuXBw_azc_aBJacHyZGVJXEoU00942GxILTCq_qjfg8LalN488nRc5YesNeAUDuG5xZftOgBhFQGvrVXBCexRAmfyK8-lK3OLzVw5GZlDvmrLS9RjjR8GoCoLrJmLUQa7BKLVqMLfk7UvINpNFjcW-8oSKiS-RE5-0Q7683lZTpeworxnX2xEeZcrDZmEyHnPBiqJ5b3pyHEOuVGyJZzdEVhpEJHVMoyb1I4EelgdB7h1XKszp8hCWxtIss26lZKgPeiHDa9ymjSQUwzWgTabjGgLrt78ztrA7r_n55-CdebrqPUfFJol2liDfjF3n_oF-0en50E4iauvXCK6Gx7AvjIAi1YyKlsojcc8O_LiWj_xcjHf_EdVFd-Avg3VZCiAb-scgm0XgSrhwP02QWw3CAgs6sfYziCvnh30eeytJFHJOrfZP2iBrnHUhM2OaUFry5ovjopRQ1Got3_URhB74QrxDx6hB-3NthYtmsqz1_ubkxz5WefWOeX3vVJxI6clEn71ZPcEAVMlH6C2pJiaoV7L6RvWsP9k3a3YFpTyYzwbzhB3Mobx7pNPkNrFdDX8cD5htifZlLATONsEek3zJEeN-0b7k9xZIm5xUZujwp-MdZ3e6nQMsQZe3j40OsRjD_jkB6JAUz5j2aq_UVpwuUsQxFSvPwc7PqZzS4idZIkxSkBAicVd93EVmbfnXLyJDAWnNy_QJeApYb7GxKn-psS_zBk6nxowl75m7acVVjyyXHkbFR5R5Rxur1WnMV1ITP2W7Wo4SdQ0uZTMlsHUx6SsczI2seUbM5qqRAskAjEPMsi0QnPcQfgqy8FUdxeagY337ZSg1ysAdeyUpyU4U1WXXntN63XLSX2RO4-Y_W7nzpSWxmMAGv9fIPOmuHVYmtltR6bHlRkS9ZodClJnmgbbU92wPklK7-F4C4Z7Kb4bmVTSDGCIbzKT_L2QRhSIfGBXPc8E_vgu2j2ZCxfwVD7MWrsm7TR6-9Gra1AmQnrVTstwh6w3SXcmuT6NzD4Yo2uVs6ThYABju9rsiBQtaAbEQLZG-FUj9cijdHbdld-knpzCin5R_dlZRRdfm8pKjqCC-J2Lb2uE51v-k9GAWNuE9B75gNQIA28LxSdFcELaiwkUZJqD907Dn0in6EHrQu7glFOjdsXpWf0J46XZxkgeYWHPRwGX7tEL2NZq3DrbQy5gL73mE4AE75-det0ZpBNhSQ7PghuKzw38DljBet-7nPugqiq9jh3kgbzgKpNCOWRRXIsw4f9S73LYiisGPYdrAUF7MsfZAWKC84GN-F2zeQoYZW-UTDUXxwSAEi-8lYn73rI5296YcpT0MgnFvKItsQAjjOGJZMQzQczdyxE8ifWns4ClfhN91nv_QXz_fZp-anxGhX2nwFnyvjZSt6PmMFmxj2mxCIJj1KkM2EitPzBzCXElvS0CYo54vbgQipPyvbdaNREXKVozdMYKUo8XNvdGDbMQHCatbMNMHtD_9_nRosC61Y4yxBTCWpvsIPmWXOl6etxdGgK-gsDYB-c83WFUI3la7bWt-_Z-cE6V-MAFsah_d_4yIEUryq45eifqH2WvhrNQgHZDYjlPZxzCK8CyrmcuGqxYYjZtkK1BoTsYtvD_SLuFxHLgH5JydK8FwM_V-2vfmMm3IyNbqZ-vSMM_SctUlWwy_VmTV5r1PeZtGpRWYTeuxy3rXJK7Kv7F2e-hA7JfB8jBMKB-y4L6hejmacNej6F-3FvsW3pqUVqssu6etoToE_432GPysM6ZHC-g9qyFFw4Wn42BKva8QuBv6XcvWnjPg3_01KtzX-4KYqAl0w49vqPgA0D7Dp5UL7sID1wHpBtnLeMZ467W470mpiVp7DOOYMazfi3dFAr5F-pq9NpD4cpwllTVD3OoNpsbg5iL5FOFtddSBQlu34VBmlGjfYJLQMCxciLtsJxqYbNb3iCXI0MCV006_S57Xs6pUoalC1_GRL3HcjWA7jbRIcEs-h_CpC7Bv1Uj-1fTSOiCbaUgZ_10yNotEkod8WvDEPQfs5HhVuu-7QzbgHVP_MUI7_E8a_WCBJUiLEfbZnM9gofFyI3bZC5sktpF8YJmdUJ10tytlN215LGgDRP4CFuAtUhDa38dA4pA2s_nmc_t7v4MaDv8b79vAmnv8mh04VwQobkAAplvw0QoV39-817tiqNHQmRIAAw--Y84Cab3ypJI1IyHYVNMQmiQGBv7pzM4tFzBkNzPQGYB0CwNMQ-fi_sWaMJnEyPnlD1dKf89jWtPIes3sUGpwgKb4paSIjf5mKij3i6-2Ml2znBinpz8sSVuJaxP5l9ljZkxEL2nEYN6Ya95ewfgnxPV7nngls85Dg.SlFAMJ-mlXbp-s_A9pu7PAChWbSfTWstvX4PdTeewsQ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "自定义grant_type类型",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "net",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1q2w3E*",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "Net offline_access",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost:44382/signin-oidc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "自定义类型刷新tonek",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJDN0ZFNjNGOTlCM0ExMjlBMjJGMjk5ODlFMDMyRDcwN0NCM0QyMUI5IiwidHlwIjoib2lfcmVmdCtqd3QiLCJjdHkiOiJKV1QifQ.PK68u1CbZouifHKibaoSOMsD0TMSSsMhmNt4TCDV61UBp8G4paXtSyZI_r7rUrlkxXhVEZ17Fw4HnM-vKQDkSiCN-2o8JWOMYlBrhKLdwebXNAheClmCLoHLPa_FYr4hEhZ-LQ4bfuA9PAa-UP4YyWK8LQk6EyT1wwtPI56D62MsUGpRZZJMMpUJhthSr8vTFBhZKp3lP4A2RS8gz1-DyATo0ZUIenuPqtys-FeAA2jI4znPMsEoyOdXeEldUnP3cH2k_qqcoktRSSPPGdLoWlbsHh0QPmI5XPvznS_pGtG2_oDat-mEFtq9BGjG1SXtGnKAQJw0dZRDtzHlx5aJmA.FmapXdAEtvd-X6_cKFLwaw.AwsCXOEVpN_kWakTWnew596HVtT7PUk38T3K5m6VZ5By1P8EvFNk3QsUPQNFcL_RJjDp9BGk6J3yhsP4V6XeLWu4-J6r4YZKm5jPJ1YSxobjE_8TYGX0jWCMlDIHfwukUSJiwB36P1zT65RDRgIUtfMEQUsTxgJuZq7j6gF_2Fn-iIUqwdtpQfJOOVyi2TBR4wiRWpApKl2V3Lwy_i4jJm8LKgJhSmOHGPBo4qSkJpptvM3YnutvHPotgor-5YULfpN_hpbRn-6cnMP9fb3UtZQ-FADxEXQjpjPRjgrHHtVERDBtZr7VAZEGLHgvcTyNGGWPt3397nhs0IJPGQaMEMT86G2yORd80OCALn5ipKF-jWbhSj9xBAcVV-yzRozQS1o2WOmEhzx6iaivffW9N-Hy_yES9L4-D6rTu9XGFAaUhtH7guBOFJO4qijuwDKHpibNemt0JaFlhgCTe89SeiSZMVrbuAj4BgpIohXNMW6-F5fHi80JH503ZwOqg6ZnEGjzvHXqzFpPzfpImSaBNsT2nibOdbdlMv2wgfmBIN4vxQqTCynYe7V8Lrd359zUb_piG8A6AjxmcQeWsnDgwgQaOao4nusY7t1Uj14nSFpsZcSOEjft1WCYsmgUeC45m8vycfJzdEM288joiBtL7Mc2sgX_085QB-BBcEzfrsGVO3laXD9WQCX_yw7rSogjWTXdOr7dQAmvmBnXyOMY-vGAVfTb7Bm61wWjI01_8AjL53F725p2QpRZrhH9qpA1D0WFtO1gFZvFadrkcipTqIsD-aYhLo1QNQavNN-XtBkxz_9Q3HYrOiLAlm2SA3vyAxJn-XW52xB-Aeex87cPUAIg-lysnRClDoE9m4PrNX71kq7dJdXaOMEyTCIB_nUvpjQtxGusPb0v32o2bRVamuoRDCFgT7IGfUe42T5qtXDGyWJ57enM6s0rMLzwzBGrzl68dtHswl1jWA1ZDap4YpxRIu-FtYOleBbvGGDW_bTeTfNQ1HIMpXdcCtYk684AzvEoDDif0Q5UlGbtWn3xc7YSdIfFeHZqDLucC9FbzpCGaVBkLA-JfeRbUFAEV2xAsuCcqdtZP8T0IIVt3WQJo1nLc1Cr896NLxwAlL0XZssFTbII-bAxuAlfYNgHa40tY8teST7eiBqKw4EWWzjFi5-v4ET55Icin4wr01ofWUh7NGpaSn7kJejrw2m_hEduuTaq_YSJVXFsGVKBOz9WV0J3PmlvEVha_jij9tcNO-bIAM3HVNluqpbQAbiYUuf_5H16KL2EIZoEVybn-Ur_rGThTuizRYeAlwdx0pCrEQuepiTvp-eD4_jhWgm9OfsrwRYZ1cHHMbPfhbUrH6FmnjrdjWT-emlyCCASY5WSQ33jp9vzfaClhAsfBQnk5pnnQT3WUmGJ9NxX9PsBEgJr2nYzzYGb5OXlkTMqCVb4ZFCQ6ipf1OXH2kAUtCGi1iEvsgc4rqssR3JgScOGbupf4I6vYzTWwe7L1JaBY8ypaEvmoL34wJ2vBCBbYPX_n1Ys7WcnVc7xmhnXVFJBagzi0GzZ4UIF0iSG52O-LUcRdyaWwmQ8J1DKQVbKa_qFiCP3xBh5Vm_XJxX0mZTCiTZ2tGjrjITQuNt-FI2jKKb2hRm_XfDE8l6qZtaHs_IOIIVzfLSFk7AmOKkTrtIirV18zEmvyDf-_WLXk0d6WJD3Rb4Y6ptvBOUnkCE6g_42KU1ai3lP2noBBbuxlq1HE2vMVxQOyFHYNNv2qvZUp9lEK-4Pk_div4ZPuC7n5RSKuFagLsbkV0jujAwSZGveZtKFzh-UuiQIx1rXKvBIUqHNF8JAEy52PU14uU79oruc75BCplKKkSnkSkCFBKRAIjfObLJ5hLuTGJ_AplSc52X0lNX4uKKcpUyF45s4qaDT6IZEerNDLInW-soHthjFfxdv1Nj3GYVL_H5DIMSRpfCunTq12i7IA71hTriENJL4BIbEw-GIQjAmMmxnKP--GEdURlCgPGxvssvlrda4ORzV80MgYYL8JKV_zFBzm8W0NmCB0AEdX8V10sYmzyacoUonHEDkF8Du8u65BfApQshZwky4oQkhI6YFe_c5S3rgZ95LqAFaRcj6nvhupT8PY115ZBgku_FYKYQ1vtQUXcTW6UxDK95W9v3xsr6bN2ROdDeEoO3jCFqEL_b54AqBkw67cIf7s-ZNbpG7CMnvwhGcCX1PBdR0Tx0RX4RD3qFcrdfjdygTW_BvjoBlXUdf0Qj8vA4o27j70JhevsajWPI0aEPtchlP7QXMyJsyOJUmN1ARJ76uQoHA3PZVpvwpF2EgvA.9KfJEbCdOJ6vVpvEue3oiu1wH4qpPyJUZvs37bLaAbg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "授权码获取Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.baidu.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "zqBxaityr9MKfINcCp9QIfftirNbpZOkAMYWlJdFpdU",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设备授权码申请token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "zh-cn"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:device_code",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						},
+						{
+							"key": "device_code",
+							"value": "zwrWNGsFmcquK4QjYhtlS2rnT_iYSskRO3W_W9_bZR8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取设备代码",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "Net_Web",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "Net offline_access",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1q2w3e*",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44365/device",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44365",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

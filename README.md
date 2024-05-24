@@ -72,6 +72,9 @@ C# Asp.NetCore 8.0
 - [x] 客户端模式
 - [x] 设备码授权模式(可用于App扫码登录)
 - [x] 简单模式(OAuth2.0已弃用不在实现)
+	新增postman测试json  放在src/Panda.Net.AuthServer/postman/postman_collection.json
+	如图所示
+	<img src="module/workflow/images/1.png"/>
 ## Panda.Net.HttpApi.Host
 ### 服务中心
 	启动命令 dotnet Panda.Net.HttpApi.Host.dll --urls https://localhost:44368
@@ -80,9 +83,6 @@ C# Asp.NetCore 8.0
 	启动命令 dotnet Panda.Workflow.HttpApi.Host.dll --urls https://localhost:44598
 
 #### 审批流截图： 
-<ui>
-<li></li>
-</ui>
  <table>
     <tr>
         <td><img src="module/workflow/images/1.png"/></td>
