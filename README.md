@@ -165,3 +165,9 @@ dotnet ef migrations script --verbose -i --project "存放项目绝对路径" -c
 # 生成某一次迭代更新的脚本, 从这个迭代 20240329102615_file1 到 20240408082719_announcement 迭代版本之间的差异脚本
 dotnet ef migrations script --verbose -i --project "./" -c NetDbContext -o "./2.sql"  20240329102615_file1 20240408082719_announcement
 ```
+## 脚本还原
+```bash
+	#还原脚本
+	新建数据库panda
+	执行脚本 src/Panda.Net.EntityFrameworkCore/panda.sql 
+```	
