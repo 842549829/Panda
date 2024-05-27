@@ -12,6 +12,7 @@ using Panda.Net.EntityFrameworkCore;
 using Panda.Net.Hubs;
 using Panda.Net.MultiTenancy;
 using StackExchange.Redis;
+using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -256,6 +257,18 @@ public class NetHttpApiHostModule : AbpModule
             var configuration = context.GetConfiguration();
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
             options.OAuthScopes("Net");
+
+            // Swagger文档样式跳转
+            options.DefaultModelsExpandDepth(-1); // 默认全部不展开
+            options.DefaultModelExpandDepth(99); // 子属性默认展开深度99
+            
+            options.DefaultModelRendering(ModelRendering.Model); 
+            options.DisplayOperationId();
+            options.DisplayRequestDuration();
+            options.DocExpansion(DocExpansion.List);
+            options.EnableDeepLinking();
+            options.EnableFilter();
+            options.ShowExtensions();
         });
 
         app.UseAuditing();
