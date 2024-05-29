@@ -1,6 +1,6 @@
 <br />
 
-<h1 align="center">Panda.Net</h1>
+<h1 align="center">Panda</h1>
 
 <p align="center">ABP + EF Core 的微服务开源框架</p>
 
