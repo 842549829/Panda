@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,7 +16,9 @@ using StackExchange.Redis;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc;
@@ -25,6 +28,7 @@ using Volo.Abp.Autofac;
 using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.DistributedLocking;
+using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
@@ -62,9 +66,29 @@ public class NetHttpApiHostModule : AbpModule
         ConfigureSwaggerServices(context, configuration);
 
         // 关闭防伪造验证
-        Configure<AbpAntiForgeryOptions>(options => {
+        Configure<AbpAntiForgeryOptions>(options =>
+        {
             options.AutoValidate = false;
         });
+
+        //// 客户端代理设置请求头
+        //Configure<AbpHttpClientBuilderOptions>(options =>
+        //{
+        //    options.ProxyClientActions.Add((_, provider, client) =>
+        //    {
+        //        var httpContextAccessor = provider.GetRequiredService<IHttpContextAccessor>();
+        //        var httpContext = httpContextAccessor.HttpContext;
+        //        if (httpContext == null)
+        //        {
+        //            return;
+        //        }
+        //        var token = httpContext.GetTokenAsync("access_token").Result ?? httpContext.Request.Headers["Authorization"];
+        //        if (token != null)
+        //        {
+        //            client.DefaultRequestHeaders.Add($"{JwtBearerDefaults.AuthenticationScheme} Authorization", token);
+        //        }
+        //    });
+        //});
     }
 
     private void ConfigureCache(IConfiguration configuration)
@@ -154,8 +178,8 @@ public class NetHttpApiHostModule : AbpModule
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Net API", Version = "v1" });
                 options.DocInclusionPredicate((_, description) => description.RelativePath != null && description.RelativePath switch
                 {
-                   _ when description.RelativePath.StartsWith("api/app") => false,
-                   _ when description.RelativePath.StartsWith("api/abp") => false,
+                    _ when description.RelativePath.StartsWith("api/app") => false,
+                    _ when description.RelativePath.StartsWith("api/abp") => false,
                     _ => true
                 });
                 options.CustomSchemaIds(type => type.FullName);
@@ -261,8 +285,8 @@ public class NetHttpApiHostModule : AbpModule
             // Swagger文档样式跳转
             options.DefaultModelsExpandDepth(-1); // 默认全部不展开
             options.DefaultModelExpandDepth(99); // 子属性默认展开深度99
-            
-            options.DefaultModelRendering(ModelRendering.Model); 
+
+            options.DefaultModelRendering(ModelRendering.Model);
             options.DisplayOperationId();
             options.DisplayRequestDuration();
             options.DocExpansion(DocExpansion.List);

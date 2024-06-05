@@ -89,19 +89,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowCore.DSL", "module\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{3AE73BC3-8D7A-4617-9C85-B508A224B7F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.Domain.Shared", "module\files\Panda.File.Domain.Shared\Panda.File.Domain.Shared.csproj", "{F1448C6C-4895-4AF9-98F4-181398DE4558}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.Domain.Shared", "module\files\Panda.File.Domain.Shared\Panda.File.Domain.Shared.csproj", "{F1448C6C-4895-4AF9-98F4-181398DE4558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.Domain", "module\files\Panda.File.Domain\Panda.File.Domain.csproj", "{CAC26B4D-359B-40DF-9531-C4A61EE067FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.Domain", "module\files\Panda.File.Domain\Panda.File.Domain.csproj", "{CAC26B4D-359B-40DF-9531-C4A61EE067FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.EntityFrameworkCore", "module\files\Panda.File.EntityFrameworkCore\Panda.File.EntityFrameworkCore.csproj", "{B9D6D077-AE28-4C9E-9775-11F7F027AB02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.EntityFrameworkCore", "module\files\Panda.File.EntityFrameworkCore\Panda.File.EntityFrameworkCore.csproj", "{B9D6D077-AE28-4C9E-9775-11F7F027AB02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.Application.Contracts", "module\files\Panda.File.Application.Contracts\Panda.File.Application.Contracts.csproj", "{6F760962-2EC7-4AB7-B673-102977D69EBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.Application.Contracts", "module\files\Panda.File.Application.Contracts\Panda.File.Application.Contracts.csproj", "{6F760962-2EC7-4AB7-B673-102977D69EBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.Application", "module\files\Panda.File.Application\Panda.File.Application.csproj", "{B0C78351-AE43-435A-BDF5-BE37C33E4F3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.Application", "module\files\Panda.File.Application\Panda.File.Application.csproj", "{B0C78351-AE43-435A-BDF5-BE37C33E4F3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.HttpApi", "module\files\Panda.File.HttpApi\Panda.File.HttpApi.csproj", "{23A12996-9E96-444E-9E95-0DB124123116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.HttpApi", "module\files\Panda.File.HttpApi\Panda.File.HttpApi.csproj", "{23A12996-9E96-444E-9E95-0DB124123116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.File.HttpApi.Host", "module\files\Panda.File.HttpApi.Host\Panda.File.HttpApi.Host.csproj", "{372C84D6-8A20-46BD-8806-167C6D6F4E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.File.HttpApi.Host", "module\files\Panda.File.HttpApi.Host\Panda.File.HttpApi.Host.csproj", "{372C84D6-8A20-46BD-8806-167C6D6F4E9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data-permission", "data-permission", "{4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataPermission.Abstractions", "module\data-permission\Panda.DataPermission.Abstractions\Panda.DataPermission.Abstractions.csproj", "{5826E51B-EA38-4674-9EDF-6D2FF1387EA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataPermission", "module\data-permission\Panda.DataPermission\Panda.DataPermission.csproj", "{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.EntityFrameworkCore.DataPermission", "module\data-permission\Panda.EntityFrameworkCore.DataPermission\Panda.EntityFrameworkCore.DataPermission.csproj", "{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +281,18 @@ Global
 		{372C84D6-8A20-46BD-8806-167C6D6F4E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{372C84D6-8A20-46BD-8806-167C6D6F4E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{372C84D6-8A20-46BD-8806-167C6D6F4E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +343,10 @@ Global
 		{B0C78351-AE43-435A-BDF5-BE37C33E4F3C} = {3AE73BC3-8D7A-4617-9C85-B508A224B7F4}
 		{23A12996-9E96-444E-9E95-0DB124123116} = {3AE73BC3-8D7A-4617-9C85-B508A224B7F4}
 		{372C84D6-8A20-46BD-8806-167C6D6F4E9A} = {3AE73BC3-8D7A-4617-9C85-B508A224B7F4}
+		{4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D} = {C5F8CF87-FF4A-407A-929D-516DAC5A9D1D}
+		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
+		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
+		{BDEA2F3C-5C7B-4699-8E85-FC032DF3D874} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}
