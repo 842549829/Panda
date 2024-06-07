@@ -167,7 +167,7 @@ dotnet ef migrations script --verbose -i --project "./" -c NetDbContext -o "./2.
 ```
 ## 脚本还原
 ```bash
-	#还原脚本
-	新建数据库panda
-	执行脚本 src/Panda.Net.EntityFrameworkCore/panda.sql 
+#还原脚本
+新建数据库panda
+执行脚本 src/Panda.Net.EntityFrameworkCore/panda.sql 
 ```	

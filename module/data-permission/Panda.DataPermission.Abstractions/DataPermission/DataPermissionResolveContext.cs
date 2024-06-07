@@ -24,8 +24,8 @@ public class DataPermissionResolveContext : IDataPermissionResolveContext
         ServiceProvider = serviceProvider;
     }
 
-    public bool HasResolvedTenantOrHost()
+    public bool HasResolvedDataPermission()
     {
-        return Handled || (DataPermission != null && DataPermissionCode != null);
+        return Handled || DataPermission != null;
     }
 }

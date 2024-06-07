@@ -1,4 +1,5 @@
-﻿using Panda.DataPermission.Abstractions.DataPermission;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Panda.DataPermission.Abstractions.DataPermission;
 using Volo.Abp.Data;
 using Volo.Abp.EventBus.Abstractions;
 using Volo.Abp.Modularity;
@@ -17,4 +18,12 @@ namespace Panda.DataPermission;
 
 public class DataPermissionModule : AbpModule
 {
+    public override void ConfigureServices(ServiceConfigurationContext context)
+    {
+        context.Services.AddSingleton<ICurrentDataPermissionAccessor>(AsyncLocalCurrentDataPermissionAccessor.Instance);
+        Configure<PandaAspDataPermissionResolveOptions>(options =>
+        {
+            options.DataPermissionResolves.Insert(0, new CurrentUserResolveContributor());
+        });
+    }
 }
