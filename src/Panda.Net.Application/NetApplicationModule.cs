@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Panda.Messaging.Application;
+using Panda.Net.Bases.Announcements;
+using Panda.Net.Bases.Announcements.Dtos;
 using Panda.Net.Options;
 using System;
+using Panda.Net.Bases.Announcements.Entities;
+using Panda.Net.Enums;
 using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
@@ -12,6 +16,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Microsoft.Extensions.Configuration;
 
 namespace Panda.Net;
 
@@ -55,5 +60,17 @@ public class NetApplicationModule : AbpModule
 
         // 注册网络请求
         services.AddHttpClient();
+
+        // 配置自动映射
+        //Configure<AbpAutoMapperOptions>(options =>
+        //{
+        //    options.Configurators.Add(configurationContext =>
+        //    {
+        //        var address = configurationContext.ServiceProvider.GetRequiredService<IConfiguration>()["App:CorsOrigins"];
+        //        configurationContext.MapperConfiguration
+        //            .CreateMap<Announcement, AnnouncementDto>().ForMember(d => d.Content,
+        //                s => s.MapFrom(c => address + c.Content));
+        //    });
+        //});
     }
 }
