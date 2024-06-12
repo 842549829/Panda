@@ -6,7 +6,7 @@
 
 <h4 align="center">
     <p>
-        <a href="https://github.com/842549829/Panda/README.md">English</a>|
+        <a href="./README.md">English</a>|
         <b>中文</b> 
     </p>
 </h4>
