@@ -1,29 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\common.props" />
+	<Import Project="..\..\configureawait.props" />
+	<Import Project="..\..\common.props" />
 
-  <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
-    <Nullable>enable</Nullable>
-    <RootNamespace>Panda.Net</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Panda.Net</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.Account.HttpApi.Client" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi.Client" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi.Client" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" Version="8.1.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Account.HttpApi.Client" />
+		<PackageReference Include="Volo.Abp.Identity.HttpApi.Client" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" />
+		<PackageReference Include="Volo.Abp.TenantManagement.HttpApi.Client" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.HttpApi.Client" />
+		<PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="**\*generate-proxy.json" />
-    <Content Remove="**\*generate-proxy.json" />
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="**\*generate-proxy.json" />
+		<Content Remove="**\*generate-proxy.json" />
+	</ItemGroup>
 
 </Project>

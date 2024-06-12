@@ -1,13 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\configureawait.props" />
 	<Import Project="..\..\..\common.props" />
+	
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
+	
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.Ddd.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\src\Panda.Net.Application\Panda.Net.Application.csproj" />
 		<ProjectReference Include="..\Panda.Workflow.Application.Contracts\Panda.Workflow.Application.Contracts.csproj" />

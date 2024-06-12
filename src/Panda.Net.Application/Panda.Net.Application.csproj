@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+	<Import Project="..\..\configureawait.props" />
 	<Import Project="..\..\common.props" />
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<RootNamespace>Panda.Net</RootNamespace>
 	</PropertyGroup>
@@ -15,13 +16,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.FluentValidation" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.Account.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.Identity.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.TenantManagement.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.FluentValidation" />
+		<PackageReference Include="Volo.Abp.Account.Application" />
+		<PackageReference Include="Volo.Abp.Identity.Application" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Application" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.Application" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Application" />
 	</ItemGroup>
 
 </Project>

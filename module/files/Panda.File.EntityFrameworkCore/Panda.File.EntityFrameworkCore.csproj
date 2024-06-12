@@ -1,24 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\configureawait.props" />
 	<Import Project="..\..\..\common.props" />
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" />
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Panda.File.Domain\Panda.File.Domain.csproj" />
+		<ProjectReference Include="..\Panda.File.Domain\Panda.File.Domain.csproj" />
 	</ItemGroup>
 </Project>

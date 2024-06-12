@@ -1,4 +1,6 @@
-﻿using Panda.DataPermission.Abstractions.DataPermission;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Panda.DataPermission.Abstractions.DataPermission;
 
 namespace Panda.AspNetCore.DataPermission;
 
@@ -11,7 +13,7 @@ public class CookieDataPermissionResolveContributor : HttpDataPermissionResolveC
     /// </summary>
     public override string Name => ContributorName;
         
-    protected override Task<(string?, Panda.DataPermission.Abstractions.DataPermission.DataPermission?)> GetDataPermissionFromHttpContextOrNullAsync(IDataPermissionResolveContext context, HttpContext httpContext)
+    protected override Task<(string, Panda.DataPermission.Abstractions.DataPermission.DataPermission?)> GetDataPermissionFromHttpContextOrNullAsync(IDataPermissionResolveContext context, HttpContext httpContext)
     {
         var code  = httpContext.Request.Cookies[context.GetPandaAspDataPermissionOptions().DataPermissionCodeKey];
         var dataPermission = httpContext.Request.Cookies[context.GetPandaAspDataPermissionOptions().DataPermissionKey]?.ToDataPermission();

@@ -24,19 +24,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConcurrentHashSet" Version="1.3.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
-    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="8.0.4" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.14" />
-    <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
-    <PackageReference Include="System.Threading.ThreadPool" Version="4.3.0" />
-    <PackageReference Include="System.Reflection" Version="4.3.0" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
-    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="ConcurrentHashSet" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.ObjectPool" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="System.Linq.Dynamic.Core" />
+    <PackageReference Include="System.Threading.Tasks.Parallel" />
+    <PackageReference Include="System.Threading.ThreadPool"  />
+    <PackageReference Include="System.Reflection"  />
+    <PackageReference Include="System.Reflection.TypeExtensions" />
+    <PackageReference Include="System.Threading.Thread" />
+    <PackageReference Include="System.Linq.Queryable" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\configureawait.props" />
 	<Import Project="..\..\..\common.props" />
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.1.1" />
-		<PackageReference Include="Volo.Abp.AutoMapper" Version="8.1.1" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application" />
+		<PackageReference Include="Volo.Abp.AutoMapper" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Panda.File.Application.Contracts\Panda.File.Application.Contracts.csproj" />
-	  <ProjectReference Include="..\Panda.File.Domain\Panda.File.Domain.csproj" />
+		<ProjectReference Include="..\Panda.File.Application.Contracts\Panda.File.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Panda.File.Domain\Panda.File.Domain.csproj" />
 	</ItemGroup>
 </Project>

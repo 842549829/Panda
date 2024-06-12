@@ -1,17 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+	<Import Project="..\..\..\configureawait.props" />
 	<Import Project="..\..\..\common.props" />
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
+	
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-    <ItemGroup>
-	    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="8.1.1" />
-	    <PackageReference Include="Volo.Abp.ObjectExtending" Version="8.1.1" />
-    </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" />
+		<PackageReference Include="Volo.Abp.ObjectExtending" />
+	</ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Panda.Messaging.Domain.Shared\Panda.Messaging.Domain.Shared.csproj" />
-    </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Messaging.Domain.Shared\Panda.Messaging.Domain.Shared.csproj" />
+	</ItemGroup>
 </Project>

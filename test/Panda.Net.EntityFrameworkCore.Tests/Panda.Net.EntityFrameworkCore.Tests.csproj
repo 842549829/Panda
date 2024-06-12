@@ -1,21 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\common.props" />
+	<Import Project="..\..\common.test.props" />
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <RootNamespace>Panda.Net</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Panda.Net</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\Panda.Net.TestBase\Panda.Net.TestBase.csproj" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.1.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Panda.Net.TestBase\Panda.Net.TestBase.csproj" />
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+	</ItemGroup>
 
 </Project>

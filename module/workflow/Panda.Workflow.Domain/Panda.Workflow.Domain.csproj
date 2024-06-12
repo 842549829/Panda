@@ -1,20 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<Import Project="..\..\..\configureawait.props" />
+	<Import Project="..\..\..\common.props" />
 
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="8.1.1" />
-    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="8.1.1" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Panda.Net.Domain\Panda.Net.Domain.csproj" />
-    <ProjectReference Include="..\Abp.WorkflowCore.Persistence.EntityFrameworkCore\Abp.WorkflowCore.Persistence.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\Panda.Workflow.Domain.Shared\Panda.Workflow.Domain.Shared.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.AutoMapper" />
+		<PackageReference Include="Volo.Abp.Ddd.Domain" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Panda.Net.Domain\Panda.Net.Domain.csproj" />
+		<ProjectReference Include="..\Abp.WorkflowCore.Persistence.EntityFrameworkCore\Abp.WorkflowCore.Persistence.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Panda.Workflow.Domain.Shared\Panda.Workflow.Domain.Shared.csproj" />
+	</ItemGroup>
 
 </Project>
