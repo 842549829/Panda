@@ -1,7 +1,6 @@
 <Project>
 	<PropertyGroup>
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-		
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageVersion Include="Volo.Abp.AutoMapper" Version="$(AbpVersion)" />
