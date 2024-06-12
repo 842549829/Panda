@@ -38,6 +38,7 @@
 - [x] 消息推送
 - [x] 工作流
 - [x] 文件分片上传
+- [x] 数据权限模块
 
 ## 核心技术
 
@@ -171,3 +172,10 @@ dotnet ef migrations script --verbose -i --project "./" -c NetDbContext -o "./2.
 新建数据库panda
 执行脚本 src/Panda.Net.EntityFrameworkCore/panda.sql 
 ```	
+
+<br />
+
+## 📢 版本说明 
+
+-  v1.0  权限管理+菜单管理+部门管理+登录日志+操作日志+系统公告+文件上传+定时任务+消息推送+工作流+文件分片上传+审批流模块
+-  v1.1  添加数据权限模块
