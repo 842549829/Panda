@@ -2,13 +2,22 @@
 
 <h1 align="center">Panda</h1>
 
-<p align="center">ABP + EF Core 的微服务开源框架</p>
+<br />
 
-<p align="center">⭐ 支持 工作流 与 消息推送 ⭐</p>
+<h4 align="center">
+    <p>
+        <b>English</b> |
+        <a href="https://github.com/842549829/Panda/README_CN.md">中文</a>
+    </p>
+</h4>
+
+<p align="center">ABP + EF Core Microservices open source framework</p>
+
+<p align="center">⭐ Support workflow and message push ⭐</p>
 
 <br />
 
-<p align="center">💬 QQ 群: 240647629</p>
+<p align="center">💬 QQ group: 240647629</p>
 
 <br />
 
@@ -24,112 +33,112 @@
 
 <br />
 
-## 🥇 功能列表 （持续更新）
+## 🥇 Feature list (continuously updated)
 
-- [x] 用户管理
-- [x] 角色管理
-- [x] 菜单管理
-- [x] 部门管理
-- [x] 登录日志
-- [x] 操作日志
-- [x] 系统公告
-- [x] 文件上传
-- [x] 定时任务
-- [x] 消息推送
-- [x] 工作流
-- [x] 文件分片上传
-- [x] 数据权限模块
+- [x] User management
+- [x] Role management
+- [x] Menu management
+- [x] Department management
+- [x] Entry log
+- [x] Operation log
+- [x] System bulletin
+- [x] File upload
+- [x] Scheduled task
+- [x] Message push
+- [x] Workflow
+- [x] File fragment upload
+- [x] Data rights module
 
-## 核心技术
+## Core technology
 
-### 后端 C# Asp.Net Core
+### Rear end C# Asp.Net Core
 
-- [x] 动态 API：ABP
-- [x] ORM 框架: EF Core
-- [x] 鉴权授权：OpenIddict
-- [x] 工作流：workflow-core
-- [x] 日志：Serilog
-- [x] 模块化：ABP
-- [x] 依赖注入：Autofac
-- [x] 对象映射：AutoMapper
-- [x] 工作单元：ABP
-- [x] 多租户：ABP
-- [x] 本地缓存：ABP
-- [x] 分布式缓存：Redis
-- [x] 事件总线：ABP
-- [x] 微服务：ABP
-- [x] 消息通知：SignalR
+- [x] Dynamic API：ABP
+- [x] ORM： EF Core
+- [x] Authentication and authorization：OpenIddict
+- [x] Workflow：workflow-core
+- [x] Log：Serilog
+- [x] Module：ABP
+- [x] Dependency injection：Autofac
+- [x] Object mapping：AutoMapper
+- [x] Unitofwork：ABP
+- [x] Multi tenant：ABP
+- [x] Local cache：ABP
+- [x] Distributed cache：Redis
+- [x] Event bus：ABP
+- [x] Microservice：ABP
+- [x] Message notification：SignalR
 
-### 前端 Vue 3
+### Front end Vue 3
 > [!NOTE]
-> [前端项目开源地址](https://gitee.com/notify/panda.net.web)
+> [Front-end project open source address](https://gitee.com/notify/panda.net.web)
 
 
-- [x] 组件库：element-plus
-- [x] 路由：vue-router
-- [x] 存储：pinia
-- [x] 打包：vite	
-- [x] 异步请求：axios
-- [x] 图表：echarts
-- [x] 审批流：jsplumb
-- [x] 拖拽：vuedraggable
-- [x] 自定义表单：vue + element-plus 实现
+- [x] Component library：element-plus
+- [x] Route：vue-router
+- [x] Store：pinia
+- [x] pack：vite	
+- [x] Asynchronous request：axios
+- [x] Chart：echarts
+- [x] Workflow：jsplumb
+- [x] Drag：vuedraggable
+- [x] Custom form：vue + element-plus 
 
-## 项目结构
+## Project structure
 
 ```bash
-# 安装abp cli 
+# Install abp cli 
 dotnet tool install -g Volo.Abp.Cli
-# 更新abp cli
+# Update abp cli
 dotnet tool update -g Volo.Abp.Cli
-# 创建项目	
+# Create project	
 abp new Panda.Net -u none --separate-auth-server -dbms mysql -d ef
 ```
 
-### Panda.Net.AuthServer 认证中心
+### Panda.Net.AuthServer Authorization server
 
 > [!TIP]
-> 参考文档:
+> Reference document:
 > 
 > OpenIddict
 > 
 > https://note.youdao.com/s/I7rsNw8N
 
-启动命令
+Start command
 ```bash
 dotnet Panda.Net.AuthServer.dll --urls https://localhost:44365
 ```
-- [x] 密码模式
-- [x] 授权码模式
-- [x] 客户端模式
-- [x] 设备码授权模式(可用于App扫码登录)
-- [x] 简单模式( OAuth2.0 已弃用不再实现) 
-	- 新增 postman 测试 json, 放在 `src/Panda.Net.AuthServer/postman/postman_collection.json`
-	- 如图所示
+- [x] Resource owner password credentials
+- [x] Authorization code
+- [x] Client credentials
+- [x] Device authorization code(Can be used for App scan code login)
+- [x] Implicit( OAuth2.1 Deprecated no longer implemented) 
+	- Added postman test json, placed in `src/Panda.Net.AuthServer/postman/postman_collection.json`
+	- As shown in the figure
 	- <img src="images/1.png" width="300px"/>
  
-### Panda.Net.HttpApi.Host 服务中心
+### Panda.Net.HttpApi.Host Service center
 
 > [!TIP]
-> 参考文档:
+> Reference document:
 > 
-> Abp 扩展 User 表
+> Abp extends the User table
 > 
 > https://note.youdao.com/s/7oP7XG2O
 
-启动命令
+Start command
 ```bash
 dotnet Panda.Net.HttpApi.Host.dll --urls https://localhost:44368
 ```
 
-### Panda.Workflow.HttpApi.Host 工作流
+### Panda.Workflow.HttpApi.Host Workflow
 
-启动命令
+Start command
 ```cmd
 dotnet Panda.Workflow.HttpApi.Host.dll --urls https://localhost:44598
 ```
 
-截图： 
+screenshot： 
 <table>
   <tr>
     <td><img src="module/workflow/images/1.png" /></td>
@@ -150,32 +159,32 @@ dotnet Panda.Workflow.HttpApi.Host.dll --urls https://localhost:44598
   </tr>
 </table>
 	
-### 数据库还原
+### Database restore
 
 ```bash
-# 安装 dotnet ef cli
+# install dotnet ef cli
 dotnet tool install --global dotnet-ef
-# 更新 dotnet ef cli
+# update dotnet ef cli
 dotnet tool update --global dotnet-ef
-# 生成迁移文件
+# migration
 dotnet ef migrations add init -c NetDbContext
-# 更新数据库
+# database update
 dotnet ef database update -c NetDbContext
-# 生成迁移脚本 ( 用于生成环境 )
-dotnet ef migrations script --verbose -i --project "存放项目绝对路径" -c NetDbContext -o "存放脚本绝对路径"
-# 生成某一次迭代更新的脚本, 从这个迭代 20240329102615_file1 到 20240408082719_announcement 迭代版本之间的差异脚本
+# migration scripts (for building environments)
+dotnet ef migrations script --verbose -i --project "Item absolute path" -c NetDbContext -o "Script absolute path"
+# Generate a script for an iteration update, the difference script from this iteration 20240329102615_file1 to 20240408082719_announcement
 dotnet ef migrations script --verbose -i --project "./" -c NetDbContext -o "./2.sql"  20240329102615_file1 20240408082719_announcement
 ```
-## 脚本还原
+## Script restore
 ```bash
-#还原脚本
-新建数据库panda
-执行脚本 src/Panda.Net.EntityFrameworkCore/panda.sql 
+#Script restore
+New database panda
+Execute script src/Panda.Net.EntityFrameworkCore/panda.sql 
 ```	
 
 <br />
 
-## 📢 版本说明 
+## 📢 Versions 
 
--  v1.0  权限管理+菜单管理+部门管理+登录日志+操作日志+系统公告+文件上传+定时任务+消息推送+工作流+文件分片上传+审批流模块
--  v1.1  添加数据权限模块
+-  v1.0  Rights management + menu management + department management + login log + operation log + system announcement + file upload + Scheduled task + message push + Workflow + file fragment upload + approval flow module
+-  v1.1  Add a data permission module
