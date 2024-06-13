@@ -22,6 +22,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Panda.Net.AuthServer.Home": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:44365",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "home"
+      }
     }
   }
 }

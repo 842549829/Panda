@@ -8,6 +8,7 @@ using Serilog.Events;
 
 namespace Panda.Net;
 
+//abp install-libs
 public class Program
 {
     public async static Task<int> Main(string[] args)
