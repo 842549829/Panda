@@ -128,5 +128,7 @@
 		<PackageVersion Include="xunit.extensibility.execution" Version="2.8.0" />
 		<PackageVersion Include="xunit.runner.visualstudio" Version="2.8.0" />
 		<PackageVersion Include="coverlet.collector" Version="6.0.0" />
+		<PackageVersion Include="ConfigureAwait.Fody" Version="3.3.2" />
+		<PackageVersion Include="Fody" Version="6.8.0" />
 	</ItemGroup>
 </Project>
