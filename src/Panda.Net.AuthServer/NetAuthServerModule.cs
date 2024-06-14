@@ -44,6 +44,7 @@ using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.MultiTenancy;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Volo.Abp.OpenIddict;
+using OpenIddict.Server.AspNetCore;
 
 namespace Panda.Net;
 
@@ -76,6 +77,12 @@ public class NetAuthServerModule : AbpModule
             //{
             //    options.UseAspNetCore().DisableTransportSecurityRequirement();
             //});
+        });
+
+        // 禁用安全传输https
+        Configure<OpenIddictServerAspNetCoreOptions>(options =>
+        {
+            options.DisableTransportSecurityRequirement = true;
         });
 
         PreConfigure<OpenIddictServerBuilder>(builder =>
