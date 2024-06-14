@@ -1,24 +1,27 @@
-using System;
-using System.IO;
-using System.Linq;
 using Localization.Resources.AbpUi;
 using Medallion.Threading;
 using Medallion.Threading.Redis;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using OpenIddict.Server.AspNetCore;
 using Panda.Net.EntityFrameworkCore;
 using Panda.Net.ExtensionGrantTypes;
 using Panda.Net.Localization;
 using Panda.Net.MultiTenancy;
 using StackExchange.Redis;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
-using Volo.Abp.AspNetCore.Mvc.UI;
-using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
+using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
@@ -32,19 +35,12 @@ using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.DistributedLocking;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.UI.Navigation.Urls;
-using Volo.Abp.UI;
-using Volo.Abp.VirtualFileSystem;
-using Volo.Abp.OpenIddict.ExtensionGrantTypes;
-using Microsoft.OpenApi.Models;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-using Volo.Abp.Swashbuckle;
-using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.MultiTenancy;
-using Microsoft.AspNetCore.Mvc.Razor;
 using Volo.Abp.OpenIddict;
-using OpenIddict.Server.AspNetCore;
+using Volo.Abp.OpenIddict.ExtensionGrantTypes;
+using Volo.Abp.Swashbuckle;
+using Volo.Abp.UI.Navigation.Urls;
+using Volo.Abp.VirtualFileSystem;
 
 namespace Panda.Net;
 
@@ -79,7 +75,7 @@ public class NetAuthServerModule : AbpModule
             //});
         });
 
-        // 禁用安全传输https
+        // Disable the secure transfer of https
         Configure<OpenIddictServerAspNetCoreOptions>(options =>
         {
             options.DisableTransportSecurityRequirement = true;
@@ -188,7 +184,7 @@ public class NetAuthServerModule : AbpModule
             dataProtectionBuilder.PersistKeysToStackExchangeRedis(redis, "Net-Protection-Keys");
         }
 
-        context.Services.AddSingleton<IDistributedLockProvider>(sp =>
+        context.Services.AddSingleton<IDistributedLockProvider>(_ =>
         {
             var connection = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]!);
             return new RedisDistributedSynchronizationProvider(connection.GetDatabase());

@@ -33,6 +33,12 @@
 
 <br />
 
+## 🚀 Quick experience
+> [Experience address](http://139.9.70.213)  
+   Note: Because the server memory is very small, the workflow and message notification function services are not started at present. If there is a jam, the server is dead. Please contact the author from the server or you can contact the author donation server
+
+<br />
+
 ## 🥇 Feature list (continuously updated)
 
 - [x] User management
