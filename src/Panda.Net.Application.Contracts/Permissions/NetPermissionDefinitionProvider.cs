@@ -149,6 +149,20 @@ public class NetPermissionDefinitionProvider : PermissionDefinitionProvider
             .WithProperty(PermissionDefinitionConsts.Type, PermissionType.Menu)
             .WithProperty(PermissionDefinitionConsts.Path, "workflow-create")
             .WithProperty(PermissionDefinitionConsts.Icon, "workflow");
+
+
+        var agentPermission = basicsGroup.AddPermission(NetPermissions.Agent.Default, L("DisplayName:AgentManagement"))
+            .WithProviders(RolePermissionValueProvider.ProviderName)
+            .WithProperty(PermissionDefinitionConsts.Type, PermissionType.Menu)
+            .WithProperty(PermissionDefinitionConsts.Path, "agent-all")
+            .WithProperty(PermissionDefinitionConsts.Icon, "agent-all");
+
+
+        var merchantPermission = basicsGroup.AddPermission(NetPermissions.Merchant.Default, L("DisplayName:MerchantManagement"))
+            .WithProviders(RolePermissionValueProvider.ProviderName)
+            .WithProperty(PermissionDefinitionConsts.Type, PermissionType.Menu)
+            .WithProperty(PermissionDefinitionConsts.Path, "merchant-all")
+            .WithProperty(PermissionDefinitionConsts.Icon, "merchant-all");
     }
 
     // 写成固定字符串  这里就直接传入菜的名称即可

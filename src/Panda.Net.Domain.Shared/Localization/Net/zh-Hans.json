@@ -17,6 +17,8 @@
     "DisplayName:AnnouncementManagement": "公告管理",
     "DisplayName:WorkFlowListManagement": "工作流管理",
     "DisplayName:WorkFlowCreateManagement": "创建工作流",
+    "DisplayName:AgentManagement": "代理商管理",
+    "DisplayName:MerchantManagement": "商户管理",
     "DisplayName:Create": "创建",
     "DisplayName:Edit": "编辑",
     "DisplayName:Start": "发起",

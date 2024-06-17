@@ -66,4 +66,14 @@ public static class NetPermissions
     {
         public const string Default = GroupName + ".WorkFlowCreates";
     }
+
+    public static class Agent
+    {
+        public const string Default = GroupName + ".AllAgent";
+    }
+
+    public static class Merchant
+    {
+        public const string Default = GroupName + ".AllMerchant";
+    }
 }
