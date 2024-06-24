@@ -7,6 +7,6 @@
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 		<!-- All Abp Version Packages -->
-		<AbpVersion>8.1.3</AbpVersion>
+		<AbpVersion>8.1.4</AbpVersion>
 	</PropertyGroup>
 </Project>
