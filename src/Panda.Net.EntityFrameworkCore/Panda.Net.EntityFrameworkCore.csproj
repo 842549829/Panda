@@ -10,6 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\module\data-permission\Panda.DataPermission.EntityFrameworkCore\Panda.DataPermission.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\..\module\messaging\Panda.Messaging.EntityFrameworkCore\Panda.Messaging.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Panda.Net.Domain\Panda.Net.Domain.csproj" />
 		<PackageReference Include="Volo.Abp.Dapper" />

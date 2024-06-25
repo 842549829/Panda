@@ -56,6 +56,22 @@ public static class NetEfCoreEntityExtensionMappings
                         propertyBuilder.HasDefaultValue(string.Empty);
                         propertyBuilder.IsRequired();
                     });
+
+            ObjectExtensionManager
+                .Instance
+                .MapEfCoreProperty<IdentityRole, int>(IdentityRoleExtensionConsts.DataPermission,
+                    (_, propertyBuilder) =>
+                    {
+                        propertyBuilder.HasDefaultValue(0);
+                        propertyBuilder.IsRequired();
+                    })
+                .MapEfCoreProperty<IdentityRole, string>(IdentityRoleExtensionConsts.CustomDataPermission,
+                    (_, propertyBuilder) =>
+                    {
+                        propertyBuilder.HasMaxLength(IdentityRoleExtensionConsts.MaxCustomDataPermissionLength);
+                        propertyBuilder.HasDefaultValue(string.Empty);
+                        propertyBuilder.IsRequired();
+                    });
         });
     }
 }

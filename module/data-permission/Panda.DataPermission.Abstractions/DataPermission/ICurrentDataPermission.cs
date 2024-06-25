@@ -1,13 +1,12 @@
-﻿namespace Panda.DataPermission.Abstractions.DataPermission
+﻿namespace Panda.DataPermission.Abstractions.DataPermission;
+
+public interface ICurrentDataPermission
 {
-    public interface ICurrentDataPermission
-    {
-        bool IsAvailable { get; }
+    bool IsAvailable { get; }
 
-        string? Code { get; }
+    string? Code { get; }
 
-        DataPermission? DataPermission { get; }
+    DataPermission? DataPermission { get; }
 
-        IDisposable Change(string? code = null, DataPermission? dataPermission = null);
-    }
+    IDisposable Change(string? code = null, DataPermission? dataPermission = null);
 }

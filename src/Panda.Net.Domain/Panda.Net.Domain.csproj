@@ -10,12 +10,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\module\data-permission\Panda.DataPermission\Panda.DataPermission.csproj" />
 		<ProjectReference Include="..\..\module\messaging\Panda.Messaging.Domain\Panda.Messaging.Domain.csproj" />
 		<ProjectReference Include="..\Panda.Net.Domain.Shared\Panda.Net.Domain.Shared.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.Emailing"  />
+		<PackageReference Include="Volo.Abp.Emailing" />
 		<PackageReference Include="Volo.Abp.Identity.Domain" />
 		<PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" />
 		<PackageReference Include="Volo.Abp.BackgroundJobs.Domain" />

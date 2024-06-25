@@ -47,6 +47,22 @@ public static class NetDtoExtensions
                         typeof(UserAvatarUpdateDto)
                     },
                     IdentityUserExtensionConsts.Avatar);
+
+            ObjectExtensionManager.Instance
+                .AddOrUpdateProperty<int>(new[]
+                    {
+                        typeof(IdentityRoleDto),
+                        typeof(IdentityRoleCreateDto),
+                        typeof(IdentityRoleUpdateDto)
+                    },
+                    IdentityRoleExtensionConsts.DataPermission)
+                .AddOrUpdateProperty<string>(new[]
+                    {
+                        typeof(IdentityRoleDto),
+                        typeof(IdentityRoleCreateDto),
+                        typeof(IdentityRoleUpdateDto)
+                    },
+                    IdentityRoleExtensionConsts.CustomDataPermission);
         });
     }
 }
