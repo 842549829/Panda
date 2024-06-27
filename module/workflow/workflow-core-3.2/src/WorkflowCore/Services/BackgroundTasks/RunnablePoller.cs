@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Microsoft.Extensions.Logging;
 using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models;
 
 namespace WorkflowCore.Services.BackgroundTasks

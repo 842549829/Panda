@@ -1,5 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Panda.DataPermission.EntityFrameworkCore.EntityFrameworkCore;
 using Panda.Messaging.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -29,7 +31,8 @@ namespace Panda.Net.EntityFrameworkCore;
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
     typeof(AbpFeatureManagementEntityFrameworkCoreModule),
     typeof(AbpDapperModule),
-    typeof(MessageEntityFrameworkCoreModule)
+    typeof(MessageEntityFrameworkCoreModule),
+    typeof(DataPermissionEntityFrameworkCoreModule)
     )]
 public class NetEntityFrameworkCoreModule : AbpModule
 {

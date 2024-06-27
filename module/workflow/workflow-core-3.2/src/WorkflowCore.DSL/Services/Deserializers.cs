@@ -1,9 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
 using SharpYaml.Serialization;
-using WorkflowCore.Models.DefinitionStorage.v1;
+using WorkflowCore.DSL.Models.v1;
 
-namespace WorkflowCore.Services.DefinitionStorage
+namespace WorkflowCore.DSL.Services
 {
     public static class Deserializers
     {

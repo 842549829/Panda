@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
 using WorkflowCore.Models.Search;
 
-namespace WorkflowCore.Services
+namespace WorkflowCore.Services.DefaultProviders
 {
     public class NullSearchIndex : ISearchIndex
     {

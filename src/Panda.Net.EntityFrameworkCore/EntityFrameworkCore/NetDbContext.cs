@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Panda.DataPermission.EntityFrameworkCore.EntityFrameworkCore;
 using Panda.Net.Bases.Announcements.Entities;
 using Panda.Net.Bases.FileStores;
 using Panda.Net.EntityFrameworkCore.FileStores;
@@ -23,7 +24,7 @@ namespace Panda.Net.EntityFrameworkCore;
 [ReplaceDbContext(typeof(ITenantManagementDbContext))]
 [ConnectionStringName("Default")]
 public class NetDbContext :
-    AbpDbContext<NetDbContext>,
+    DataPermissionDbContext<NetDbContext>,
     IIdentityDbContext,
     ITenantManagementDbContext,
     IFileStoreDbContext

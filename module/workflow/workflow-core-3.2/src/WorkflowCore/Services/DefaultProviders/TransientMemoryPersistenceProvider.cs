@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models;
 
-namespace WorkflowCore.Services
+namespace WorkflowCore.Services.DefaultProviders
 {
     public class TransientMemoryPersistenceProvider : IPersistenceProvider
     {

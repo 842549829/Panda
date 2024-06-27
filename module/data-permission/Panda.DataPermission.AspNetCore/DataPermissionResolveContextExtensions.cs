@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using Panda.DataPermission.Abstractions.DataPermission;
 
-namespace Panda.AspNetCore.DataPermission;
+namespace Panda.DataPermission.AspNetCore;
 
 public static class DataPermissionResolveContextExtensions
 {

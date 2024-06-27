@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using WorkflowCore.Interface;
 using WorkflowCore.Models.LifeCycleEvents;
 
-namespace WorkflowCore.Services
+namespace WorkflowCore.Services.DefaultProviders
 {
     public class SingleNodeEventHub : ILifeCycleEventHub
     {

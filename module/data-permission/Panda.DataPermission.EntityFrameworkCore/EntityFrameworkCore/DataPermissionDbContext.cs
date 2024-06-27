@@ -1,7 +1,6 @@
-﻿using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Panda.DataPermission.Abstractions.DataPermission;
-using Volo.Abp;
+using System.Linq.Expressions;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace Panda.DataPermission.EntityFrameworkCore.EntityFrameworkCore;
@@ -12,6 +11,8 @@ public abstract class DataPermissionDbContext<TDbContext> : AbpDbContext<TDbCont
     protected virtual bool IsDataPermissionFilterEnabled => DataFilter?.IsEnabled<IDataPermission>() ?? false;
 
     protected virtual string? CurrentDataPermissionCode => CurrentDataPermission?.Code;
+
+    protected virtual string[]? CurrentDataPermissionCodes => CurrentDataPermission?.Code?.Split(',');
 
     protected virtual Panda.DataPermission.Abstractions.DataPermission.DataPermission? DataPermission => CurrentDataPermission?.DataPermission;
 
@@ -25,52 +26,19 @@ public abstract class DataPermissionDbContext<TDbContext> : AbpDbContext<TDbCont
         where TEntity : class
     {
         var expression = base.CreateFilterExpression<TEntity>();
-
-        if (typeof(ISoftDelete).IsAssignableFrom(typeof(TEntity)))
+        if (typeof(IDataPermission).IsAssignableFrom(typeof(TEntity)))
         {
-            expression = e => !IsSoftDeleteFilterEnabled || !EF.Property<bool>(e, "IsDeleted");
+
+            Expression<Func<TEntity, bool>> dataPermissionFilter = e => !IsDataPermissionFilterEnabled
+                                                                        || DataPermission == Abstractions.DataPermission.DataPermission.All
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode)
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && (EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode || EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!)))
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Sub && (EF.Property<string>(e, nameof(IDataPermission.Code)) != CurrentDataPermissionCode && EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!)))
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Custom && CurrentDataPermissionCodes!.Contains(EF.Property<string>(e, nameof(IDataPermission.Code))))
+                                                                        ;
+            expression = expression == null ? dataPermissionFilter : QueryFilterExpressionHelper.CombineExpressions(expression, dataPermissionFilter);
         }
 
-        if (typeof(IDataPermission).IsAssignableFrom(typeof(TEntity)) && DataPermission != null)
-        {
-            switch (DataPermission.Value)
-            {
-                case Panda.DataPermission.Abstractions.DataPermission.DataPermission.All:
-                    break;
-                case Panda.DataPermission.Abstractions.DataPermission.DataPermission.Cur:
-                {
-                    Expression<Func<TEntity, bool>> multiTenantFilter = e => !IsDataPermissionFilterEnabled || EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode;
-                    expression = expression == null ? multiTenantFilter : QueryFilterExpressionHelper.CombineExpressions(expression, multiTenantFilter);
-                    break;
-                }
-                case Panda.DataPermission.Abstractions.DataPermission.DataPermission.CurAndSub:
-                {
-                    Expression<Func<TEntity, bool>> multiTenantFilter = e => !IsDataPermissionFilterEnabled
-                                                                             || EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode
-                                                                             || EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!);
-                    expression = expression == null ? multiTenantFilter : QueryFilterExpressionHelper.CombineExpressions(expression, multiTenantFilter);
-                    break;
-                }
-                case Panda.DataPermission.Abstractions.DataPermission.DataPermission.Sub:
-                {
-                    Expression<Func<TEntity, bool>> multiTenantFilter = e => !IsDataPermissionFilterEnabled
-                                                                             || (EF.Property<string>(e, nameof(IDataPermission.Code)) != CurrentDataPermissionCode
-                                                                                 && EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!));
-                    expression = expression == null ? multiTenantFilter : QueryFilterExpressionHelper.CombineExpressions(expression, multiTenantFilter);
-                    break;
-                }
-                case Panda.DataPermission.Abstractions.DataPermission.DataPermission.Custom:
-                {
-                    var codes = CurrentDataPermissionCode!.Split(',');
-                    Expression<Func<TEntity, bool>> multiTenantFilter = e => !IsDataPermissionFilterEnabled || codes.Contains(EF.Property<string>(e, nameof(IDataPermission.Code)));
-                    expression = expression == null ? multiTenantFilter : QueryFilterExpressionHelper.CombineExpressions(expression, multiTenantFilter);
-                    break;
-                }
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-        }
 
         return expression;
     }

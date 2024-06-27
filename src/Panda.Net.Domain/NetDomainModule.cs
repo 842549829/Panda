@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Panda.DataPermission;
 using Panda.Messaging.Domain;
 using Panda.Net.MultiTenancy;
 using Volo.Abp.AuditLogging;
@@ -31,7 +32,8 @@ namespace Panda.Net;
     typeof(AbpSettingManagementDomainModule),
     typeof(AbpTenantManagementDomainModule),
     typeof(AbpEmailingModule),
-    typeof(MessageDomainModule)
+    typeof(MessageDomainModule),
+    typeof(DataPermissionModule)
 )]
 public class NetDomainModule : AbpModule
 {

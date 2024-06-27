@@ -2,7 +2,9 @@
 using System;
 using Microsoft.Extensions.Logging;
 using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Services;
+using WorkflowCore.Services.DefaultProviders;
 
 namespace WorkflowCore.Models
 {

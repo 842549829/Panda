@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace WorkflowCore.Models.DefinitionStorage
+﻿namespace WorkflowCore.DSL.Models
 {
     public class Envelope
     {

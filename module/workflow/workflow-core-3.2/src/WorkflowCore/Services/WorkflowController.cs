@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WorkflowCore.Exceptions;
 using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models;
 using WorkflowCore.Models.LifeCycleEvents;
 

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Panda.DataPermission;
-using Panda.DataPermission.Abstractions.DataPermission;
+﻿using Panda.DataPermission.Abstractions.DataPermission;
 using Volo.Abp;
 
-namespace Panda.AspNetCore.DataPermission;
+namespace Panda.DataPermission.AspNetCore;
 
 public abstract class HttpDataPermissionResolveContributorBase : DataPermissionResolveContributorBase
 {

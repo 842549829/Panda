@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using WorkflowCore.Interface;
-using WorkflowCore.Services.DefinitionStorage;
+﻿using Microsoft.Extensions.DependencyInjection;
+using WorkflowCore.DSL.Interface;
+using WorkflowCore.DSL.Services;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace WorkflowCore.DSL
 {
     public static class ServiceCollectionExtensions
     {

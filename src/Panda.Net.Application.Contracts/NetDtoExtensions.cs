@@ -1,4 +1,5 @@
-﻿using Panda.Net.Bases.Users.Dtos;
+﻿using Panda.Net.Bases.Roles.Dtos;
+using Panda.Net.Bases.Users.Dtos;
 using Panda.Net.Identity;
 using Volo.Abp.Account;
 using Volo.Abp.Identity;
@@ -53,14 +54,18 @@ public static class NetDtoExtensions
                     {
                         typeof(IdentityRoleDto),
                         typeof(IdentityRoleCreateDto),
-                        typeof(IdentityRoleUpdateDto)
+                        typeof(IdentityRoleUpdateDto),
+                        typeof(RoleCreateDto),
+                        typeof(RoleUpdateDto)
                     },
                     IdentityRoleExtensionConsts.DataPermission)
                 .AddOrUpdateProperty<string>(new[]
                     {
                         typeof(IdentityRoleDto),
                         typeof(IdentityRoleCreateDto),
-                        typeof(IdentityRoleUpdateDto)
+                        typeof(IdentityRoleUpdateDto),
+                        typeof(RoleCreateDto),
+                        typeof(RoleUpdateDto)
                     },
                     IdentityRoleExtensionConsts.CustomDataPermission);
         });

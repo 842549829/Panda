@@ -19,6 +19,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Panda.DataPermission.AspNetCore;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc;
@@ -32,6 +33,7 @@ using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+
 namespace Panda.Net;
 
 [DependsOn(
@@ -44,7 +46,8 @@ namespace Panda.Net;
     typeof(NetApplicationModule),
     typeof(NetEntityFrameworkCoreModule),
     typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpSwashbuckleModule)
+    typeof(AbpSwashbuckleModule),
+    typeof(PandaAspNetCoreDataPermissionModule)
 )]
 public class NetHttpApiHostModule : AbpModule
 {
@@ -270,6 +273,8 @@ public class NetHttpApiHostModule : AbpModule
         {
             app.UseMultiTenancy();
         }
+
+        app.UseDataPermission();
 
         app.UseAuthorization();
 

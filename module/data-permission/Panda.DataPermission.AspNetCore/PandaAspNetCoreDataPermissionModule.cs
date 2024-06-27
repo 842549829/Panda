@@ -1,9 +1,8 @@
-﻿using Panda.DataPermission;
-using Volo.Abp.AspNetCore;
+﻿using Volo.Abp.AspNetCore;
 using Volo.Abp.Modularity;
 using Volo.Abp.MultiTenancy;
 
-namespace Panda.AspNetCore.DataPermission;
+namespace Panda.DataPermission.AspNetCore;
 
 [DependsOn(
     typeof(AbpMultiTenancyModule),

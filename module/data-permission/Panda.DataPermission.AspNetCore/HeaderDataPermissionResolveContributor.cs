@@ -1,6 +1,6 @@
 ﻿using Panda.DataPermission.Abstractions.DataPermission;
 
-namespace Panda.AspNetCore.DataPermission;
+namespace Panda.DataPermission.AspNetCore;
 
 public class HeaderDataPermissionResolveContributor : HttpDataPermissionResolveContributorBase
 {

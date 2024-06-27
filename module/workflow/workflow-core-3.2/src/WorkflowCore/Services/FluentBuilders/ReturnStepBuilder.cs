@@ -2,7 +2,7 @@
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
 
-namespace WorkflowCore.Services
+namespace WorkflowCore.Services.FluentBuilders
 {
     public class ReturnStepBuilder<TData, TStepBody, TParentStep> : IContainerStepBuilder<TData, TStepBody, TParentStep>
         where TStepBody : IStepBody

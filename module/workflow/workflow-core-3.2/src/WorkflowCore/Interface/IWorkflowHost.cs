@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
 using Microsoft.Extensions.Hosting;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models;
 using WorkflowCore.Models.LifeCycleEvents;
 

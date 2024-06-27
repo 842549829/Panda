@@ -1,21 +1,19 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
 using Newtonsoft.Json.Linq;
+using WorkflowCore.DSL.Interface;
+using WorkflowCore.DSL.Models.v1;
+using WorkflowCore.Exceptions;
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
 using WorkflowCore.Primitives;
-using WorkflowCore.Models.DefinitionStorage;
-using WorkflowCore.Models.DefinitionStorage.v1;
-using WorkflowCore.Exceptions;
 
-namespace WorkflowCore.Services.DefinitionStorage
+namespace WorkflowCore.DSL.Services
 {
     public class DefinitionLoader : IDefinitionLoader
     {

@@ -9,6 +9,7 @@ using WorkflowCore.Models;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using WorkflowCore.Exceptions;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models.LifeCycleEvents;
 
 namespace WorkflowCore.Services

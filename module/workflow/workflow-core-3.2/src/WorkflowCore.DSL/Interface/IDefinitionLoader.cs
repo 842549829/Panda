@@ -1,8 +1,8 @@
 ﻿using System;
+using WorkflowCore.DSL.Models.v1;
 using WorkflowCore.Models;
-using WorkflowCore.Models.DefinitionStorage.v1;
 
-namespace WorkflowCore.Interface
+namespace WorkflowCore.DSL.Interface
 {
     public interface IDefinitionLoader
     {

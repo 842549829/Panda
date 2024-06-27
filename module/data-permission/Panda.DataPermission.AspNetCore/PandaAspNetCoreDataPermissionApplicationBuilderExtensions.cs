@@ -1,8 +1,8 @@
-﻿namespace Panda.AspNetCore.DataPermission;
+﻿namespace Panda.DataPermission.AspNetCore;
 
 public static class PandaAspNetCoreDataPermissionApplicationBuilderExtensions
 {
-    public static IApplicationBuilder UseMultiTenancy(this IApplicationBuilder app)
+    public static IApplicationBuilder UseDataPermission(this IApplicationBuilder app)
     {
         return app
             .UseMiddleware<DataPermissionMiddleware>();

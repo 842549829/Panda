@@ -4,10 +4,11 @@ using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Domain.Services;
 using Volo.Abp.Json;
 using Volo.Abp.Uow;
+using WorkflowCore.DSL.Interface;
+using WorkflowCore.DSL.Models.v1;
+using WorkflowCore.DSL.Services;
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
-using WorkflowCore.Models.DefinitionStorage.v1;
-using WorkflowCore.Services.DefinitionStorage;
 
 namespace Abp.WorkflowCore;
 

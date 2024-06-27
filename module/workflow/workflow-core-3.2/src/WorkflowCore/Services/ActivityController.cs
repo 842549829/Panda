@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using WorkflowCore.Exceptions;
 using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 using WorkflowCore.Models;
 
 namespace WorkflowCore.Services

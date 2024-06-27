@@ -126,9 +126,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataPermission.Abstra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataPermission", "module\data-permission\Panda.DataPermission\Panda.DataPermission.csproj", "{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.AspNetCore.DataPermission", "module\data-permission\Panda.AspNetCore.DataPermission\Panda.AspNetCore.DataPermission.csproj", "{2369F5EC-702A-4B7C-A0D0-4CF89858429B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataPermission.EntityFrameworkCore", "module\data-permission\Panda.DataPermission.EntityFrameworkCore\Panda.DataPermission.EntityFrameworkCore.csproj", "{D2ECEE7A-95CE-444A-882E-BFC910ECA174}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataPermission.AspNetCore", "module\data-permission\Panda.DataPermission.AspNetCore\Panda.DataPermission.AspNetCore.csproj", "{3B42E56B-416D-479D-96D5-F837FE745A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -308,14 +308,14 @@ Global
 		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2369F5EC-702A-4B7C-A0D0-4CF89858429B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2369F5EC-702A-4B7C-A0D0-4CF89858429B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2369F5EC-702A-4B7C-A0D0-4CF89858429B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2369F5EC-702A-4B7C-A0D0-4CF89858429B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D2ECEE7A-95CE-444A-882E-BFC910ECA174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2ECEE7A-95CE-444A-882E-BFC910ECA174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2ECEE7A-95CE-444A-882E-BFC910ECA174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2ECEE7A-95CE-444A-882E-BFC910ECA174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B42E56B-416D-479D-96D5-F837FE745A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B42E56B-416D-479D-96D5-F837FE745A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B42E56B-416D-479D-96D5-F837FE745A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B42E56B-416D-479D-96D5-F837FE745A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -369,8 +369,8 @@ Global
 		{4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D} = {C5F8CF87-FF4A-407A-929D-516DAC5A9D1D}
 		{5826E51B-EA38-4674-9EDF-6D2FF1387EA6} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
 		{4A0B5EC5-6DDC-4A9D-95D6-FD125D40F9A2} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
-		{2369F5EC-702A-4B7C-A0D0-4CF89858429B} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
 		{D2ECEE7A-95CE-444A-882E-BFC910ECA174} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
+		{3B42E56B-416D-479D-96D5-F837FE745A70} = {4F66F60E-14D7-4FD5-BAD9-A8452C5EAB7D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}

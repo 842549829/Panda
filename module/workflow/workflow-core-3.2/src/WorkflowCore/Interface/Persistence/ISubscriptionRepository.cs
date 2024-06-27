@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using WorkflowCore.Models;
 
-namespace WorkflowCore.Interface
+namespace WorkflowCore.Interface.Persistence
 {
     public interface ISubscriptionRepository
     {        

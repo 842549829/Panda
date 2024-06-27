@@ -1,6 +1,7 @@
 ﻿using Abp.Workflow;
 using Abp.WorkflowCore.Persistence;
 using WorkflowCore.Interface;
+using WorkflowCore.Interface.Persistence;
 
 namespace Abp.WorkflowCore;
 

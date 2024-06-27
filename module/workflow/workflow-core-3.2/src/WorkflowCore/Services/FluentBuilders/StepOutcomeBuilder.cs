@@ -3,7 +3,7 @@ using WorkflowCore.Interface;
 using WorkflowCore.Models;
 using WorkflowCore.Primitives;
 
-namespace WorkflowCore.Services
+namespace WorkflowCore.Services.FluentBuilders
 {
     public class StepOutcomeBuilder<TData> : IStepOutcomeBuilder<TData>
     {

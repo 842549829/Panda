@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using WorkflowCore.Models;
 
-namespace WorkflowCore.Models.DefinitionStorage.v1
+namespace WorkflowCore.DSL.Models.v1
 {
     public class DefinitionSourceV1 : DefinitionSource
     {
