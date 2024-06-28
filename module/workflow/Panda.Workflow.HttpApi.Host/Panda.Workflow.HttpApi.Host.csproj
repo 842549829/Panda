@@ -12,6 +12,9 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" />
 		<PackageReference Include="Serilog.AspNetCore"  />
 		<PackageReference Include="Serilog.Sinks.Async" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />

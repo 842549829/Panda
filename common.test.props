@@ -1,12 +1,10 @@
 <Project>
+	<Import Project="version.props" />
 	<PropertyGroup>
-		<LangVersion>latest</LangVersion>
 		<NoWarn>$(NoWarn);CS1591;CS0436</NoWarn>
 		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
 		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
 		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-		<!-- All Abp Version Packages -->
-		<AbpVersion>8.1.4</AbpVersion>
 	</PropertyGroup>
 </Project>

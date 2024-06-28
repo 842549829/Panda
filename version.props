@@ -1,0 +1,10 @@
+<Project>
+	<PropertyGroup>
+		<LangVersion>preview</LangVersion>
+		<Version>1.0.0</Version>
+		<!-- All Microsoft TargetFrameworks Packages -->
+		<MicrosoftTargetFrameworks>net8.0</MicrosoftTargetFrameworks>
+		<!-- All Abp Version Packages -->
+		<AbpVersion>8.2.0</AbpVersion>
+	</PropertyGroup>
+</Project>

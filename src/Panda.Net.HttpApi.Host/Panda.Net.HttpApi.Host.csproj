@@ -17,6 +17,9 @@
 		<PackageReference Include="Serilog.Sinks.Async" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
 		<PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" />
 		<PackageReference Include="DistributedLock.Redis" />
 		<PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" />
 		<PackageReference Include="Volo.Abp.Autofac" />

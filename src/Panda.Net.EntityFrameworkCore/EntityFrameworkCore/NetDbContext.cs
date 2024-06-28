@@ -52,6 +52,7 @@ public class NetDbContext :
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
+    public DbSet<IdentitySession> Sessions { get; }
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
