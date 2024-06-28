@@ -194,3 +194,5 @@ Execute script src/Panda.Net.EntityFrameworkCore/panda.sql
 
 -  v1.0  Rights management + menu management + department management + login log + operation log + system announcement + file upload + Scheduled task + message push + Workflow + file fragment upload + approval flow module
 -  v1.1  Add a data permission module
+-  v2.0  vue3 + role + data permission
+ - v2.1  Fix file upload memory leak
