@@ -19,6 +19,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http.Features;
 using Panda.DataPermission.AspNetCore;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiTenancy;
@@ -33,6 +34,7 @@ using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 namespace Panda.Net;
 
@@ -67,6 +69,21 @@ public class NetHttpApiHostModule : AbpModule
         ConfigureDistributedLocking(context, configuration);
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
+
+        #region 配置请求大小限制
+        Configure<KestrelServerOptions>(options =>
+       {
+           //options.Limits.MaxRequestBodySize = null; // 设置为null表示不限制大小  
+           options.Limits.MaxRequestBodySize = 1 * 1024 * 1024 * 1024; //  设置为1G  
+       });
+        Configure<FormOptions>(options =>
+        {
+            // 设置MultipartBodyLengthLimit（以字节为单位）  
+            //options.MultipartBodyLengthLimit = long.MaxValue; // 设置为最大值，表示不限制大小  
+            // 或者你可以设置一个更大的值，比如：
+            options.MultipartBodyLengthLimit = 1 * 1024 * 1024 * 1024; //  设置为1G  
+        }); 
+        #endregion
 
         // 关闭防伪造验证
         Configure<AbpAntiForgeryOptions>(options =>
