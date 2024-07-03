@@ -4,8 +4,6 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>

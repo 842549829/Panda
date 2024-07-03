@@ -5,8 +5,6 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 		<SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
 	</PropertyGroup>
