@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\configureawait.props" />
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<Content Include="appsettings.json">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<None Remove="appsettings.secrets.json" />
+		<Content Include="appsettings.secrets.json">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Serilog.Extensions.Logging" />
+		<PackageReference Include="Serilog.Sinks.Async" />
+		<PackageReference Include="Serilog.Sinks.File" />
+		<PackageReference Include="Serilog.Sinks.Console" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" />
+		<PackageReference Include="Volo.Abp.Autofac"  />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis"  />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Logs\**" />
+		<Content Remove="Logs\**" />
+		<EmbeddedResource Remove="Logs\**" />
+		<None Remove="Logs\**" />
+	</ItemGroup>
+
+</Project>

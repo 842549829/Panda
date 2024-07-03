@@ -9,11 +9,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.PermissionManagement.Application" />
 		<PackageReference Include="Volo.Abp.AutoMapper" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\..\src\Panda.Application\Panda.Application.csproj" />
 	  <ProjectReference Include="..\Panda.DataDictionary.Application.Contracts\Panda.DataDictionary.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\Panda.DataDictionary.Domain\Panda.DataDictionary.Domain.csproj" />
 	</ItemGroup>

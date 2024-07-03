@@ -1,11 +1,9 @@
-﻿using Panda.DataDictionary.Domain.Shared;
-using Panda.DataPermission;
+﻿using Panda.Domain;
+using Panda.Domain.Shared;
 using Volo.Abp.Modularity;
-using Volo.Abp.PermissionManagement;
 
 namespace Panda.DataDictionary.Domain;
 
-[DependsOn(typeof(DictionaryDomainSharedModule),
-    typeof(AbpPermissionManagementDomainModule),
-    typeof(DataPermissionModule))]
+[DependsOn(typeof(PandaDomainSharedModule),
+    typeof(PandaDomainModule))]
 public class DictionaryDomainModule : AbpModule;

@@ -1,12 +1,12 @@
 ﻿using Panda.DataDictionary.Application.Contracts;
 using Panda.DataPermission.AspNetCore;
+using Panda.HttpApi;
 using Volo.Abp.Modularity;
-using Volo.Abp.PermissionManagement.HttpApi;
 
 namespace Panda.DataDictionary.HttpApi;
 
 
-[DependsOn(typeof(AbpPermissionManagementHttpApiModule),
+[DependsOn(typeof(PandaHttpApiModule),
     typeof(DictionaryApplicationContractsModule),
     typeof(PandaAspNetCoreDataPermissionModule)
     )]

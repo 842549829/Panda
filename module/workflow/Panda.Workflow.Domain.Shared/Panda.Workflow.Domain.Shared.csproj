@@ -18,7 +18,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\src\Panda.Net.Domain.Shared\Panda.Net.Domain.Shared.csproj" />
+	  <ProjectReference Include="..\..\net\Panda.Net.Domain.Shared\Panda.Net.Domain.Shared.csproj" />
 	  <ProjectReference Include="..\Abp.WorkflowCore\Abp.WorkflowCore.csproj" />
 	</ItemGroup>
 </Project>

@@ -15,7 +15,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\src\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\..\net\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\Panda.Workflow.Domain.Shared\Panda.Workflow.Domain.Shared.csproj" />
 	</ItemGroup>
 

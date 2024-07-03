@@ -1,14 +1,14 @@
-﻿using Panda.DataDictionary.Application.Contracts;
+﻿using Panda.Application;
+using Panda.DataDictionary.Application.Contracts;
 using Panda.DataDictionary.Domain;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
-using Volo.Abp.PermissionManagement;
 
 namespace Panda.DataDictionary.Application;
 [DependsOn(
     typeof(DictionaryDomainModule),
     typeof(DictionaryApplicationContractsModule),
-    typeof(AbpPermissionManagementApplicationModule)
+    typeof(PandaApplicationModule)
 )]
 public class DictionaryApplicationModule : AbpModule
 {

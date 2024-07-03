@@ -22,7 +22,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\src\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\net\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Abp.WorkflowCore.Persistence.EntityFrameworkCore\Abp.WorkflowCore.Persistence.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Panda.Workflow.Domain\Panda.Workflow.Domain.csproj" />
 	</ItemGroup>

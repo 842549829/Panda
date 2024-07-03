@@ -1,5 +1,6 @@
-﻿using Panda.DataDictionary.Domain.Shared.Enums;
-using Panda.DataPermission.Abstractions.DataPermission;
+﻿using Panda.DataPermission.Abstractions.DataPermission;
+using Panda.Domain.Entities;
+using Panda.Domain.Shared.Enums;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 

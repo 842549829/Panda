@@ -9,7 +9,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" />
 		<PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" />
 	</ItemGroup>
 
@@ -21,6 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\..\src\Panda.EntityFrameworkCore\Panda.EntityFrameworkCore.csproj" />
 	  <ProjectReference Include="..\..\data-permission\Panda.DataPermission.EntityFrameworkCore\Panda.DataPermission.EntityFrameworkCore.csproj" />
 	  <ProjectReference Include="..\Panda.DataDictionary.Domain\Panda.DataDictionary.Domain.csproj" />
 	</ItemGroup>

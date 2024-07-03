@@ -1,4 +1,4 @@
-﻿using Panda.DataDictionary.Domain.Shared.Enums;
+﻿using Panda.Domain.Shared.Enums;
 
 namespace Panda.DataDictionary.Domain.DataDictionaries.Entities;
 

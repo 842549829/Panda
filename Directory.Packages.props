@@ -4,7 +4,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageVersion Include="Volo.Abp.AutoMapper" Version="$(AbpVersion)" />
-		<PackageVersion Include="Volo.Abp.Autofac" Version="8.2.0" />
+		<PackageVersion Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.AspNetCore" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.AspNetCore.Mvc" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.AspNetCore.Serilog" Version="$(AbpVersion)" />

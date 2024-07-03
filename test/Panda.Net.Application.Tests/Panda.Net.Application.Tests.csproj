@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Panda.Net.Application\Panda.Net.Application.csproj" />
+		<ProjectReference Include="..\..\module\net\Panda.Net.Application\Panda.Net.Application.csproj" />
 		<ProjectReference Include="..\Panda.Net.Domain.Tests\Panda.Net.Domain.Tests.csproj" />
 	</ItemGroup>
 

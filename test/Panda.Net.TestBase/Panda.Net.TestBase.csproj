@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Panda.Net.Domain\Panda.Net.Domain.csproj" />
+		<ProjectReference Include="..\..\module\net\Panda.Net.Domain\Panda.Net.Domain.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

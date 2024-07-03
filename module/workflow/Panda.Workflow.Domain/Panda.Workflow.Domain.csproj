@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\src\Panda.Net.Domain\Panda.Net.Domain.csproj" />
+		<ProjectReference Include="..\..\net\Panda.Net.Domain\Panda.Net.Domain.csproj" />
 		<ProjectReference Include="..\Abp.WorkflowCore.Persistence.EntityFrameworkCore\Abp.WorkflowCore.Persistence.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Panda.Workflow.Domain.Shared\Panda.Workflow.Domain.Shared.csproj" />
 	</ItemGroup>

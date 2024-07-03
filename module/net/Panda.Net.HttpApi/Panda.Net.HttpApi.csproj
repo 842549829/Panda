@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\configureawait.props" />
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Panda.Net</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+	</ItemGroup>
+
+</Project>

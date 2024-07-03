@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\module\net\Panda.Net.EntityFrameworkCore\Panda.Net.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Panda.Net.TestBase\Panda.Net.TestBase.csproj" />
 		<PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" />
 	</ItemGroup>

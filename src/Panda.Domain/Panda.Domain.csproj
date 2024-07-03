@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\configureawait.props" />
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.PermissionManagement.Domain" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Domain.Shared\Panda.Domain.Shared.csproj" />
+	</ItemGroup>
+</Project>

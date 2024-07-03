@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<Import Project="..\..\configureawait.props" />
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+		<SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+		<IsPackable>true</IsPackable>
+		<OutputType>Library</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Serilog.AspNetCore" />
+		<PackageReference Include="Serilog.Sinks.Async" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" />
+		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" />
+		<PackageReference Include="DistributedLock.Redis" />
+		<PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" />
+		<PackageReference Include="Volo.Abp.Autofac" />
+		<PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" />
+		<PackageReference Include="Volo.Abp.DistributedLocking" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Serilog" />
+		<PackageReference Include="Volo.Abp.Swashbuckle" />
+		<PackageReference Include="Volo.Abp.Http.Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Panda.Application\Panda.Application.csproj" />
+		<ProjectReference Include="..\Panda.EntityFrameworkCore\Panda.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Panda.HttpApi\Panda.HttpApi.csproj" />
+	</ItemGroup>
+
+</Project>

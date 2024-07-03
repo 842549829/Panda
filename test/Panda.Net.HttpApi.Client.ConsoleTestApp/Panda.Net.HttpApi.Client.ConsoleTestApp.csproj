@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\common.test.props" />
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -20,12 +21,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.Http.Client.IdentityModel" />
 		<PackageReference Include="Volo.Abp.Autofac" />
+		<PackageReference Include="Volo.Abp.Http.Client.IdentityModel" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Panda.Net.HttpApi.Client\Panda.Net.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\module\net\Panda.Net.HttpApi.Client\Panda.Net.HttpApi.Client.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

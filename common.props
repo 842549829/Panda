@@ -4,6 +4,8 @@
 		<NoWarn>$(NoWarn);CS1591</NoWarn>
 		<AbpProjectType>app</AbpProjectType>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 		<!-- Include symbol files (*.pdb) in the built .nupkg -->
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 	</PropertyGroup>

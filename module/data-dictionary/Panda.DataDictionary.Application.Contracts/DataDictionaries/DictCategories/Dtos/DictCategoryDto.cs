@@ -1,4 +1,4 @@
-﻿using Panda.DataDictionary.Domain.Shared.Enums;
+﻿using Panda.Domain.Shared.Enums;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Domain.Entities;
 

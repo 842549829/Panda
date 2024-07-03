@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\..\configureawait.props" />
+	<Import Project="..\..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Panda.Net</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\messaging\Panda.Messaging.Application\Panda.Messaging.Application.csproj" />
+		<ProjectReference Include="..\Panda.Net.Domain\Panda.Net.Domain.csproj" />
+		<ProjectReference Include="..\Panda.Net.Application.Contracts\Panda.Net.Application.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.FluentValidation" />
+		<PackageReference Include="Volo.Abp.Account.Application" />
+		<PackageReference Include="Volo.Abp.Identity.Application" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Application" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.Application" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Application" />
+	</ItemGroup>
+
+</Project>
