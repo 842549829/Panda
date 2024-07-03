@@ -19,4 +19,9 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\data-permission\Panda.DataPermission.EntityFrameworkCore\Panda.DataPermission.EntityFrameworkCore.csproj" />
+	  <ProjectReference Include="..\Panda.DataDictionary.Domain\Panda.DataDictionary.Domain.csproj" />
+	</ItemGroup>
 </Project>

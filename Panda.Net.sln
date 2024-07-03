@@ -147,6 +147,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataDictionary.HttpAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataDictionary.HttpApi.Host", "module\data-dictionary\Panda.DataDictionary.HttpApi.Host\Panda.DataDictionary.HttpApi.Host.csproj", "{FCAEE70B-EE82-46A8-9F5F-FB2E75C433FC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{6230AD17-8250-49B0-82D6-C9935B1BEB2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -424,6 +426,7 @@ Global
 		{0800DB74-0949-4F2D-8C71-5299F587CCE2} = {2319E10B-0E15-41F6-B551-89A972A0129B}
 		{39CFD89B-4819-4900-8267-2DF57C29B8D8} = {2319E10B-0E15-41F6-B551-89A972A0129B}
 		{FCAEE70B-EE82-46A8-9F5F-FB2E75C433FC} = {2319E10B-0E15-41F6-B551-89A972A0129B}
+		{6230AD17-8250-49B0-82D6-C9935B1BEB2F} = {C5F8CF87-FF4A-407A-929D-516DAC5A9D1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}

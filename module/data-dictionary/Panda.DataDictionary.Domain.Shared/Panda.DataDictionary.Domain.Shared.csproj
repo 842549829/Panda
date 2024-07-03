@@ -11,4 +11,8 @@
 	<ItemGroup>
 		<PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Localization\DataDictionary\*.json" />
+	</ItemGroup>
 </Project>

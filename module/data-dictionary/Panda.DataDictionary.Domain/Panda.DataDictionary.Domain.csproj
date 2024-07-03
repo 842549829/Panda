@@ -11,4 +11,9 @@
 	<ItemGroup>
 		<PackageReference Include="Volo.Abp.PermissionManagement.Domain" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\data-permission\Panda.DataPermission\Panda.DataPermission.csproj" />
+	  <ProjectReference Include="..\Panda.DataDictionary.Domain.Shared\Panda.DataDictionary.Domain.Shared.csproj" />
+	</ItemGroup>
 </Project>

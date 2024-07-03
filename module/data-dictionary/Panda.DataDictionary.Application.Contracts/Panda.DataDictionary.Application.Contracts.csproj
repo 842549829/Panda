@@ -12,4 +12,12 @@
 		<PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.DataDictionary.Domain.Shared\Panda.DataDictionary.Domain.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Permissions\" />
+	</ItemGroup>
+
 </Project>

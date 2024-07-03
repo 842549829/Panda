@@ -22,7 +22,7 @@ public class Program
 
         try
         {
-            Log.Information("Starting Panda.File.HttpApi.Host.");
+            Log.Information("Starting Panda.DataDictionary.HttpApi.Host.");
             var builder = WebApplication.CreateBuilder(args);
             builder.Host.AddAppSettingsSecretsJson()
                 .UseAutofac()
@@ -31,7 +31,7 @@ public class Program
             {
                 kestrel.Limits.MaxRequestBodySize = null;
             });
-            await builder.AddApplicationAsync<DataDictionaryHttpApiHostModule>();
+            await builder.AddApplicationAsync<DictionaryHttpApiHostModule>();
             var app = builder.Build();
             await app.InitializeApplicationAsync();
             await app.RunAsync();

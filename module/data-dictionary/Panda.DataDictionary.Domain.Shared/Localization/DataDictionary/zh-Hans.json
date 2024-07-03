@@ -1,0 +1,29 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "Menu:Home": "首页",
+    "Welcome": "欢迎",
+    "LongWelcomeMessage": "欢迎来到该应用程序. 这是一个基于ABP框架的启动项目. 有关更多信息, 请访问 abp.io.",
+    "Permission:IdentityManagement": "用户模块管理",
+    "Permission:SettingManagement": "配置模块管理",
+    "Permission:FeatureManagement": "功能模块管理",
+    "Permission:TenantManagement": "租户模块管理",
+    "DisplayName:Basic": "基础信息管理",
+    "DisplayName:RoleManagement": "角色管理",
+    "DisplayName:UserManagement": "用户管理",
+    "DisplayName:MenuManagement": "菜单管理",
+    "DisplayName:OrganizationManagement": "组织管理",
+    "DisplayName:TenantManagement": "租户管理",
+    "DisplayName:AnnouncementManagement": "公告管理",
+    "DisplayName:WorkFlowListManagement": "工作流管理",
+    "DisplayName:WorkFlowCreateManagement": "创建工作流",
+    "DisplayName:AgentManagement": "代理商管理",
+    "DisplayName:MerchantManagement": "商户管理",
+    "DisplayName:Create": "创建",
+    "DisplayName:Edit": "编辑",
+    "DisplayName:Start": "发起",
+    "DisplayName:Delete": "删除",
+    "DisplayName:NoPath": "上传项目路径未维护",
+    "DisplayName:NoFileType": "上传文件类型不支持"
+  }
+}

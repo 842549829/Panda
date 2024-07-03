@@ -11,4 +11,9 @@
 	<ItemGroup>
 		<PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\data-permission\Panda.DataPermission.AspNetCore\Panda.DataPermission.AspNetCore.csproj" />
+	  <ProjectReference Include="..\Panda.DataDictionary.Application.Contracts\Panda.DataDictionary.Application.Contracts.csproj" />
+	</ItemGroup>
 </Project>

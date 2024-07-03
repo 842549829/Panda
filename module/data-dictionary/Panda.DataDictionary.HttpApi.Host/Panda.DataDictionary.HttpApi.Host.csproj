@@ -29,4 +29,10 @@
 		<PackageReference Include="Volo.Abp.Http.Client" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Panda.DataDictionary.Application\Panda.DataDictionary.Application.csproj" />
+	  <ProjectReference Include="..\Panda.DataDictionary.EntityFrameworkCore\Panda.DataDictionary.EntityFrameworkCore.csproj" />
+	  <ProjectReference Include="..\Panda.DataDictionary.HttpApi\Panda.DataDictionary.HttpApi.csproj" />
+	</ItemGroup>
+
 </Project>
