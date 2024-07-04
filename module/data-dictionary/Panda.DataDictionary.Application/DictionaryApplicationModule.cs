@@ -5,6 +5,7 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 
 namespace Panda.DataDictionary.Application;
+
 [DependsOn(
     typeof(DictionaryDomainModule),
     typeof(DictionaryApplicationContractsModule),

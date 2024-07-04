@@ -8,7 +8,8 @@ namespace Panda.DataDictionary.Domain.DataDictionaries.Entities;
 
 public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant, IEnable, ISort, IDataPermission
 {
-    protected DictEntity(string key, string name, Enable status, int sort, string describe, string code, Guid? parnetId, Guid? tenantId)
+    protected DictEntity(Guid id, string key, string name, Enable status, int sort, string describe, string code, Guid? parnetId, Guid? tenantId)
+    : base(id)
     {
         Key = key;
         Name = name;
@@ -30,7 +31,7 @@ public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant,
 
     public string Key { get; set; }
 
-    public string Describe { get; }
+    public string Describe { get; set; }
 
     public string Code { get; set; }
 
@@ -39,5 +40,12 @@ public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant,
     public void ChangeStatus(Enable status)
     {
         Status = status;
+    }
+
+    public void Update(string name, int sort, string describe)
+    {
+        Name = name;
+        Sort = sort;
+        Describe = describe;
     }
 }

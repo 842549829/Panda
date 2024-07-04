@@ -1,5 +1,6 @@
 ﻿using Panda.DataDictionary.Domain.DataDictionaries.Entities;
 using Panda.DataDictionary.Domain.DataDictionaries.Repositories;
+using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Services;
 
 namespace Panda.DataDictionary.Domain.DataDictionaries.Managers;
@@ -21,9 +22,16 @@ public class DictCategoryManager(IDictCategoryRepository dictCategoryRepository)
         return dictCategoryRepository.DeleteAsync(id, cancellationToken: cancellationToken);
     }
 
-    public Task<DictCategory> GetAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<DictCategory> GetAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        return dictCategoryRepository.GetAsync(id, cancellationToken: cancellationToken);
+        var dictCategory = await dictCategoryRepository.GetAsync(id, cancellationToken: cancellationToken);
+
+        if (dictCategory == null)
+        {
+            throw new EntityNotFoundException(typeof(DictCategory), id);
+        }
+
+        return dictCategory;
     }
 
     public Task<List<DictCategory>> GetListAsync(string? sorting = null, int maxResultCount = int.MaxValue, int skipCount = 0, string? filter = null,

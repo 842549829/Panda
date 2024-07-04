@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Volo.Abp.FluentValidation" />
 		<PackageReference Include="Volo.Abp.PermissionManagement.Application" />
 	</ItemGroup>
 

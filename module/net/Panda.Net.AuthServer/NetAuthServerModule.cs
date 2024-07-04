@@ -1,12 +1,8 @@
 using Localization.Resources.AbpUi;
 using Medallion.Threading;
 using Medallion.Threading.Redis;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.DataProtection;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using OpenIddict.Server.AspNetCore;
 using Panda.Net.EntityFrameworkCore;
@@ -14,10 +10,6 @@ using Panda.Net.ExtensionGrantTypes;
 using Panda.Net.Localization;
 using Panda.Net.MultiTenancy;
 using StackExchange.Redis;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
@@ -87,6 +79,11 @@ public class NetAuthServerModule : AbpModule
             {
                 // 注册新的GrantTypes模式
                 options.GrantTypes.Add("net");
+
+                //// 设AccessToken有效期2小时
+                //options.AccessTokenLifetime = TimeSpan.FromHours(2);
+                //// 设RefreshToken有效期30天
+                //options.RefreshTokenLifetime = TimeSpan.FromDays(30);
 
             });
         });
