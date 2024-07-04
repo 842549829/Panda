@@ -1,4 +1,5 @@
-﻿using Panda.DataDictionary.EntityFrameworkCore;
+﻿using Panda.DataDictionary.Application.Contracts;
+using Panda.DataDictionary.EntityFrameworkCore;
 using Panda.DbMigrator;
 using Panda.EntityFrameworkCore;
 using Volo.Abp.Caching;
@@ -15,7 +16,8 @@ namespace Panda.DataDictionary.DbMigrator;
     typeof(PandaDbMigratorModule),
     typeof(AbpMultiTenancyModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
-    typeof(DictionaryEntityFrameworkCoreModule)
+    typeof(DictionaryEntityFrameworkCoreModule),
+    typeof(DictionaryApplicationContractsModule)
 )]
 public class DataDictionaryDbMigratorModule : AbpModule
 {

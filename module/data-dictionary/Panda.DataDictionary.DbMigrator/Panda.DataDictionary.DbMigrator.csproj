@@ -16,6 +16,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\src\Panda.DbMigrator\Panda.DbMigrator.csproj" />
+		<ProjectReference Include="..\Panda.DataDictionary.Application.Contracts\Panda.DataDictionary.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Panda.DataDictionary.EntityFrameworkCore\Panda.DataDictionary.EntityFrameworkCore.csproj" />
 	</ItemGroup>
 
