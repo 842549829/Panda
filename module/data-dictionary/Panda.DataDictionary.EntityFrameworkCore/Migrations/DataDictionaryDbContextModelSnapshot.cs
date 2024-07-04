@@ -121,9 +121,10 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key");
-
                     b.HasIndex("Name");
+
+                    b.HasIndex("Key", "TenantId")
+                        .IsUnique();
 
                     b.ToTable("YaDeaDictCategory", (string)null);
                 });
@@ -237,9 +238,10 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key");
-
                     b.HasIndex("Name");
+
+                    b.HasIndex("Key", "TenantId")
+                        .IsUnique();
 
                     b.ToTable("YaDeaDictItem", (string)null);
                 });

@@ -30,7 +30,7 @@ public static class DataDictionaryDbContextModelBuilderExtensions
             b.HasMany(a => a.Items)
                 .WithOne(a => a.Category)
                 .HasForeignKey(a => a.CategoryId)
-                .OnDelete(DeleteBehavior.Cascade);  
+                .OnDelete(DeleteBehavior.Cascade);
 
             b.ApplyObjectExtensionMappings();
         });
@@ -96,7 +96,7 @@ public static class DataDictionaryDbContextModelBuilderExtensions
 
         b.HasIndex(u => u.Code);
         b.HasIndex(u => u.Name);
-        b.HasIndex(u => u.Key);
-        //.IsUnique();
+        b.HasIndex(u => new { u.Key, u.TenantId })
+         .IsUnique();
     }
 }

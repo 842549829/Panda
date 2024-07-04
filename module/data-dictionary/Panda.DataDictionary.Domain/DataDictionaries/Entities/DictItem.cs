@@ -29,4 +29,10 @@ public class DictItem : DictEntity
     public string Style { get; set; }
 
     public string Value { get; set; }
+
+    public void Update(string name, int sort, string describe, string style)
+    {
+        Update(name, sort, describe);
+        Style = style;
+    }
 }
