@@ -22,7 +22,7 @@ public class DataDictionaryDbContextFactory : IDesignTimeDbContextFactory<DataDi
     private static IConfigurationRoot BuildConfiguration()
     {
         var builder = new ConfigurationBuilder()
-            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../Panda.DataDictionary.HttpApi.Host/"))
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../Panda.DataDictionary.DbMigrator/"))
             .AddJsonFile("appsettings.json", optional: false);
 
         return builder.Build();

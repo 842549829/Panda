@@ -25,9 +25,19 @@ public class DataDictionaryDbContext : DataPermissionDbContext<DataDictionaryDbC
         // 设置 EF Core 日志级别，以便记录SQL语句
         optionsBuilder.LogTo(message =>
         {
-            Logger.LogDebug(message);
+            try
+            {
+                if (LazyServiceProvider != null && Logger != null)
+                {
+                    Logger.LogDebug(message);
+                }
+            }
+            finally
+            {
+                Console.WriteLine(message);
+            }
         }, new[] { Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.CommandExecuting });
-        optionsBuilder.EnableSensitiveDataLogging(); // 如果需要记录敏感数据，请谨慎启用此选项
+        optionsBuilder.EnableSensitiveDataLogging(); // 如果需要记录敏感数据，请谨慎启用此选
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

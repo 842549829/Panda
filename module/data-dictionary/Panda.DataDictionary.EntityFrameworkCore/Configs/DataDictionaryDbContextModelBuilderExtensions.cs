@@ -96,7 +96,7 @@ public static class DataDictionaryDbContextModelBuilderExtensions
 
         b.HasIndex(u => u.Code);
         b.HasIndex(u => u.Name);
-        b.HasIndex(u => u.Key)
-            .IsUnique();
+        b.HasIndex(u => u.Key);
+        //.IsUnique();
     }
 }

@@ -13,7 +13,7 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(DataDictionaryDbContext))]
-    [Migration("20240704055259_init")]
+    [Migration("20240704082433_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -124,8 +124,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key")
-                        .IsUnique();
+                    b.HasIndex("Key");
 
                     b.HasIndex("Name");
 
@@ -241,8 +240,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key")
-                        .IsUnique();
+                    b.HasIndex("Key");
 
                     b.HasIndex("Name");
 

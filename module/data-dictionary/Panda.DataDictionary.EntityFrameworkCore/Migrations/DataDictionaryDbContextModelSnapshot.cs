@@ -121,8 +121,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key")
-                        .IsUnique();
+                    b.HasIndex("Key");
 
                     b.HasIndex("Name");
 
@@ -238,8 +237,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
 
                     b.HasIndex("Code");
 
-                    b.HasIndex("Key")
-                        .IsUnique();
+                    b.HasIndex("Key");
 
                     b.HasIndex("Name");
 

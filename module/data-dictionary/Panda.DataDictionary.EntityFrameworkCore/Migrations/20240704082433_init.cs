@@ -105,8 +105,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_YaDeaDictCategory_Key",
                 table: "YaDeaDictCategory",
-                column: "Key",
-                unique: true);
+                column: "Key");
 
             migrationBuilder.CreateIndex(
                 name: "IX_YaDeaDictCategory_Name",
@@ -126,8 +125,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_YaDeaDictItem_Key",
                 table: "YaDeaDictItem",
-                column: "Key",
-                unique: true);
+                column: "Key");
 
             migrationBuilder.CreateIndex(
                 name: "IX_YaDeaDictItem_Name",

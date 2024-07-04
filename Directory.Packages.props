@@ -62,6 +62,8 @@
 		<PackageVersion Include="Volo.Abp.SettingManagement.Domain.Shared" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.OpenIddict.Domain.Shared" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.Dapper" Version="$(AbpVersion)" />
+		<PackageVersion Include="Volo.Abp.Data" Version="$(AbpVersion)" />
+		<PackageVersion Include="Volo.Abp.MultiTenancy" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.Identity.EntityFrameworkCore" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="$(AbpVersion)" />

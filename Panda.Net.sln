@@ -163,7 +163,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.HttpApi", "src\Panda.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.HttpApi.Host", "src\Panda.HttpApi.Host\Panda.HttpApi.Host.csproj", "{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataDictionary.DbMigrator", "module\data-dictionary\Panda.DataDictionary.DbMigrator\Panda.DataDictionary.DbMigrator.csproj", "{CE792F48-5F9A-4958-AA28-5558B78CBFEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataDictionary.DbMigrator", "module\data-dictionary\Panda.DataDictionary.DbMigrator\Panda.DataDictionary.DbMigrator.csproj", "{CE792F48-5F9A-4958-AA28-5558B78CBFEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DbMigrator", "src\Panda.DbMigrator\Panda.DbMigrator.csproj", "{7CF67573-CEA7-4508-A7DC-BFF426DADE54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -411,6 +413,10 @@ Global
 		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CF67573-CEA7-4508-A7DC-BFF426DADE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF67573-CEA7-4508-A7DC-BFF426DADE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF67573-CEA7-4508-A7DC-BFF426DADE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF67573-CEA7-4508-A7DC-BFF426DADE54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -483,6 +489,7 @@ Global
 		{A2DDD318-749B-4769-866E-D8D66D49C4E9} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{CE792F48-5F9A-4958-AA28-5558B78CBFEC} = {2319E10B-0E15-41F6-B551-89A972A0129B}
+		{7CF67573-CEA7-4508-A7DC-BFF426DADE54} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}
