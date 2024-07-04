@@ -27,5 +27,9 @@
         public static int MaxLength4096 { get; set; } = 4096;
 
         public static int MaxLength8192 { get; set; } = 8192;
+
+        public static int MaxLength20 { get; set; } = 20;
+
+        public static int MaxLength95 { get; set; } = 95;
     }
 }

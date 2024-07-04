@@ -14,7 +14,7 @@ public abstract class DataPermissionDbContext<TDbContext> : AbpDbContext<TDbCont
 
     protected virtual string[]? CurrentDataPermissionCodes => CurrentDataPermission?.Code?.Split(',');
 
-    protected virtual Panda.DataPermission.Abstractions.DataPermission.DataPermission? DataPermission => CurrentDataPermission?.DataPermission;
+    protected virtual Abstractions.DataPermission.DataPermission? DataPermission => CurrentDataPermission?.DataPermission;
 
     public ICurrentDataPermission CurrentDataPermission => LazyServiceProvider.LazyGetRequiredService<ICurrentDataPermission>();
 

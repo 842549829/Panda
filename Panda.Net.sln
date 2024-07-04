@@ -149,19 +149,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Net.HttpApi.Host", "m
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Net.WsApi", "module\net\Panda.Net.WsApi\Panda.Net.WsApi.csproj", "{9DF4261A-6CE9-43FC-8E64-BF5A3EEA910F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Application", "src\Panda.Application\Panda.Application.csproj", "{089C43DD-1EA6-4FE4-928D-A797DABA0E66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Application", "src\Panda.Application\Panda.Application.csproj", "{089C43DD-1EA6-4FE4-928D-A797DABA0E66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Domain.Shared", "src\Panda.Domain.Shared\Panda.Domain.Shared.csproj", "{A7758D67-960E-43A9-A316-BEF583FD2816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Domain.Shared", "src\Panda.Domain.Shared\Panda.Domain.Shared.csproj", "{A7758D67-960E-43A9-A316-BEF583FD2816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Application.Contracts", "src\Panda.Application.Contracts\Panda.Application.Contracts.csproj", "{8E3944EB-6BE1-44FB-B093-AC95C1518F03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Application.Contracts", "src\Panda.Application.Contracts\Panda.Application.Contracts.csproj", "{8E3944EB-6BE1-44FB-B093-AC95C1518F03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.Domain", "src\Panda.Domain\Panda.Domain.csproj", "{AB26EC54-F9E3-4C56-B72A-ED5021014A0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.Domain", "src\Panda.Domain\Panda.Domain.csproj", "{AB26EC54-F9E3-4C56-B72A-ED5021014A0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.EntityFrameworkCore", "src\Panda.EntityFrameworkCore\Panda.EntityFrameworkCore.csproj", "{47DE9506-AAEE-4FA6-AD4F-392BCD762296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.EntityFrameworkCore", "src\Panda.EntityFrameworkCore\Panda.EntityFrameworkCore.csproj", "{47DE9506-AAEE-4FA6-AD4F-392BCD762296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.HttpApi", "src\Panda.HttpApi\Panda.HttpApi.csproj", "{A2DDD318-749B-4769-866E-D8D66D49C4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.HttpApi", "src\Panda.HttpApi\Panda.HttpApi.csproj", "{A2DDD318-749B-4769-866E-D8D66D49C4E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.HttpApi.Host", "src\Panda.HttpApi.Host\Panda.HttpApi.Host.csproj", "{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.HttpApi.Host", "src\Panda.HttpApi.Host\Panda.HttpApi.Host.csproj", "{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataDictionary.DbMigrator", "module\data-dictionary\Panda.DataDictionary.DbMigrator\Panda.DataDictionary.DbMigrator.csproj", "{CE792F48-5F9A-4958-AA28-5558B78CBFEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -405,6 +407,10 @@ Global
 		{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE792F48-5F9A-4958-AA28-5558B78CBFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -476,6 +482,7 @@ Global
 		{47DE9506-AAEE-4FA6-AD4F-392BCD762296} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{A2DDD318-749B-4769-866E-D8D66D49C4E9} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{2C426C02-87DB-4EF9-A4E3-1F0E60AFABF1} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
+		{CE792F48-5F9A-4958-AA28-5558B78CBFEC} = {2319E10B-0E15-41F6-B551-89A972A0129B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}

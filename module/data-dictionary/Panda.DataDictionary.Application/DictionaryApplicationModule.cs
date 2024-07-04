@@ -9,7 +9,8 @@ namespace Panda.DataDictionary.Application;
 [DependsOn(
     typeof(DictionaryDomainModule),
     typeof(DictionaryApplicationContractsModule),
-    typeof(PandaApplicationModule)
+    typeof(PandaApplicationModule),
+    typeof(AbpAutoMapperModule)
 )]
 public class DictionaryApplicationModule : AbpModule
 {

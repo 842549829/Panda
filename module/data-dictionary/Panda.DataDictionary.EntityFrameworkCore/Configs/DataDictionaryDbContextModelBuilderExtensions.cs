@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Panda.DataDictionary.Domain.DataDictionaries;
 using Panda.DataDictionary.Domain.DataDictionaries.Entities;
 using Panda.DataDictionary.EntityFrameworkCore.DbContext;
+using Panda.Domain.Shared.Consts;
 using Volo.Abp;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
@@ -23,8 +24,13 @@ public static class DataDictionaryDbContextModelBuilderExtensions
             b.ConfigureDictEntity();
 
             b.Property(u => u.Alias).IsRequired()
-                .HasMaxLength(512)
+                .HasMaxLength(PandaConsts.MaxLength512)
                 .HasColumnName(nameof(DictCategory.Alias));
+
+            b.HasMany(a => a.Items)
+                .WithOne(a => a.Category)
+                .HasForeignKey(a => a.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);  
 
             b.ApplyObjectExtensionMappings();
         });
@@ -37,17 +43,20 @@ public static class DataDictionaryDbContextModelBuilderExtensions
 
             b.ConfigureDictEntity();
 
+            b.Property(u => u.CategoryId).IsRequired()
+                .HasColumnName(nameof(DictItem.CategoryId));
+
             b.Property(u => u.Style).IsRequired()
-                .HasMaxLength(512)
+                .HasMaxLength(PandaConsts.MaxLength512)
                 .HasColumnName(nameof(DictItem.Style));
 
             b.Property(u => u.Value).IsRequired()
-                .HasMaxLength(16)
+                .HasMaxLength(PandaConsts.MaxLength16)
                 .HasColumnName(nameof(DictItem.Value));
 
             b.ApplyObjectExtensionMappings();
         });
-        
+
 
         builder.TryConfigureObjectExtensions<DataDictionaryDbContext>();
     }
@@ -58,11 +67,11 @@ public static class DataDictionaryDbContextModelBuilderExtensions
         b.Property(x => x.Id).ValueGeneratedNever();
 
         b.Property(u => u.Name).IsRequired()
-            .HasMaxLength(256)
+            .HasMaxLength(PandaConsts.MaxLength256)
             .HasColumnName(nameof(DictEntity.Name));
 
         b.Property(u => u.Code).IsRequired()
-            .HasMaxLength(4096)
+            .HasMaxLength(PandaConsts.MaxLength95)
             .HasColumnName(nameof(DictEntity.Code));
 
         b.Property(u => u.ParnetId).IsRequired(false)
@@ -75,11 +84,11 @@ public static class DataDictionaryDbContextModelBuilderExtensions
             .HasColumnName(nameof(DictEntity.Status));
 
         b.Property(u => u.Key).IsRequired()
-            .HasMaxLength(32)
+            .HasMaxLength(PandaConsts.MaxLength32)
             .HasColumnName(nameof(DictEntity.Key));
 
         b.Property(u => u.Describe).IsRequired()
-            .HasMaxLength(512)
+            .HasMaxLength(PandaConsts.MaxLength512)
             .HasColumnName(nameof(DictEntity.Describe));
 
         b.Property(u => u.Sort).IsRequired()

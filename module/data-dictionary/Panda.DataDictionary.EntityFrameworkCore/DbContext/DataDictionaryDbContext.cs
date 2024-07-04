@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Panda.DataDictionary.Domain.DataDictionaries;
 using Panda.DataDictionary.Domain.DataDictionaries.Entities;
 using Panda.DataDictionary.EntityFrameworkCore.Configs;
@@ -18,6 +19,16 @@ public class DataDictionaryDbContext : DataPermissionDbContext<DataDictionaryDbC
 
     public DbSet<DictItem> DictItem { get; set; } = default!;
 
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        // 设置 EF Core 日志级别，以便记录SQL语句
+        optionsBuilder.LogTo(message =>
+        {
+            Logger.LogDebug(message);
+        }, new[] { Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.CommandExecuting });
+        optionsBuilder.EnableSensitiveDataLogging(); // 如果需要记录敏感数据，请谨慎启用此选项
+    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -20,7 +20,7 @@ public class DictCategoryDto : ExtensibleEntityDto<Guid>, IHasConcurrencyStamp
 
     public string Key { get; set; } = default!;
 
-    public string Describe { get; } = default!;
+    public string Describe { get; set; } = default!;
 
     public string Code { get; set; } = default!;
 

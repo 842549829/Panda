@@ -4,7 +4,7 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace Panda.DataDictionary.HttpApi.Controllers;
 
-[Authorize]
+//[Authorize]
 public abstract class DictionaryBaseController : AbpControllerBase
 {
     protected DictionaryBaseController()

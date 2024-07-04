@@ -11,6 +11,8 @@ public class DictCategory : DictEntity
 
     public string Alias { get; set; }
 
+    public ICollection<DictItem> Items { get; set; } = default!;
+
     public void Update(string name, int sort, string describe, string alias)
     {
         Update(name, sort, describe);

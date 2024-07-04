@@ -8,7 +8,7 @@ public class DictCategoryCreateOrUpdateDtoBase : ExtensibleObject
 
     public string Name { get; set; } = default!;
 
-    public string Describe { get; } = default!;
+    public string Describe { get; set; } = default!;
 
     public int Sort { get; set; } = default!;
 }

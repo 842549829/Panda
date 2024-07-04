@@ -4,5 +4,5 @@ namespace Panda.DataDictionary.Application.Contracts.DataDictionaries.DictCatego
 
 public class GetDictCategoryInput : PagedAndSortedResultRequestDto
 {
-    public string Filter { get; set; } = default!;
+    public string? Filter { get; set; }
 }
