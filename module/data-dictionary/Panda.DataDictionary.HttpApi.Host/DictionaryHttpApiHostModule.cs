@@ -3,6 +3,7 @@ using Panda.DataDictionary.Application.Contracts;
 using Panda.DataDictionary.Domain;
 using Panda.DataDictionary.Domain.Shared;
 using Panda.DataDictionary.EntityFrameworkCore;
+using Panda.DataPermission.AspNetCore;
 using Panda.HttpApi.Host;
 using Panda.HttpApi.Host.Configurations;
 using Volo.Abp;
@@ -92,6 +93,7 @@ public class DictionaryHttpApiHostModule : AbpModule
         app.UseAuthentication();
 
         app.UseMultiTenancy();
+        app.UseDataPermission();
 
         app.UseAuthorization();
 

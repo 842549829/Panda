@@ -12,6 +12,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\src\Panda.Application\Panda.Application.csproj" />
+	  <ProjectReference Include="..\..\net\Panda.Net.HttpApi.Client\Panda.Net.HttpApi.Client.csproj" />
 	  <ProjectReference Include="..\Panda.DataDictionary.Application.Contracts\Panda.DataDictionary.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\Panda.DataDictionary.Domain\Panda.DataDictionary.Domain.csproj" />
 	</ItemGroup>

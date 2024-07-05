@@ -1,3 +1,4 @@
+using Panda.DataPermission.Abstractions.DataPermission;
 using Panda.Messaging.Application.Contracts;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
@@ -19,7 +20,8 @@ namespace Panda.Net;
     typeof(AbpSettingManagementApplicationContractsModule),
     typeof(AbpTenantManagementApplicationContractsModule),
     typeof(AbpObjectExtendingModule),
-    typeof(MessageApplicationContractsModule)
+    typeof(MessageApplicationContractsModule),
+    typeof(DataPermissionAbstractionsModule)
 )]
 public class NetApplicationContractsModule : AbpModule
 {

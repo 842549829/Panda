@@ -21,7 +21,7 @@ namespace Panda.Net;
 )]
 public class NetHttpApiClientModule : AbpModule
 {
-    public const string RemoteServiceName = "Default";
+    public const string RemoteServiceName = "Net";
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
