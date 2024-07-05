@@ -15,7 +15,7 @@ public class ValidatorDictCategoryCreate : ValidatorDictCategory<DictCategoryCre
         RuleFor(x => x.Key)
             .NotNull()
             .WithMessage("字典分类Key不能为空")
-            .Length(2, 30)
+            .Length(1, 30)
             .WithMessage("字典分类Key输入错误 长度1-20位");
     }
 }
