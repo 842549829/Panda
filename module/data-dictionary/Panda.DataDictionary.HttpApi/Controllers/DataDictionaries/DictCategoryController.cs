@@ -20,13 +20,13 @@ public class DictCategoryController(IDictCategoryAppService dictCategoryAppServi
         return dictCategoryAppService.CreateAsync(input);
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public Task<DictCategoryDto> UpdateAsync(Guid id, [FromBody] DictCategoryUpdateDto input)
     {
         return dictCategoryAppService.UpdateAsync(id, input);
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public Task DeleteAsync(Guid id)
     {
         return dictCategoryAppService.DeleteAsync(id);

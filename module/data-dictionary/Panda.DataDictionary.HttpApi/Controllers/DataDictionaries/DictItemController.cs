@@ -20,13 +20,13 @@ public class DictItemController(IDictItemAppService dictItemAppService) : Dictio
         return dictItemAppService.CreateAsync(input);
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public Task<DictItemDto> UpdateAsync(Guid id, [FromBody] DictItemUpdateDto input)
     {
         return dictItemAppService.UpdateAsync(id, input);
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public Task DeleteAsync(Guid id)
     {
         return dictItemAppService.DeleteAsync(id);
