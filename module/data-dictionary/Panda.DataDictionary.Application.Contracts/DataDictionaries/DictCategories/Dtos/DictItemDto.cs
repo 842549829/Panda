@@ -6,6 +6,8 @@ namespace Panda.DataDictionary.Application.Contracts.DataDictionaries.DictCatego
 
 public class DictItemDto : ExtensibleEntityDto<Guid>, IHasConcurrencyStamp
 {
+    public Guid CategoryId { get; set; }
+
     public string ConcurrencyStamp { get; set; } = default!;
 
     public string? Style { get; set; } 
