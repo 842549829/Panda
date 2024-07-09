@@ -5,28 +5,28 @@ pipeline{
         timeout(time: 3600, unit: 'SECONDS')
     }
     stages{
-        stage("dotnet build"){
-            steps{
-                //echo "========executing A========"
-                sh "dotnet build -f ${PUBLISH_FRAMEWORK} -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH} "
-            }
-            // post{
-            //     always{
-            //         echo "========dotnet build after========"
-            //     }
-            //     success{
-            //         echo "========dotnet build successfully========"
-            //     }
-            //     failure{
-            //         echo "========dotnet build failed========"
-            //     }
-            // }
-        }
-        stage("dotnet publish"){
-            steps{
-                sh "dotnet publish -f ${PUBLISH_FRAMEWORK}  -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH}"
-            }
-        }
+        // stage("dotnet build"){
+        //     steps{
+        //         //echo "========executing A========"
+        //         sh "dotnet build -f ${PUBLISH_FRAMEWORK} -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH} "
+        //     }
+        //     // post{
+        //     //     always{
+        //     //         echo "========dotnet build after========"
+        //     //     }
+        //     //     success{
+        //     //         echo "========dotnet build successfully========"
+        //     //     }
+        //     //     failure{
+        //     //         echo "========dotnet build failed========"
+        //     //     }
+        //     // }
+        // }
+        // stage("dotnet publish"){
+        //     steps{
+        //         sh "dotnet publish -f ${PUBLISH_FRAMEWORK}  -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH}"
+        //     }
+        // }
         stage("copy docker file"){
             steps{
                 sh "cp ${ROOT_PATH}/Dockerfile ${ROOT_PATH}/${PUBLISH_PATH}/Dockerfile"
