@@ -8,6 +8,14 @@ EXPOSE 5000
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+COPY ["NuGet.Config", "src/"]
+COPY ["common.props", "src/"]
+COPY ["common.test.props", "src/"]
+COPY ["configureawait.props", "src/"]
+COPY ["Directory.Build.props", "src/"]
+COPY ["Directory.Packages.props", "src/"]
+COPY ["global.json", "src/"]
+COPY ["version.props", "src/"]
 COPY ["module/data-dictionary/Panda.DataDictionary.HttpApi.Host/Panda.DataDictionary.HttpApi.Host.csproj", "module/data-dictionary/Panda.DataDictionary.HttpApi.Host/"]
 COPY ["src/Panda.HttpApi.Host/Panda.HttpApi.Host.csproj", "src/Panda.HttpApi.Host/"]
 COPY ["src/Panda.Application/Panda.Application.csproj", "src/Panda.Application/"]
