@@ -45,7 +45,7 @@ pipeline{
             }
         }
         stage("docker run"){
-            stages{
+            steps{
                 sh 'docker run -d  -p  ${RUN_PORT}:5000  -e RuntimeNameSpace="${RUNTIME_NAMESPACE}" --privileged --restart=always --name ${CURRENT_CONTAINER_NAME} ${CURRENT_IMAGE_NAME}'
             }
         }
