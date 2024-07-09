@@ -32,12 +32,12 @@ pipeline{
         //         sh "cp ${ROOT_PATH}/Dockerfile ${ROOT_PATH}/${PUBLISH_PATH}/Dockerfile"
         //     }
         // }
-        stage("docker remove"){
-            when { branch 'master' }     
-            steps{
-                 sh '(docker rm -f ${CURRENT_CONTAINER_NAME}&&docker rmi -f ${CURRENT_IMAGE_NAME})||echo "not exits ${CURRENT_CONTAINER_NAME} continue "'
-            }
-        }
+        // stage("docker remove"){
+        //     when { branch 'master' }     
+        //     steps{
+        //          sh '(docker rm -f ${CURRENT_CONTAINER_NAME}&&docker rmi -f ${CURRENT_IMAGE_NAME})||echo "not exits ${CURRENT_CONTAINER_NAME} continue "'
+        //     }
+        // }
         stage("docker build"){
             steps{
                 sh '''cd ${ROOT_PATH}
