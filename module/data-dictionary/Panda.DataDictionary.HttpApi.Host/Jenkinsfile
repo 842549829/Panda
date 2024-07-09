@@ -1,0 +1,77 @@
+pipeline{
+    agent any
+    options {
+        // 设置超时时间3600秒
+        timeout(time: 3600, unit: 'SECONDS')
+    }
+    stages{
+        stage("dotnet build"){
+            steps{
+                //echo "========executing A========"
+                sh "dotnet build -f ${PUBLISH_FRAMEWORK} -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH} "
+            }
+            // post{
+            //     always{
+            //         echo "========dotnet build after========"
+            //     }
+            //     success{
+            //         echo "========dotnet build successfully========"
+            //     }
+            //     failure{
+            //         echo "========dotnet build failed========"
+            //     }
+            // }
+        }
+        stage("dotnet publish"){
+            steps{
+                sh "dotnet publish -f ${PUBLISH_FRAMEWORK}  -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH}"
+            }
+        }
+        stage("copy docker file"){
+            steps{
+                sh "cp ${ROOT_PATH}/Dockerfile ${ROOT_PATH}/${PUBLISH_PATH}/Dockerfile"
+            }
+        }
+        stage("docker remove"){
+            when { branch 'master' }     
+            steps{
+                 sh '(docker rm -f ${CURRENT_CONTAINER_NAME}&&docker rmi -f ${CURRENT_IMAGE_NAME})||echo "not exits ${CURRENT_CONTAINER_NAME} continue "'
+            }
+        }
+        stage("docker build"){
+            steps{
+                sh '''cd ${ROOT_PATH}/${PUBLISH_PATH}
+                    docker build -t ${CURRENT_IMAGE_NAME}  .'''
+            }
+        }
+        stage("docker run"){
+            stages{
+                sh 'docker run -d  -p  ${RUN_PORT}:5000  -e RuntimeNameSpace="${RUNTIME_NAMESPACE}" --privileged --restart=always --name ${CURRENT_CONTAINER_NAME} ${CURRENT_IMAGE_NAME}'
+            }
+        }
+    }
+    post{
+        always{
+            echo "========after========"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
+    environment {
+        PUBLISH_FRAMEWORK = 'net8.0'
+        PUBLISH_RUNTMIE = 'linux-x64'
+        PUBLISH_PATH = 'publish'
+        ROOT_PATH = './module/data-dictionary/Panda.DataDictionary.HttpApi.Host'
+        PROJECT_NAME = 'Panda.DataDictionary.HttpApi.Host.csproj'
+	    RUN_PORT=5542
+	    RUNTIME_NAMESPACE='Pro'
+        CURRENT_IMAGE_NAME = 'panda/net:1.1.1.2'
+        CURRENT_CONTAINER_NAME = 'panda/net'
+        PUBLISH_CMD = 'echo "continue"'
+        PUSH_ADDRESS = 'http://139.159.202.0:5000'
+    }
+}
