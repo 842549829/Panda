@@ -8,13 +8,13 @@ EXPOSE 5000
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Panda.DataDictionary.HttpApi.Host/Panda.DataDictionary.HttpApi.Host.csproj", "src/Panda.DataDictionary.HttpApi.Host/"]
-COPY ["Panda.DataDictionary.Application/Panda.DataDictionary.Application.csproj", "src/Panda.DataDictionary.Application/"]
-COPY ["Panda.DataDictionary.Domain/Panda.DataDictionary.Domain.csproj", "src/Panda.DataDictionary.Domain/"]
-COPY ["Panda.DataDictionary.Domain.Shared/Panda.DataDictionary.Domain.Shared.csproj", "src/Panda.DataDictionary.Domain.Shared/"]
-COPY ["Panda.DataDictionary.Application.Contracts/Panda.DataDictionary.Application.Contracts.csproj", "src/Panda.DataDictionary.Application.Contracts/"]
-COPY ["Panda.DataDictionary.EntityFrameworkCore/Panda.DataDictionary.EntityFrameworkCore.csproj", "src/Panda.DataDictionary.EntityFrameworkCore/"]
-COPY ["Panda.DataDictionary.HttpApi/Panda.DataDictionary.HttpApi.csproj", "src/Panda.DataDictionary.HttpApi/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.HttpApi.Host/Panda.DataDictionary.HttpApi.Host.csproj", "src/Panda.DataDictionary.HttpApi.Host/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.Application/Panda.DataDictionary.Application.csproj", "src/Panda.DataDictionary.Application/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.Domain/Panda.DataDictionary.Domain.csproj", "src/Panda.DataDictionary.Domain/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.Domain.Shared/Panda.DataDictionary.Domain.Shared.csproj", "src/Panda.DataDictionary.Domain.Shared/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.Application.Contracts/Panda.DataDictionary.Application.Contracts.csproj", "src/Panda.DataDictionary.Application.Contracts/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.EntityFrameworkCore/Panda.DataDictionary.EntityFrameworkCore.csproj", "src/Panda.DataDictionary.EntityFrameworkCore/"]
+COPY ["module/data-dictionary/Panda.DataDictionary.HttpApi/Panda.DataDictionary.HttpApi.csproj", "src/Panda.DataDictionary.HttpApi/"]
 RUN dotnet restore "./src/Panda.DataDictionary.HttpApi.Host/Panda.DataDictionary.HttpApi.Host.csproj"
 COPY . .
 WORKDIR "/src/src/Panda.DataDictionary.HttpApi.Host"
