@@ -27,11 +27,11 @@ pipeline{
         //         sh "dotnet publish -f ${PUBLISH_FRAMEWORK}  -r ${PUBLISH_RUNTMIE} -c Release ${ROOT_PATH}/${PROJECT_NAME}  -o ${ROOT_PATH}/${PUBLISH_PATH}"
         //     }
         // }
-        stage("copy docker file"){
-            steps{
-                sh "cp ${ROOT_PATH}/Dockerfile ${ROOT_PATH}/${PUBLISH_PATH}/Dockerfile"
-            }
-        }
+        // stage("copy docker file"){
+        //     steps{
+        //         sh "cp ${ROOT_PATH}/Dockerfile ${ROOT_PATH}/${PUBLISH_PATH}/Dockerfile"
+        //     }
+        // }
         stage("docker remove"){
             when { branch 'master' }     
             steps{
@@ -40,7 +40,7 @@ pipeline{
         }
         stage("docker build"){
             steps{
-                sh '''cd ${ROOT_PATH}/${PUBLISH_PATH}
+                sh '''cd ${ROOT_PATH}
                     docker build -t ${CURRENT_IMAGE_NAME}  .'''
             }
         }
