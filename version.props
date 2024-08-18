@@ -5,6 +5,6 @@
 		<!-- All Microsoft TargetFrameworks Packages -->
 		<MicrosoftTargetFrameworks>net8.0</MicrosoftTargetFrameworks>
 		<!-- All Abp Version Packages -->
-		<AbpVersion>8.2.0</AbpVersion>
+		<AbpVersion>8.2.2</AbpVersion>
 	</PropertyGroup>
 </Project>
