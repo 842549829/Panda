@@ -1,4 +1,5 @@
-﻿using Panda.Messaging.Domain.Shared;
+﻿using Panda.Domain.Shared;
+using Panda.Messaging.Domain.Shared;
 using Panda.Net.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
@@ -25,7 +26,8 @@ namespace Panda.Net;
     typeof(AbpPermissionManagementDomainSharedModule),
     typeof(AbpSettingManagementDomainSharedModule),
     typeof(AbpTenantManagementDomainSharedModule),
-    typeof(MessageDomainSharedModule)
+    typeof(MessageDomainSharedModule),
+    typeof(PandaDomainSharedModule)
     )]
 public class NetDomainSharedModule : AbpModule
 {

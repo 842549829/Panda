@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="PinYin" />
 		<PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" />
 	</ItemGroup>
 

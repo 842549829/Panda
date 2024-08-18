@@ -2,7 +2,7 @@
 
 namespace Panda.Domain.Entities;
 
-public interface IEnable
+public interface IHasEnable
 {
     Enable Status { get; }
 

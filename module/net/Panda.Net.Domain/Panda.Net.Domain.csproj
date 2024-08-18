@@ -10,6 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Panda.Domain\Panda.Domain.csproj" />
 		<ProjectReference Include="..\..\data-permission\Panda.DataPermission\Panda.DataPermission.csproj" />
 		<ProjectReference Include="..\..\messaging\Panda.Messaging.Domain\Panda.Messaging.Domain.csproj" />
 		<ProjectReference Include="..\Panda.Net.Domain.Shared\Panda.Net.Domain.Shared.csproj" />

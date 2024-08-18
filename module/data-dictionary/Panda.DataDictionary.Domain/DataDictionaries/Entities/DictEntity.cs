@@ -6,7 +6,7 @@ using Volo.Abp.MultiTenancy;
 
 namespace Panda.DataDictionary.Domain.DataDictionaries.Entities;
 
-public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant, IEnable, ISort, IDataPermission
+public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant, IHasEnable, IHasSort, IDataPermission
 {
     protected DictEntity(Guid id, string key, string name, Enable status, int sort, string describe, string code, Guid? parnetId, Guid? tenantId)
     : base(id)
@@ -36,6 +36,11 @@ public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant,
     public string Code { get; set; }
 
     public int Sort { get; set; }
+
+    public void ChangeSort(int sort)
+    {
+        Sort = sort;
+    }
 
     public void ChangeStatus(Enable status)
     {
