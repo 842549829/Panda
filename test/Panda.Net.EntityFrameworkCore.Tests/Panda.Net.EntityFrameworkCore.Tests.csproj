@@ -18,4 +18,11 @@
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Update="coverlet.collector">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
 </Project>
