@@ -5,4 +5,4 @@ namespace Panda.Net.Bases.Departments;
 /// <summary>
 /// 科室类型
 /// </summary>
-public class DepartmentType(string name) : FullAuditedAggregateHealthcare<Guid>(name);
+public class DepartmentType(string name) : FullHealthcareAuditedAggregateRoot<Guid>(name);

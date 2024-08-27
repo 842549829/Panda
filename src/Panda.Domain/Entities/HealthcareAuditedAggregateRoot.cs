@@ -1,31 +1,32 @@
 ﻿using Panda.Domain.Shared.Enums;
 using Panda.Domain.Shared.Extensions;
 using Volo.Abp.Domain.Entities.Auditing;
-using Volo.Abp.MultiTenancy;
 
 namespace Panda.Domain.Entities;
 
-public class FullAuditedAggregateHealthcare<TKey>(string name, string code) :
+public abstract class HealthcareAuditedAggregateRoot<TKey>(string name, string code):
     FullAuditedAggregateRoot<TKey>,
     IMayHaveCreatorName,
     IMayHaveModificationName,
     IMayHaveDeletionName,
-    IMultiTenant,
-    IHasEnable,
-    IHasSort,
+    IMultiTenantExtension,
+    IHasEnableExtension,
+    IHasSortExtension,
     IHasPinyin,
     IHasName,
     IHasCode,
-    IMayHaveDescribe,
-    IHasOrganization
+    IMayHaveDescribeExtension
 {
-    public FullAuditedAggregateHealthcare(string name) : this(name, string.Empty)
+    protected HealthcareAuditedAggregateRoot(string name) : this(name, string.Empty)
     {
     }
 
     public Guid? TenantId { get; private set; }
 
-    public Guid OrganizationId { get; private set; }
+    public void ChangeTenant(Guid? tenantId)
+    {
+        TenantId = tenantId;
+    }
 
     public string Name { get; private set; } = name;
 
@@ -46,6 +47,11 @@ public class FullAuditedAggregateHealthcare<TKey>(string name, string code) :
     public string? DeletionName { get; set; }
 
     public string? Describe { get; private set; }
+
+    public void SetDescribe(string? describe)
+    {
+        Describe = describe;
+    }
 
     public void ChangeSort(int sort)
     {
