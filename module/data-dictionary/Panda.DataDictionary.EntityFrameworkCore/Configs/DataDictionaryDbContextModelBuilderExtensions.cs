@@ -70,12 +70,12 @@ public static class DataDictionaryDbContextModelBuilderExtensions
             .HasMaxLength(PandaConsts.MaxLength256)
             .HasColumnName(nameof(DictEntity.Name));
 
-        b.Property(u => u.Code).IsRequired()
+        b.Property(u => u.OrganizationCode).IsRequired()
             .HasMaxLength(PandaConsts.MaxLength95)
-            .HasColumnName(nameof(DictEntity.Code));
+            .HasColumnName(nameof(DictEntity.OrganizationCode));
 
-        b.Property(u => u.ParnetId).IsRequired(false)
-            .HasColumnName(nameof(DictEntity.ParnetId));
+        b.Property(u => u.ParentId).IsRequired(false)
+            .HasColumnName(nameof(DictEntity.ParentId));
 
         b.Property(u => u.TenantId).IsRequired(false)
             .HasColumnName(nameof(DictEntity.TenantId));
@@ -94,7 +94,7 @@ public static class DataDictionaryDbContextModelBuilderExtensions
         b.Property(u => u.Sort).IsRequired()
             .HasColumnName(nameof(DictEntity.Sort));
 
-        b.HasIndex(u => u.Code);
+        b.HasIndex(u => u.OrganizationCode);
         b.HasIndex(u => u.Name);
         b.HasIndex(u => new { u.Key, u.TenantId })
          .IsUnique();

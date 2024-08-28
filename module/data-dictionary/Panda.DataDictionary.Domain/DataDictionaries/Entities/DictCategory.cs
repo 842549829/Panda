@@ -1,21 +1,32 @@
 ﻿using Panda.Domain.Shared.Enums;
+using Volo.Abp;
 
 namespace Panda.DataDictionary.Domain.DataDictionaries.Entities;
 
-public class DictCategory : DictEntity
+public class DictCategory(
+    Guid id,
+    string key,
+    string name,
+    Enable status,
+    int sort,
+    string describe,
+    string alias,
+    string code,
+    Guid? parentId,
+    Guid? tenantId,
+    string organizationCode)
+    : DictEntity(id, key, name, status, sort, describe, code, parentId, tenantId, organizationCode)
 {
-    public DictCategory(Guid id, string key, string name, Enable status, int sort, string describe, string alias, string code, Guid? parnetId, Guid? tenantId) : base(id, key, name, status, sort, describe, code, parnetId, tenantId)
-    {
-        Alias = alias;
-    }
-
-    public string Alias { get; set; }
+    public string Alias { get; set; } = alias;
 
     public ICollection<DictItem> Items { get; set; } = default!;
 
     public void Update(string name, int sort, string describe, string alias)
     {
-        Update(name, sort, describe);
+        Check.NotNull(alias, nameof(alias));
+        SetName(name);
+        SetSort(sort);
+        SetDescribe(describe);
         Alias = alias;
     }
 }

@@ -101,9 +101,9 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
                         .HasColumnType("varchar(256)")
                         .HasColumnName("Name");
 
-                    b.Property<Guid?>("ParnetId")
+                    b.Property<Guid?>("ParentId")
                         .HasColumnType("char(36)")
-                        .HasColumnName("ParnetId");
+                        .HasColumnName("ParentId");
 
                     b.Property<int>("Sort")
                         .HasColumnType("int")
@@ -204,9 +204,9 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
                         .HasColumnType("varchar(256)")
                         .HasColumnName("Name");
 
-                    b.Property<Guid?>("ParnetId")
+                    b.Property<Guid?>("ParentId")
                         .HasColumnType("char(36)")
-                        .HasColumnName("ParnetId");
+                        .HasColumnName("ParentId");
 
                     b.Property<int>("Sort")
                         .HasColumnType("int")

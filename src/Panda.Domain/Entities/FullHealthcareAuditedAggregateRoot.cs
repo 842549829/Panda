@@ -1,9 +1,9 @@
 ﻿namespace Panda.Domain.Entities;
 
-public abstract class FullHealthcareAuditedAggregateRoot<TKey>(string name, string code) : HealthcareAuditedAggregateRoot<TKey>(name, code),
+public abstract class FullHealthcareAuditedAggregateRoot<TKey>(TKey id, string name, string code) : HealthcareAuditedAggregateRoot<TKey>(id, name, code),
     IHasOrganizationExtension
 {
-    protected FullHealthcareAuditedAggregateRoot(string name) : this(name, string.Empty)
+    protected FullHealthcareAuditedAggregateRoot(TKey id, string name) : this(id, name, string.Empty)
     {
     }
 

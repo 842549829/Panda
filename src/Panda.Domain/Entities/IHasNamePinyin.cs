@@ -1,6 +1,6 @@
 ﻿namespace Panda.Domain.Entities
 {
-    public interface IHasPinyin
+    public interface IHasNamePinyin : IHasName
     {
         string Pinyin { get; }
 

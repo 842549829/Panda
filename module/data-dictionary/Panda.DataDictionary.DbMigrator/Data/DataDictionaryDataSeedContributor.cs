@@ -39,7 +39,7 @@ public class DataDictionaryDataSeedContributor : IDataSeedContributor, ITransien
         {
             var dictCategories = new List<DictCategory>()
             {
-                new DictCategory(GuidGenerator.Create(), "Sex", "性别", Enable.Enabled, 1, "性别", "性别",string.Empty,null,context.TenantId)
+                new DictCategory(GuidGenerator.Create(), "Sex", "性别", Enable.Enabled, 1, "性别", "性别",string.Empty,null,context.TenantId, string.Empty)
             };
 
             foreach (var dictCategory in dictCategories)
@@ -47,9 +47,9 @@ public class DataDictionaryDataSeedContributor : IDataSeedContributor, ITransien
                 dictCategory.Items = new List<DictItem>()
                 {
                     new DictItem(GuidGenerator.Create(), dictCategory.Id, "Male", "0", "男", Enable.Enabled, 0, "男",
-                        string.Empty, string.Empty, null,context.TenantId),
+                        string.Empty, string.Empty, null,context.TenantId, string.Empty),
                     new DictItem(GuidGenerator.Create(), dictCategory.Id, "Female", "1", "女",Enable.Enabled, 2, "女",
-                        string.Empty, string.Empty,null, context.TenantId)
+                        string.Empty, string.Empty,null, context.TenantId, string.Empty)
                 };
             }
 

@@ -1,7 +1,7 @@
 ﻿namespace Panda.Domain.Entities;
 
-public abstract class FullPersonnelAuditedAggregateRoot<TKey>(string name, string code, string idCardType, string idCardNo, string gender, string phone) 
-    : FullHealthcareAuditedAggregateRoot<TKey>(name, code), IHasUserBaseInfoExtension
+public abstract class FullPersonnelAuditedAggregateRoot<TKey>(TKey id, string name, string code, string idCardType, string idCardNo, string gender, string phone)
+    : FullHealthcareAuditedAggregateRoot<TKey>(id, name, code), IHasUserBaseInfoExtension
 {
     public string? NationCode { get; private set; }
 

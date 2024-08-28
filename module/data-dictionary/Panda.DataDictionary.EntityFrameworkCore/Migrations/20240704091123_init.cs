@@ -32,7 +32,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
                     IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
                     DeleterId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     DeletionTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    ParnetId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    ParentId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     TenantId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: false)
@@ -72,7 +72,7 @@ namespace Panda.DataDictionary.EntityFrameworkCore.Migrations
                     IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
                     DeleterId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     DeletionTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    ParnetId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    ParentId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     TenantId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: false)

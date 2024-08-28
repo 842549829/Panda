@@ -4,5 +4,5 @@ namespace Panda.Domain.Entities;
 
 public interface IHasEnableExtension : IHasEnable
 {
-    void ChangeStatus(Enable status);
+    void SetStatus(Enable status);
 }

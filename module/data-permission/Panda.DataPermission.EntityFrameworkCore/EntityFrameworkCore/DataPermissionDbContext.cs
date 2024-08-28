@@ -31,10 +31,10 @@ public abstract class DataPermissionDbContext<TDbContext> : AbpDbContext<TDbCont
 
             Expression<Func<TEntity, bool>> dataPermissionFilter = e => !IsDataPermissionFilterEnabled
                                                                         || DataPermission == Abstractions.DataPermission.DataPermission.All
-                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode)
-                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && (EF.Property<string>(e, nameof(IDataPermission.Code)) == CurrentDataPermissionCode || EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!)))
-                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Sub && (EF.Property<string>(e, nameof(IDataPermission.Code)) != CurrentDataPermissionCode && EF.Property<string>(e, nameof(IDataPermission.Code)).StartsWith(CurrentDataPermissionCode!)))
-                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Custom && CurrentDataPermissionCodes!.Contains(EF.Property<string>(e, nameof(IDataPermission.Code))))
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && EF.Property<string>(e, nameof(IDataPermission.OrganizationCode)) == CurrentDataPermissionCode)
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Cur && (EF.Property<string>(e, nameof(IDataPermission.OrganizationCode)) == CurrentDataPermissionCode || EF.Property<string>(e, nameof(IDataPermission.OrganizationCode)).StartsWith(CurrentDataPermissionCode!)))
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Sub && (EF.Property<string>(e, nameof(IDataPermission.OrganizationCode)) != CurrentDataPermissionCode && EF.Property<string>(e, nameof(IDataPermission.OrganizationCode)).StartsWith(CurrentDataPermissionCode!)))
+                                                                        || (DataPermission == Abstractions.DataPermission.DataPermission.Custom && CurrentDataPermissionCodes!.Contains(EF.Property<string>(e, nameof(IDataPermission.OrganizationCode))))
                                                                         ;
             expression = expression == null ? dataPermissionFilter : QueryFilterExpressionHelper.CombineExpressions(expression, dataPermissionFilter);
         }

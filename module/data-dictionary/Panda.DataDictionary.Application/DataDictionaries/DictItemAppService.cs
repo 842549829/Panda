@@ -37,8 +37,9 @@ public class DictItemAppService(IDictItemManager dictItemManager)
             input.Describe,
             input.Style ?? string.Empty,
             string.Empty,
-            input.ParnetId,
-            CurrentUser.TenantId
+            input.ParentId,
+            CurrentUser.TenantId,
+            string.Empty
         );
 
         input.MapExtraPropertiesTo(dictItem);
@@ -57,7 +58,7 @@ public class DictItemAppService(IDictItemManager dictItemManager)
         dictItem.SetConcurrencyStampIfNotNull(input.ConcurrencyStamp);
 
         dictItem.Update(input.Name, input.Sort, input.Describe, input.Style ?? string.Empty);
-        dictItem.ChangeStatus(input.Status);
+        dictItem.SetStatus(input.Status);
 
         input.MapExtraPropertiesTo(dictItem);
 

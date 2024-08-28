@@ -2,7 +2,7 @@
 
 public class DictCategoryCreateDto : DictCategoryCreateOrUpdateDtoBase
 {
-    public Guid? ParnetId { get; set; }
+    public Guid? ParentId { get; set; }
 
     public string Key { get; set; } = default!;
 }

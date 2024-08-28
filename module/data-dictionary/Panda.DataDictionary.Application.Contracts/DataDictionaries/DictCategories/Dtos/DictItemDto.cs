@@ -14,7 +14,7 @@ public class DictItemDto : ExtensibleEntityDto<Guid>, IHasConcurrencyStamp
 
     public string Value { get; set; } = default!;
 
-    public Guid? ParnetId { get; set; }
+    public Guid? ParentId { get; set; }
 
     public Guid? TenantId { get; set; }
 

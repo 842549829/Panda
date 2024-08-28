@@ -2,7 +2,7 @@
 
 public class DictItemCreateDto : DictItemCreateOrUpdateDtoBase
 {
-    public Guid? ParnetId { get; set; }
+    public Guid? ParentId { get; set; }
 
     public string Key { get; set; } = default!;
 

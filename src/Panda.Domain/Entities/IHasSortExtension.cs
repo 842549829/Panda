@@ -2,5 +2,5 @@
 
 public interface IHasSortExtension : IHasSort
 {
-    void ChangeSort(int sort);
+    void SetSort(int sort);
 }

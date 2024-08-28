@@ -1,29 +1,30 @@
 ﻿using Panda.Domain.Shared.Enums;
 using Panda.Domain.Shared.Extensions;
+using Volo.Abp;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace Panda.Domain.Entities;
 
-public abstract class HealthcareAuditedAggregateRoot<TKey>(string name, string code):
-    FullAuditedAggregateRoot<TKey>,
+public abstract class HealthcareAuditedAggregateRoot<TKey>(TKey id, string name, string code) :
+    FullAuditedAggregateRoot<TKey>(id),
     IMayHaveCreatorName,
     IMayHaveModificationName,
     IMayHaveDeletionName,
     IMultiTenantExtension,
     IHasEnableExtension,
     IHasSortExtension,
-    IHasPinyin,
-    IHasName,
-    IHasCode,
+    IHasNamePinyin,
+    IHasNameExtension,
+    IHasCodeExtension,
     IMayHaveDescribeExtension
 {
-    protected HealthcareAuditedAggregateRoot(string name) : this(name, string.Empty)
+    protected HealthcareAuditedAggregateRoot(TKey id, string name) : this(id, name, string.Empty)
     {
     }
 
     public Guid? TenantId { get; private set; }
 
-    public void ChangeTenant(Guid? tenantId)
+    public void SetTenant(Guid? tenantId)
     {
         TenantId = tenantId;
     }
@@ -31,6 +32,11 @@ public abstract class HealthcareAuditedAggregateRoot<TKey>(string name, string c
     public string Name { get; private set; } = name;
 
     public string Code { get; private set; } = code;
+
+    public void SetCode(string code)
+    {
+        Code = code;
+    }
 
     public string Pinyin { get; private set; } = PinyinExtension.GetPinyin(name);
 
@@ -53,13 +59,21 @@ public abstract class HealthcareAuditedAggregateRoot<TKey>(string name, string c
         Describe = describe;
     }
 
-    public void ChangeSort(int sort)
+    public void SetSort(int sort)
     {
         Sort = sort;
     }
 
-    public void ChangeStatus(Enable status)
+    public void SetStatus(Enable status)
     {
         Status = status;
+    }
+
+    public void SetName(string name)
+    {
+        Check.NotNull(name, nameof(name));
+        Name = name;
+        Pinyin = PinyinExtension.GetPinyin(name);
+        PinyinFirstLetters = PinyinExtension.GetFirstPinyin(name);
     }
 }

@@ -43,5 +43,5 @@ public class Announcement : FullAuditedAggregateRoot<Guid>, IMultiTenant, IHasEn
     /// This is a unique code for an OrganizationUnit.
     /// It's changeable if OU hierarchy is changed.
     /// </summary>
-    public string Code { get; set; }
+    public string OrganizationCode { get; set; }
 }

@@ -2,8 +2,8 @@
 
 namespace Panda.Net.Bases.Users.Entities;
 
-public class Doctor(string accountNo, string name, string code, string idCardType, string idCardNo, string gender, string phone)
-    : FullPersonnelAuditedAggregateRoot<Guid>(name, code, idCardType, idCardNo, gender, phone)
+public class Doctor(Guid id, string accountNo, string name, string code, string idCardType, string idCardNo, string gender, string phone)
+    : FullPersonnelAuditedAggregateRoot<Guid>(id, name, code, idCardType, idCardNo, gender, phone)
 {
     public string AccountNo { get; set; } = accountNo;
 
@@ -43,7 +43,7 @@ public class Doctor(string accountNo, string name, string code, string idCardTyp
     /// <summary>
     /// 执业证书编号
     /// </summary>
-    public string? PracticeLicenseNumber { get; private set;}
+    public string? PracticeLicenseNumber { get; private set; }
 
     /// <summary>
     /// 执业范围
@@ -78,9 +78,9 @@ public class Doctor(string accountNo, string name, string code, string idCardTyp
     public void SetPracticeInfo(string? practiceLicenseNumber,
         string? practiceScope,
         DateTime? practiceValidityDate,
-        string? practiceExperience, 
-        string? workAgeLimit, 
-        string? specialization, 
+        string? practiceExperience,
+        string? workAgeLimit,
+        string? specialization,
         string? researchResult)
     {
         PracticeLicenseNumber = practiceLicenseNumber;

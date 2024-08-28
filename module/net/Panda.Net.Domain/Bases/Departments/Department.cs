@@ -5,8 +5,7 @@ namespace Panda.Net.Bases.Departments;
 /// <summary>
 /// 科室
 /// </summary>
-/// <param name="name"></param>
-public class Department(string name) : FullHealthcareAuditedAggregateRoot<Guid>(name)
+public class Department(Guid id, string name) : FullHealthcareAuditedAggregateRoot<Guid>(id, name)
 {
     public string? ShortName { get; set; }
 

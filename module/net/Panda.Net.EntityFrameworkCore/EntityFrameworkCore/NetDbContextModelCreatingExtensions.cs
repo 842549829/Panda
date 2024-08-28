@@ -19,7 +19,7 @@ public static class NetDbContextModelCreatingExtensions
             b.Property(a => a.PublishType).IsRequired();
             b.HasKey(c => c.Id);
 
-            b.Property(a => a.Code).IsRequired().HasMaxLength(4096).HasDefaultValue(string.Empty);
+            b.Property(a => a.OrganizationCode).IsRequired().HasMaxLength(4096).HasDefaultValue(string.Empty);
 
             b.ConfigureByConvention();
             b.ApplyObjectExtensionMappings();

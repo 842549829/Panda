@@ -4,5 +4,5 @@ namespace Panda.Domain.Entities;
 
 public interface IMultiTenantExtension : IMultiTenant
 {
-    public void ChangeTenant(Guid? tenantId);
+    public void SetTenant(Guid? tenantId);
 }

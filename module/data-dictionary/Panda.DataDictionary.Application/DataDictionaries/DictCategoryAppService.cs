@@ -35,8 +35,9 @@ public class DictCategoryAppService(IDictCategoryManager dictCategoryManager)
             input.Describe,
             input.Alias,
             string.Empty,
-            input.ParnetId,
-            CurrentUser.TenantId
+            input.ParentId,
+            CurrentUser.TenantId,
+            string.Empty
         );
 
         input.MapExtraPropertiesTo(dictCategory);
@@ -55,7 +56,7 @@ public class DictCategoryAppService(IDictCategoryManager dictCategoryManager)
         dictCategory.SetConcurrencyStampIfNotNull(input.ConcurrencyStamp);
 
         dictCategory.Update(input.Name, input.Sort, input.Describe, input.Alias);
-        dictCategory.ChangeStatus(input.Status);
+        dictCategory.SetStatus(input.Status);
 
         input.MapExtraPropertiesTo(dictCategory);
 

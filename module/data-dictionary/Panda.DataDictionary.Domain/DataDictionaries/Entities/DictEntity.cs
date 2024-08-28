@@ -1,56 +1,37 @@
 ﻿using Panda.DataPermission.Abstractions.DataPermission;
 using Panda.Domain.Entities;
 using Panda.Domain.Shared.Enums;
-using Volo.Abp.Domain.Entities.Auditing;
-using Volo.Abp.MultiTenancy;
+using Volo.Abp;
 
 namespace Panda.DataDictionary.Domain.DataDictionaries.Entities;
 
-public abstract class DictEntity : FullAuditedAggregateRoot<Guid>, IMultiTenant, IHasEnableExtension, IHasSortExtension, IDataPermission
+public abstract class DictEntity : FullHealthcareAuditedAggregateRoot<Guid>, IDataPermission
 {
-    protected DictEntity(Guid id, string key, string name, Enable status, int sort, string describe, string code, Guid? parnetId, Guid? tenantId)
-    : base(id)
+    protected DictEntity(Guid id, string key, string name, Enable status, int sort, string describe, string code, Guid? parentId, Guid? tenantId, string organizationCode)
+    : base(id, name, code)
     {
+        Check.NotNull(key, nameof(key));
+        Check.NotNull(organizationCode, nameof(organizationCode));
+
         Key = key;
-        Name = name;
-        Status = status;
-        Sort = sort;
-        Describe = describe;
-        Code = code;
-        ParnetId = parnetId;
-        TenantId = tenantId;
+        ParentId = parentId;
+        OrganizationCode = organizationCode;
+
+        SetStatus(status);
+        SetSort(sort);
+        SetDescribe(describe);
+        SetTenant(tenantId);
     }
 
-    public Guid? ParnetId { get; set; }
-
-    public Guid? TenantId { get; set; }
-
-    public Enable Status { get; set; }
-
-    public string Name { get; set; }
+    public Guid? ParentId { get; set; }
 
     public string Key { get; set; }
 
-    public string Describe { get; set; }
-
-    public string Code { get; set; }
-
-    public int Sort { get; set; }
-
-    public void ChangeSort(int sort)
-    {
-        Sort = sort;
-    }
-
-    public void ChangeStatus(Enable status)
-    {
-        Status = status;
-    }
-
-    public void Update(string name, int sort, string describe)
-    {
-        Name = name;
-        Sort = sort;
-        Describe = describe;
-    }
+    /// <summary>
+    /// Hierarchical Code of this organization unit.
+    /// Example: "00001.00042.00005".
+    /// This is a unique code for an OrganizationUnit.
+    /// It's changeable if OU hierarchy is changed.
+    /// </summary>
+    public string OrganizationCode { get; set; }
 }
