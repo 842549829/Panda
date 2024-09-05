@@ -29,13 +29,6 @@ namespace Panda.Net.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("char(36)");
 
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(4096)
-                        .HasColumnType("varchar(4096)")
-                        .HasDefaultValue("");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .IsRequired()
@@ -81,6 +74,13 @@ namespace Panda.Net.Migrations
                     b.Property<Guid?>("LastModifierId")
                         .HasColumnType("char(36)")
                         .HasColumnName("LastModifierId");
+
+                    b.Property<string>("OrganizationCode")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(4096)
+                        .HasColumnType("varchar(4096)")
+                        .HasDefaultValue("");
 
                     b.Property<DateTime>("PublishTime")
                         .HasColumnType("datetime(6)");
