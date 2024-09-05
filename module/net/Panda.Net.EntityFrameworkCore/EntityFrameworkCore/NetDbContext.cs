@@ -52,16 +52,16 @@ public class NetDbContext :
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
-    public DbSet<IdentitySession> Sessions { get; }
+    public DbSet<IdentitySession> Sessions { get; set; }
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     //File
-    public DbSet<FileStore> FileStores { get; }
-    public DbSet<FileProjectName> FileProjectNames { get; }
-    public DbSet<FileWhiteList> FileWhiteLists { get; }
+    public DbSet<FileStore> FileStores { get; set; }
+    public DbSet<FileProjectName> FileProjectNames { get; set; }
+    public DbSet<FileWhiteList> FileWhiteLists { get; set; }
 
     // Message
     public virtual DbSet<Announcement> Announcements { get; set; }
