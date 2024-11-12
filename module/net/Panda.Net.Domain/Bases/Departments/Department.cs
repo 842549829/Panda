@@ -15,6 +15,11 @@ public class Department(Guid id, string name) : FullHealthcareAuditedAggregateRo
     public Guid DepartmentTypeId { get; set; }
 
     /// <summary>
+    /// 科室类型
+    /// </summary>
+    public virtual DepartmentType DepartmentType { get; set; } = default!;
+
+    /// <summary>
     /// 所在院区
     /// </summary>
     public string? HospitalZone { get; set; }

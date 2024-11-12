@@ -2,7 +2,9 @@
 using Microsoft.Extensions.Logging;
 using Panda.DataPermission.EntityFrameworkCore.EntityFrameworkCore;
 using Panda.Net.Bases.Announcements.Entities;
+using Panda.Net.Bases.Departments;
 using Panda.Net.Bases.FileStores;
+using Panda.Net.Bases.Users.Entities;
 using Panda.Net.EntityFrameworkCore.FileStores;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -53,6 +55,9 @@ public class NetDbContext :
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
     public DbSet<IdentitySession> Sessions { get; set; }
+
+    public DbSet<Department> Departments { get; set; }
+    public DbSet<Doctor> Doctor { get; set; }
 
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }

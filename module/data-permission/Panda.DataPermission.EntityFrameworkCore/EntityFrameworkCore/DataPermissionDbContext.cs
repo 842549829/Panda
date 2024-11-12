@@ -22,10 +22,10 @@ public abstract class DataPermissionDbContext<TDbContext> : AbpDbContext<TDbCont
     {
     }
 
-    protected override Expression<Func<TEntity, bool>>? CreateFilterExpression<TEntity>()
+    protected override Expression<Func<TEntity, bool>>? CreateFilterExpression<TEntity>(ModelBuilder modelBuilder)
         where TEntity : class
     {
-        var expression = base.CreateFilterExpression<TEntity>();
+        var expression = base.CreateFilterExpression<TEntity>(modelBuilder);
         if (typeof(IDataPermission).IsAssignableFrom(typeof(TEntity)))
         {
 
