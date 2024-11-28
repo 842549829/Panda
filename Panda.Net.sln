@@ -169,11 +169,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DbMigrator", "src\Pan
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data-send", "data-send", "{40604230-C0E6-4F05-8680-9C34B4AFB5A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataSend.Domain", "module\data-send\Panda.DataSend.Domain\Panda.DataSend.Domain.csproj", "{6367AB34-23FF-424E-BA5E-077E79BB83DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataSend.Domain", "module\data-send\Panda.DataSend.Domain\Panda.DataSend.Domain.csproj", "{6367AB34-23FF-424E-BA5E-077E79BB83DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataSend.Domain.Shared", "module\data-send\Panda.DataSend.Domain.Shared\Panda.DataSend.Domain.Shared.csproj", "{229B6F64-B4E7-48A2-B1AD-57148A70A48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataSend.Domain.Shared", "module\data-send\Panda.DataSend.Domain.Shared\Panda.DataSend.Domain.Shared.csproj", "{229B6F64-B4E7-48A2-B1AD-57148A70A48B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataSend.EntityFrameworkCore", "module\data-send\Panda.DataSend.EntityFrameworkCore\Panda.DataSend.EntityFrameworkCore.csproj", "{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panda.DataSend.EntityFrameworkCore", "module\data-send\Panda.DataSend.EntityFrameworkCore\Panda.DataSend.EntityFrameworkCore.csproj", "{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda.DataSend.DbMigrator", "module\data-send\Panda.DataSend.DbMigrator\Panda.DataSend.DbMigrator.csproj", "{935AF392-17BB-4904-BB8B-D7A302BBAA45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -437,6 +439,10 @@ Global
 		{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935AF392-17BB-4904-BB8B-D7A302BBAA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935AF392-17BB-4904-BB8B-D7A302BBAA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935AF392-17BB-4904-BB8B-D7A302BBAA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935AF392-17BB-4904-BB8B-D7A302BBAA45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -514,6 +520,7 @@ Global
 		{6367AB34-23FF-424E-BA5E-077E79BB83DC} = {40604230-C0E6-4F05-8680-9C34B4AFB5A1}
 		{229B6F64-B4E7-48A2-B1AD-57148A70A48B} = {40604230-C0E6-4F05-8680-9C34B4AFB5A1}
 		{1501F21C-09FE-4A17-9A40-CC2CB9BDC94F} = {40604230-C0E6-4F05-8680-9C34B4AFB5A1}
+		{935AF392-17BB-4904-BB8B-D7A302BBAA45} = {40604230-C0E6-4F05-8680-9C34B4AFB5A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}
