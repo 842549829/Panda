@@ -35,16 +35,16 @@ namespace WorkflowCore.Services.BackgroundTasks
                 Logger.LogInformation("Workflow locked {0}", itemId);
                 return;
             }
-            
+
             WorkflowInstance workflow = null;
             WorkflowExecutorResult result = null;
-            
+
             try
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 workflow = await _persistenceStore.GetWorkflowInstance(itemId);
                 if (workflow.Status == WorkflowStatus.Runnable)
-                {                        
+                {
                     try
                     {
                         result = await _executor.Execute(workflow);
@@ -76,14 +76,14 @@ namespace WorkflowCore.Services.BackgroundTasks
                     }
                 }
             }
-            
+
         }
-        
+
         private async Task SubscribeEvent(EventSubscription subscription, IPersistenceProvider persistenceStore)
         {
             //TODO: move to own class
             Logger.LogDebug("Subscribing to event {0} {1} for workflow {2} step {3}", subscription.EventName, subscription.EventKey, subscription.WorkflowId, subscription.StepId);
-            
+
             await persistenceStore.CreateEventSubscription(subscription);
             if (subscription.EventName != Event.EventTypeActivity)
             {
@@ -115,7 +115,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             }
             catch (Exception ex)
             {
-                Logger.LogError(ex, ex.Message);
+                Logger.LogError(new EventId(999), ex, ex.Message);
             }
         }
     }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
 using WorkflowCore.Interface;
 
 namespace WorkflowCore.Services
@@ -10,9 +9,9 @@ namespace WorkflowCore.Services
     /// </summary>
     public class ScopeProvider : IScopeProvider
     {
-        private readonly IServiceProvider provider;
+        private readonly IServiceScopeFactory provider;
 
-        public ScopeProvider(IServiceProvider provider)
+        public ScopeProvider(IServiceScopeFactory provider)
         {
             this.provider = provider;
         }

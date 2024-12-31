@@ -20,7 +20,7 @@ namespace WorkflowCore.Services.BackgroundTasks
         public RunnablePoller(IPersistenceProvider persistenceStore, IQueueProvider queueProvider, ILoggerFactory loggerFactory, IServiceProvider serviceProvider, IWorkflowRegistry registry, IDistributedLockProvider lockProvider, WorkflowOptions options)
         {
             _persistenceStore = persistenceStore;
-            _queueProvider = queueProvider;            
+            _queueProvider = queueProvider;
             _logger = loggerFactory.CreateLogger<RunnablePoller>();
             _lockProvider = lockProvider;
             _options = options;
@@ -52,7 +52,7 @@ namespace WorkflowCore.Services.BackgroundTasks
                 {
                     try
                     {
-                        _logger.LogInformation("Polling for runnable workflows");                        
+                        _logger.LogInformation("Polling for runnable workflows");
                         var runnables = await _persistenceStore.GetRunnableInstances(DateTime.Now);
                         foreach (var item in runnables)
                         {
@@ -68,7 +68,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(new EventId(999), ex, ex.Message);
             }
 
             try
@@ -77,12 +77,12 @@ namespace WorkflowCore.Services.BackgroundTasks
                 {
                     try
                     {
-                        _logger.LogInformation("Polling for unprocessed events");                        
+                        _logger.LogInformation("Polling for unprocessed events");
                         var events = await _persistenceStore.GetRunnableEvents(DateTime.Now);
                         foreach (var item in events.ToList())
                         {
                             _logger.LogDebug($"Got unprocessed event {item}");
-                            await _queueProvider.QueueWork(item, QueueType.Event);                            
+                            await _queueProvider.QueueWork(item, QueueType.Event);
                         }
                     }
                     finally
@@ -93,7 +93,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(new EventId(999), ex, ex.Message);
             }
         }
     }

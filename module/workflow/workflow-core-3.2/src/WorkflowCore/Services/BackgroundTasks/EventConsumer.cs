@@ -37,7 +37,7 @@ namespace WorkflowCore.Services.BackgroundTasks
                 Logger.LogInformation($"Event locked {itemId}");
                 return;
             }
-            
+
             try
             {
                 cancellationToken.ThrowIfCancellationRequested();
@@ -79,9 +79,9 @@ namespace WorkflowCore.Services.BackgroundTasks
                 await _lockProvider.ReleaseLock($"evt:{itemId}");
             }
         }
-        
+
         private async Task<bool> SeedSubscription(Event evt, EventSubscription sub, List<string> toQueue, CancellationToken cancellationToken)
-        {            
+        {
             foreach (var eventId in await _eventRepository.GetEvents(sub.EventName, sub.EventKey, sub.SubscribeAsOf))
             {
                 if (eventId == evt.Id)
@@ -103,12 +103,12 @@ namespace WorkflowCore.Services.BackgroundTasks
                 Logger.LogInformation("Workflow locked {0}", sub.WorkflowId);
                 return false;
             }
-            
+
             try
             {
                 var workflow = await _workflowRepository.GetWorkflowInstance(sub.WorkflowId);
                 IEnumerable<ExecutionPointer> pointers = null;
-                
+
                 if (!string.IsNullOrEmpty(sub.ExecutionPointerId))
                     pointers = workflow.ExecutionPointers.Where(p => p.Id == sub.ExecutionPointerId && !p.EventPublished && p.EndTime == null);
                 else
@@ -127,7 +127,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             }
             catch (Exception ex)
             {
-                Logger.LogError(ex, ex.Message);
+                Logger.LogError(new EventId(999), ex, ex.Message);
                 return false;
             }
             finally

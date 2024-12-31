@@ -19,7 +19,7 @@ namespace WorkflowCore.Services.BackgroundTasks
         protected readonly IQueueProvider QueueProvider;
         protected readonly ILogger Logger;
         protected readonly WorkflowOptions Options;
-        protected Task DispatchTask;        
+        protected Task DispatchTask;
         private CancellationTokenSource _cancellationTokenSource;
 
         protected QueueConsumer(IQueueProvider queueProvider, ILoggerFactory loggerFactory, WorkflowOptions options)
@@ -39,7 +39,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             }
 
             _cancellationTokenSource = new CancellationTokenSource();
-                        
+
             DispatchTask = new Task(Execute, TaskCreationOptions.LongRunning);
             DispatchTask.Start();
         }
@@ -92,7 +92,7 @@ namespace WorkflowCore.Services.BackgroundTasks
                         if (!EnableSecondPasses)
                             await QueueProvider.QueueWork(item, Queue);
                         continue;
-                    }                   
+                    }
 
                     secondPasses.TryRemove(item);
 
@@ -119,7 +119,7 @@ namespace WorkflowCore.Services.BackgroundTasks
                     {
                         activeTasks.Add(item, task);
                     }
-                    
+
                     task.Start();
                 }
                 catch (OperationCanceledException)
@@ -127,7 +127,7 @@ namespace WorkflowCore.Services.BackgroundTasks
                 }
                 catch (Exception ex)
                 {
-                    Logger.LogError(ex, ex.Message);
+                    Logger.LogError(new EventId(999), ex, ex.Message);
                 }
             }
 
@@ -136,7 +136,7 @@ namespace WorkflowCore.Services.BackgroundTasks
             {
                 toComplete = activeTasks.Values.ToList();
             }
-            
+
             foreach (var task in toComplete)
                 task.Wait();
         }

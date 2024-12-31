@@ -1,46 +1,43 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\..\..\configureawait.props" />
+	<Import Project="..\..\..\..\..\common.props" />
 
-  <PropertyGroup>
-    <AssemblyTitle>Workflow Core</AssemblyTitle>
-    <Authors>Daniel Gerlag</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>WorkflowCore</AssemblyName>
-    <PackageId>WorkflowCore</PackageId>
-    <PackageTags>workflow;.NET;Core;state machine</PackageTags>
-    <PackageProjectUrl>https://github.com/danielgerlag/workflow-core</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/danielgerlag/workflow-core/blob/master/LICENSE.md</PackageLicenseUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/danielgerlag/workflow-core.git</RepositoryUrl>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Description>Workflow Core is a light weight workflow engine targeting .NET Standard.</Description>
-    <Version>3.2.0</Version>
-    <AssemblyVersion>3.2.0.0</AssemblyVersion>
-    <FileVersion>3.2.0.0</FileVersion>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageIconUrl>https://github.com/danielgerlag/workflow-core/raw/master/src/logo.png</PackageIconUrl>
-    <PackageVersion>3.1.6</PackageVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<AssemblyTitle>Workflow Core</AssemblyTitle>
+		<Authors>Daniel Gerlag</Authors>
+		<TargetFrameworks>$(MicrosoftTargetFrameworks)</TargetFrameworks>
+		<AssemblyName>WorkflowCore</AssemblyName>
+		<PackageId>WorkflowCore</PackageId>
+		<PackageTags>workflow;.NET;Core;state machine</PackageTags>
+		<PackageProjectUrl>https://github.com/danielgerlag/workflow-core</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/danielgerlag/workflow-core/blob/master/LICENSE.md</PackageLicenseUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/danielgerlag/workflow-core.git</RepositoryUrl>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<Description>Workflow Core is a light weight workflow engine targeting .NET Standard.</Description>
+		<Version>3.2.0</Version>
+		<AssemblyVersion>3.2.0.0</AssemblyVersion>
+		<FileVersion>3.2.0.0</FileVersion>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageIconUrl>https://github.com/danielgerlag/workflow-core/raw/master/src/logo.png</PackageIconUrl>
+		<PackageVersion>3.1.6</PackageVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ConcurrentHashSet" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
-    <PackageReference Include="Microsoft.Extensions.ObjectPool" />
-    <PackageReference Include="Newtonsoft.Json" />
-    <PackageReference Include="System.Linq.Dynamic.Core" />
-    <PackageReference Include="System.Threading.Tasks.Parallel" />
-    <PackageReference Include="System.Threading.ThreadPool"  />
-    <PackageReference Include="System.Reflection"  />
-    <PackageReference Include="System.Reflection.TypeExtensions" />
-    <PackageReference Include="System.Threading.Thread" />
-    <PackageReference Include="System.Linq.Queryable" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\DefinitionStorage\" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<PackageReference Include="ConcurrentHashSet" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.ObjectPool" />
+		<PackageReference Include="Newtonsoft.Json" />
+		<PackageReference Include="System.Linq.Dynamic.Core" />
+		<PackageReference Include="System.Threading.Tasks.Parallel" />
+		<PackageReference Include="System.Threading.ThreadPool"  />
+		<PackageReference Include="System.Reflection"  />
+		<PackageReference Include="System.Reflection.TypeExtensions" />
+		<PackageReference Include="System.Threading.Thread" />
+		<PackageReference Include="System.Linq.Queryable" />
+	</ItemGroup>
 </Project>

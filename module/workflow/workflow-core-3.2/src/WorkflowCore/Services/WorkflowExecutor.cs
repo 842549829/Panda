@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
 using WorkflowCore.Models.LifeCycleEvents;
@@ -16,7 +16,7 @@ namespace WorkflowCore.Services
         protected readonly IServiceProvider _serviceProvider;
         protected readonly IScopeProvider _scopeProvider;
         protected readonly IDateTimeProvider _datetimeProvider;
-        protected readonly ILogger _logger;
+        protected readonly ILogger<WorkflowExecutor> _logger;
         private readonly IExecutionResultProcessor _executionResultProcessor;
         private readonly ICancellationProcessor _cancellationProcessor;
         private readonly ILifeCycleEventPublisher _publisher;
@@ -80,7 +80,7 @@ namespace WorkflowCore.Services
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Workflow {0} raised error on step {1} Message: {2}", workflow.Id, pointer.StepId, ex.Message);
+                    _logger.LogError(new EventId(999), ex, "Workflow {0} raised error on step {1} Message: {2}", workflow.Id, pointer.StepId, ex.Message);
                     wfResult.Errors.Add(new ExecutionError()
                     {
                         WorkflowId = workflow.Id,

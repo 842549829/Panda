@@ -62,7 +62,7 @@ pipeline{
         }
     }
     environment {
-        PUBLISH_FRAMEWORK = 'net8.0'
+        PUBLISH_FRAMEWORK = 'net9.0'
         PUBLISH_RUNTMIE = 'linux-x64'
         PUBLISH_PATH = 'publish'
         ROOT_PATH = './module/data-dictionary/Panda.DataDictionary.HttpApi.Host'
