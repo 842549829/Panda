@@ -5,7 +5,7 @@
 		<!-- All Microsoft TargetFrameworks Packages -->
 		<MicrosoftTargetFrameworks>net9.0</MicrosoftTargetFrameworks>
 		<!-- All Abp Version Packages -->
-		<AbpVersion>9.0.2</AbpVersion>
+		<AbpVersion>9.0.3</AbpVersion>
 		<NetVersion>9.0.0</NetVersion>
 	</PropertyGroup>
 </Project>

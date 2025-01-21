@@ -55,9 +55,12 @@ public class NetEntityFrameworkCoreModule : AbpModule
 
         Configure<AbpDbContextOptions>(options =>
         {
-                /* The main point to change your DBMS.
-                 * See also NetMigrationsDbContextFactory for EF Core tooling. */
-            options.UseMySQL();
+            /* The main point to change your DBMS.
+             * See also NetMigrationsDbContextFactory for EF Core tooling. */
+            options.UseMySQL(builder =>
+            {
+                builder.TranslateParameterizedCollectionsToConstants();
+            });
         });
 
     }
