@@ -196,3 +196,4 @@ dotnet ef migrations script --verbose -i --project "./" -c NetDbContext -o "./2.
 -  v1.1  添加数据权限模块
 -  v2.0  前端实现数据权限模块
 -  v2.1  修复文件上传内存泄漏问题
+-  v9.0  升级到 .net 9.0

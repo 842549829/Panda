@@ -196,3 +196,4 @@ Execute script src/Panda.Net.EntityFrameworkCore/panda.sql
 -  v1.1  Add a data permission module
 -  v2.0  vue3 + role + data permission
  - v2.1  Fix file upload memory leak
+ - v9.0  Upgrade to.net 9.0
