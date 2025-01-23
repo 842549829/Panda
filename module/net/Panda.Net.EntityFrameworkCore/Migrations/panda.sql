@@ -11,7 +11,7 @@
  Target Server Version : 80039 (8.0.39)
  File Encoding         : 65001
 
- Date: 21/01/2025 16:41:17
+ Date: 23/01/2025 11:15:52
 */
 
 SET NAMES utf8mb4;
@@ -31,6 +31,7 @@ CREATE TABLE `__efmigrationshistory`  (
 -- Records of __efmigrationshistory
 -- ----------------------------
 INSERT INTO `__efmigrationshistory` VALUES ('20240829020544_init', '8.0.4');
+INSERT INTO `__efmigrationshistory` VALUES ('20250123030741_net91', '9.0.0');
 
 -- ----------------------------
 -- Table structure for abpannouncements
@@ -95,6 +96,21 @@ INSERT INTO `abpauditlogactions` VALUES ('3a1799a4-c563-8cd1-509d-c0a57f803e75',
 INSERT INTO `abpauditlogactions` VALUES ('3a1799dd-b23a-b0e9-2be3-5305e86b661b', NULL, '3a1799dd-b22b-38f5-29da-f82be3007ee0', 'Volo.Abp.Account.Web.Pages.Account.LoginModel', 'OnPostAsync', '{\"action\":\"Login\"}', '2025-01-21 14:18:20.378194', 2998194, '{}');
 INSERT INTO `abpauditlogactions` VALUES ('3a1799e5-a215-204e-9a67-6ba7545cf031', NULL, '3a1799e5-a214-d2c6-f8d4-451a8ea39f29', 'Volo.Abp.Account.Web.Pages.Account.LoginModel', 'OnPostAsync', '{\"action\":\"Login\"}', '2025-01-21 15:16:45.522382', 16520, '{}');
 INSERT INTO `abpauditlogactions` VALUES ('3a179a2d-3037-f807-1606-e9fe732ea845', NULL, '3a179a2d-3036-96dd-2a83-ca02f9a01d65', 'Volo.Abp.Account.Web.Pages.Account.LoginModel', 'OnPostAsync', '{\"action\":\"Login\"}', '2025-01-21 16:34:44.155511', 27369, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a179a44-b424-0d9b-d0b9-9aa273091b3f', NULL, '3a179a44-b423-6cc5-bc76-c1c3b48eb80b', 'Volo.Abp.Account.Web.Pages.Account.LoginModel', 'OnPostAsync', '{\"action\":\"Login\"}', '2025-01-21 17:00:51.598490', 1036, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a323-4cd1-86b2-053e-4580c0888b15', NULL, '3a17a323-4cd1-e1c2-f9c7-2d8bf8d64924', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:20:56.445116', 1744, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a323-4e9c-699a-4f70-7dfa46849b7a', NULL, '3a17a323-4e9c-15f0-8921-379d6e3b5cdb', 'Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Controllers.ErrorController', 'Index', '{}', '2025-01-23 10:20:58.762983', 3, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a32a-2a1f-71d5-7d7e-6433d6d83061', NULL, '3a17a32a-2a1c-9523-7ca5-11423a505da1', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:27:40.553979', 41572, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a32f-0bd6-0595-d19f-36ad24924cfc', NULL, '3a17a32f-0bd6-bc21-0b7d-bfc37593acff', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:33:43.366474', 3732, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a335-0639-d16a-7ebe-222fd1239453', NULL, '3a17a335-0639-60bc-bdb7-38c6c4026dcb', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:40:19.283201', 432, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a338-f355-2e41-7ab4-13ab854f5116', NULL, '3a17a338-f355-553c-b91a-cdf959c71b83', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:44:36.588969', 295, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a33a-277e-0b1f-a335-b24301340d99', NULL, '3a17a33a-277e-2fe7-6864-3604798944c8', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:45:14.371351', 40880, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a33a-5fa4-a157-6efd-72a49537844a', NULL, '3a17a33a-5fa4-306d-ca71-f7e9463cb882', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:46:09.816913', 399, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a33a-6fbf-32cb-efe4-cf9004adccd5', NULL, '3a17a33a-6fbf-0c05-3c19-c0fa64f88b28', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:46:13.652781', 364, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a33d-1d63-b430-397c-4ce1da303ee8', NULL, '3a17a33d-1d63-9276-5e2a-e3e9ea0fc334', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:46:27.809071', 107058, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a33d-49f2-f15f-e822-c3849b5041fa', NULL, '3a17a33d-49f2-607a-99cc-fbd52ca75dd5', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:49:14.717710', 6537, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a341-5842-168e-49c6-3197b83b6ecd', NULL, '3a17a341-5841-4e38-c339-44981c59cf77', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 10:53:21.387757', 25577, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a354-a8b7-f3d7-6b8e-efeb42d1067d', NULL, '3a17a354-a8b7-4a45-f2ab-d4a3044d8969', 'Volo.Abp.Account.Web.Pages.Account.LoginModel', 'OnPostAsync', '{\"action\":\"Login\"}', '2025-01-23 11:14:51.347289', 1880, '{}');
+INSERT INTO `abpauditlogactions` VALUES ('3a17a354-d0b9-0c85-5e22-385f0bf76557', NULL, '3a17a354-d0b9-ba9a-12b3-29e2475662ed', 'Volo.Abp.OpenIddict.Controllers.TokenController', 'HandleAsync', '{}', '2025-01-23 11:15:00.067024', 647, '{}');
 
 -- ----------------------------
 -- Table structure for abpauditlogs
@@ -145,6 +161,21 @@ INSERT INTO `abpauditlogs` VALUES ('3a1799a4-c563-6b7b-deb1-6aad2dec04e5', 'Auth
 INSERT INTO `abpauditlogs` VALUES ('3a1799dd-b22b-38f5-29da-f82be3007ee0', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-21 14:18:20.353503', 3000631, '::1', NULL, NULL, '4449f099f7d647d891683baed56fb5f0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'POST', '/Account/Login', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"对不起，在处理您的请求期间产生了一个服务器内部错误！！\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 500, '{}', '865c8dfcf8dc459799970a8a5b718d29');
 INSERT INTO `abpauditlogs` VALUES ('3a1799e5-a214-d2c6-f8d4-451a8ea39f29', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-21 15:16:45.491318', 16590, '::1', NULL, NULL, 'a778c2b83631447a8e952b885117764f', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'POST', '/Account/Login', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"对不起，在处理您的请求期间产生了一个服务器内部错误！！\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 500, '{}', 'e8676ff7455b4d0abb62adb2721de294');
 INSERT INTO `abpauditlogs` VALUES ('3a179a2d-3036-96dd-2a83-ca02f9a01d65', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-21 16:34:44.132160', 27400, '::1', NULL, NULL, 'ea0bfda4e7f5478983ef99758c44a07f', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'POST', '/Account/Login', NULL, '', 302, '{}', 'ec1565b172bc49aeb8cb1a20bc3b0c2a');
+INSERT INTO `abpauditlogs` VALUES ('3a179a44-b423-6cc5-bc76-c1c3b48eb80b', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-21 17:00:51.561841', 1075, '::1', NULL, NULL, '3828f1e52cfd4de8ab7a354cada1ef17', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'POST', '/Account/Login', NULL, '', 302, '{}', '2a2090d9696e45f78fb17c932496d9b9');
+INSERT INTO `abpauditlogs` VALUES ('3a17a323-4cd1-e1c2-f9c7-2d8bf8d64924', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:20:56.410172', 2025, '::1', NULL, NULL, '713db8f1e1c2409cb02911c7f0495b87', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', 'c84151967791410abfb7ac85cf3553a8');
+INSERT INTO `abpauditlogs` VALUES ('3a17a323-4e9c-15f0-8921-379d6e3b5cdb', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:20:58.744497', 164, '::1', NULL, NULL, '713db8f1e1c2409cb02911c7f0495b87', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/Error', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 500, '{}', '58ae96d01ccc43aba8393a344d4824b2');
+INSERT INTO `abpauditlogs` VALUES ('3a17a32a-2a1c-9523-7ca5-11423a505da1', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:27:40.538771', 47746, '::1', NULL, NULL, '993edd1834b64dd996bb88dbb791a51b', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', 'e2ddab17cfc346cca4f3c9c99dd62c7d');
+INSERT INTO `abpauditlogs` VALUES ('3a17a32f-0bd6-bc21-0b7d-bfc37593acff', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:33:43.357038', 4872, '::1', NULL, NULL, 'fd4db6cf331843fca1032b51a82976de', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', 'ff059f12a3e2423fa6b190a8cb322b55');
+INSERT INTO `abpauditlogs` VALUES ('3a17a335-0639-60bc-bdb7-38c6c4026dcb', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:40:19.281236', 744, '::1', NULL, NULL, 'ef53dd9af50245f281f88ae16d87be9b', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '3c1292c003eb4bbb93ffb62ba045a0a2');
+INSERT INTO `abpauditlogs` VALUES ('3a17a338-f355-553c-b91a-cdf959c71b83', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:44:36.586807', 746, '::1', NULL, NULL, '38d0aff6fdce48d2b13f9ed166f6fa52', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', 'adf02c41962d4b1eaece24f22f0638e7');
+INSERT INTO `abpauditlogs` VALUES ('3a17a33a-277e-2fe7-6864-3604798944c8', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:45:14.369239', 41853, '::1', NULL, NULL, '52544de0f6ce449abf069089525f18d2', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '5084f77df8864574948cc71346bcaf04');
+INSERT INTO `abpauditlogs` VALUES ('3a17a33a-5fa4-306d-ca71-f7e9463cb882', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:46:09.813744', 782, '::1', NULL, NULL, '7de806e3ded94852a4d68fececfde6e9', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '608eb83cca054fbd88e0ee367703cbd1');
+INSERT INTO `abpauditlogs` VALUES ('3a17a33a-6fbf-0c05-3c19-c0fa64f88b28', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:46:13.650582', 1068, '::1', NULL, NULL, 'ff3a1c45bd5049bf9fb74d88804e5c60', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '5201217872c34796bf36a63b3f71dc56');
+INSERT INTO `abpauditlogs` VALUES ('3a17a33d-1d63-9276-5e2a-e3e9ea0fc334', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:46:27.806851', 162436, '::1', NULL, NULL, '3b0c1bbda2d3475cb24481bd1a61dbbe', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', 'ed9e6ebab704494281adc661129603d4');
+INSERT INTO `abpauditlogs` VALUES ('3a17a33d-49f2-607a-99cc-fbd52ca75dd5', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:49:14.715967', 6934, '::1', NULL, NULL, 'efefb31a2dd84feaa49bb2a64ebc5e91', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '0e8359111a894baaa9e4b5b50ee2c117');
+INSERT INTO `abpauditlogs` VALUES ('3a17a341-5841-4e38-c339-44981c59cf77', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 10:53:21.381195', 26062, '::1', NULL, NULL, '73f4b5ec280748659026bb742abecef2', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', '[\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"An internal error occurred during your request!\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  },\r\n  {\r\n    \"code\": null,\r\n    \"message\": \"The data you have submitted has already been changed by another user. Discard your changes and try again.\",\r\n    \"details\": null,\r\n    \"data\": null,\r\n    \"validationErrors\": null\r\n  }\r\n]', '', 409, '{}', '50383bd87a434757b214222e116f5155');
+INSERT INTO `abpauditlogs` VALUES ('3a17a354-a8b7-4a45-f2ab-d4a3044d8969', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 11:14:51.307374', 1926, '::1', NULL, NULL, '51ca307eab73453e8ef8d9a62615224e', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'POST', '/Account/Login', NULL, '', 302, '{}', 'd7a76b7a78ed40b18d882c548c13aaba');
+INSERT INTO `abpauditlogs` VALUES ('3a17a354-d0b9-ba9a-12b3-29e2475662ed', 'AuthServer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2025-01-23 11:15:00.061615', 3419, '::1', NULL, NULL, '1168b048135247febee951ee7e0d9b5d', 'Apifox/1.0.0 (https://apifox.com)', 'POST', '/connect/token', NULL, '', 200, '{}', 'f5f8e8298d4b42c2a4bee6735905ebbd');
 
 -- ----------------------------
 -- Table structure for abpbackgroundjobs
@@ -230,6 +261,127 @@ CREATE TABLE `abpclaimtypes`  (
 
 -- ----------------------------
 -- Records of abpclaimtypes
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for abpdepartment
+-- ----------------------------
+DROP TABLE IF EXISTS `abpdepartment`;
+CREATE TABLE `abpdepartment`  (
+  `Id` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `ShortName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `DepartmentTypeId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `HospitalZone` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Building` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Floor` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `RoomNumber` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Capacity` int NOT NULL,
+  `Phone` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Email` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `HeadOfDepartment` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `HeadOfDepartmentPhone` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `HeadOfDepartmentEmail` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Website` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ServicesOffered` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `EmergencyContact` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `EmergencyPhone` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CreationTime` datetime(6) NOT NULL,
+  `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `LastModificationTime` datetime(6) NULL DEFAULT NULL,
+  `LastModifierId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `IsDeleted` tinyint(1) NOT NULL DEFAULT 0,
+  `DeleterId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `DeletionTime` datetime(6) NULL DEFAULT NULL,
+  `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `Name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Code` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Pinyin` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `PinyinFirstLetters` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Status` int NOT NULL,
+  `Sort` int NOT NULL,
+  `CreatorName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ModificationName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `DeletionName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Describe` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `OrganizationId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  PRIMARY KEY (`Id`) USING BTREE,
+  INDEX `IX_AbpDepartment_DepartmentTypeId`(`DepartmentTypeId` ASC) USING BTREE,
+  CONSTRAINT `FK_AbpDepartment_DepartmentType_DepartmentTypeId` FOREIGN KEY (`DepartmentTypeId`) REFERENCES `departmenttype` (`Id`) ON DELETE CASCADE ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '部门' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of abpdepartment
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for abpdoctor
+-- ----------------------------
+DROP TABLE IF EXISTS `abpdoctor`;
+CREATE TABLE `abpdoctor`  (
+  `Id` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `AccountNo` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Education` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `MedicalSchool` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Major` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `GraduationDate` datetime(6) NULL DEFAULT NULL,
+  `Avatar` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `PracticeLicenseNumber` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `PracticeScope` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `PracticeValidityDate` datetime(6) NULL DEFAULT NULL,
+  `PracticeExperience` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `WorkAgeLimit` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Specialization` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ResearchResult` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ProfessionalClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `EvaluateClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `WorkClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `PracticeClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `PeculiarityClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ScopeClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `OccupationClassify` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CreationTime` datetime(6) NOT NULL,
+  `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `LastModificationTime` datetime(6) NULL DEFAULT NULL,
+  `LastModifierId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `IsDeleted` tinyint(1) NOT NULL DEFAULT 0,
+  `DeleterId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `DeletionTime` datetime(6) NULL DEFAULT NULL,
+  `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `Name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Code` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Pinyin` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `PinyinFirstLetters` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Status` int NOT NULL,
+  `Sort` int NOT NULL,
+  `CreatorName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ModificationName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `DeletionName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Describe` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `OrganizationId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `NationCode` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ProvinceCode` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `CityCode` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `DistrictCode` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Street` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `AddressLine` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Year` int NULL DEFAULT NULL,
+  `Month` int NULL DEFAULT NULL,
+  `Day` int NULL DEFAULT NULL,
+  `IdCardType` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `IdCardNo` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Gender` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Birthday` datetime(6) NULL DEFAULT NULL,
+  `Phone` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Email` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  PRIMARY KEY (`Id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = 'Doctor' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of abpdoctor
 -- ----------------------------
 
 -- ----------------------------
@@ -452,7 +604,7 @@ CREATE TABLE `abporganizationunitroles`  (
   `RoleId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   `OrganizationUnitId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `CreationTime` datetime(6) NOT NULL,
+  `CreationTime` datetime(6) NOT NULL ON UPDATE CURRENT_TIMESTAMP(6),
   `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`OrganizationUnitId`, `RoleId`) USING BTREE,
   INDEX `IX_AbpOrganizationUnitRoles_RoleId_OrganizationUnitId`(`RoleId` ASC, `OrganizationUnitId` ASC) USING BTREE,
@@ -727,7 +879,7 @@ CREATE TABLE `abpsecuritylogs`  (
   `CorrelationId` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `ClientIpAddress` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `BrowserInfo` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `CreationTime` datetime(6) NOT NULL,
+  `CreationTime` datetime(6) NOT NULL ON UPDATE CURRENT_TIMESTAMP(6),
   `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`Id`) USING BTREE,
@@ -742,6 +894,21 @@ CREATE TABLE `abpsecuritylogs`  (
 -- ----------------------------
 INSERT INTO `abpsecuritylogs` VALUES ('3a1631ac-5711-460c-ce37-5efd3c090fd4', NULL, 'Panda.Net.AuthServer', 'Identity', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, NULL, '189341a46e7445c0a537f08156aae84b', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', '2024-11-12 16:31:09.581007', '{}', '289ddd32ecda491fb198c68cf1ef482b');
 INSERT INTO `abpsecuritylogs` VALUES ('3a179a2d-262a-2196-10ab-f6a9da3a2baf', NULL, 'Panda.Net.AuthServer', 'Identity', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, NULL, 'ea0bfda4e7f5478983ef99758c44a07f', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', '2025-01-21 16:35:08.964746', '{}', '8cd8669c252943b185ac16b0a96b70bb');
+INSERT INTO `abpsecuritylogs` VALUES ('3a179a44-9fca-287c-a751-a545d054e970', NULL, 'Panda.Net.AuthServer', 'Identity', 'Logout', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, NULL, '723dde7410d5451e877a690a478f8020', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', '2025-01-21 17:00:47.430540', '{}', '18a991c40a1744cea2b35b371d5fe3fe');
+INSERT INTO `abpsecuritylogs` VALUES ('3a179a44-b371-7001-2597-57ad8ecf73d6', NULL, 'Panda.Net.AuthServer', 'Identity', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, NULL, '3828f1e52cfd4de8ab7a354cada1ef17', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', '2025-01-21 17:00:52.464869', '{}', 'e0cf9fcd2fb64dc3b56da3488d8c0a42');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a323-4af7-786a-6846-4d1c2c9d4630', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '713db8f1e1c2409cb02911c7f0495b87', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:20:57.973681', '{}', 'eaa1a82a391048f6a0a232b800c66d9b');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a329-e005-a6fc-1289-4aad4e2dde2b', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '993edd1834b64dd996bb88dbb791a51b', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:28:09.338430', '{}', '222ff0c6a93a4371a55aaf02ca23ea37');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a32f-05ad-2527-dcf3-c34fd611e82f', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', 'fd4db6cf331843fca1032b51a82976de', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:33:46.658021', '{}', 'fe7e27b4d5904603978ba75dab9de15b');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a335-0491-f72c-f68a-3adf17cd60b9', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', 'ef53dd9af50245f281f88ae16d87be9b', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:40:19.601437', '{}', 'c931c6f38f4346d4b3505bab149e1456');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a338-f14f-7374-116f-efe9f8c8aabb', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '38d0aff6fdce48d2b13f9ed166f6fa52', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:44:36.815395', '{}', '663dfd0313c34f60862f2a3c11449127');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a33a-235c-154e-22fe-2ff771983f98', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '52544de0f6ce449abf069089525f18d2', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:45:55.163880', '{}', 'd5cd2e2103f14bf4827f6fcce34ee4fb');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a33a-5db9-630b-4445-4f5433bf0882', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '7de806e3ded94852a4d68fececfde6e9', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:46:10.105099', '{}', '7cbffc8d417447f1b79961164e5c5084');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a33a-6ca1-0e05-8bfb-1b0b59b84ed0', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', 'ff3a1c45bd5049bf9fb74d88804e5c60', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:46:13.921554', '{}', 'efe22176334f4a318a1766406649c1ae');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a33c-3e56-9339-a809-d6da64da7229', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '3b0c1bbda2d3475cb24481bd1a61dbbe', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:48:13.142405', '{}', '6e92ded6f9ef434aa3e64ab693d58481');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a33d-3e90-fbd6-c56e-e16cfa0aa05d', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', 'efefb31a2dd84feaa49bb2a64ebc5e91', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:49:18.736550', '{}', '43369d54adfa4a4fa85c55a5c41b01c6');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a341-5533-eece-9375-c99b55b06a6c', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '73f4b5ec280748659026bb742abecef2', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 10:53:46.670840', '{}', 'e77acd29ab344ae2aadac2474ed7d9dc');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a354-a77a-1ed3-60ca-484a7981412a', NULL, 'Panda.Net.AuthServer', 'Identity', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, NULL, '51ca307eab73453e8ef8d9a62615224e', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', '2025-01-23 11:14:52.918388', '{}', '596a4ff13cfe4f448a36babf07223cee');
+INSERT INTO `abpsecuritylogs` VALUES ('3a17a354-c5a4-8e4f-4981-a0ce93e5c445', NULL, 'Panda.Net.AuthServer', 'OpenIddict', 'LoginSucceeded', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'admin', NULL, 'Net_Web', '1168b048135247febee951ee7e0d9b5d', '::1', 'Apifox/1.0.0 (https://apifox.com)', '2025-01-23 11:15:00.643643', '{}', '84a0615310104f2fbefab5d47744f14d');
 
 -- ----------------------------
 -- Table structure for abpsessions
@@ -755,9 +922,10 @@ CREATE TABLE `abpsessions`  (
   `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
   `UserId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   `ClientId` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `IpAddresses` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `IpAddresses` varchar(2048) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `SignedIn` datetime(6) NOT NULL,
   `LastAccessed` datetime(6) NULL DEFAULT NULL,
+  `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   PRIMARY KEY (`Id`) USING BTREE,
   INDEX `IX_AbpSessions_Device`(`Device` ASC) USING BTREE,
   INDEX `IX_AbpSessions_SessionId`(`SessionId` ASC) USING BTREE,
@@ -951,7 +1119,7 @@ CREATE TABLE `abpuserorganizationunits`  (
   `UserId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   `OrganizationUnitId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
   `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `CreationTime` datetime(6) NOT NULL,
+  `CreationTime` datetime(6) NOT NULL ON UPDATE CURRENT_TIMESTAMP(6),
   `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`OrganizationUnitId`, `UserId`) USING BTREE,
   INDEX `IX_AbpUserOrganizationUnits_UserId_OrganizationUnitId`(`UserId` ASC, `OrganizationUnitId` ASC) USING BTREE,
@@ -1051,6 +1219,40 @@ CREATE TABLE `abpusertokens`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for departmenttype
+-- ----------------------------
+DROP TABLE IF EXISTS `departmenttype`;
+CREATE TABLE `departmenttype`  (
+  `Id` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CreationTime` datetime(6) NOT NULL,
+  `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `LastModificationTime` datetime(6) NULL DEFAULT NULL,
+  `LastModifierId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `IsDeleted` tinyint(1) NOT NULL DEFAULT 0,
+  `DeleterId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `DeletionTime` datetime(6) NULL DEFAULT NULL,
+  `TenantId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
+  `Name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Code` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Pinyin` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `PinyinFirstLetters` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Status` int NOT NULL,
+  `Sort` int NOT NULL,
+  `CreatorName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `ModificationName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `DeletionName` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `Describe` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+  `OrganizationId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  PRIMARY KEY (`Id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of departmenttype
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for openiddictapplications
 -- ----------------------------
 DROP TABLE IF EXISTS `openiddictapplications`;
@@ -1088,7 +1290,7 @@ CREATE TABLE `openiddictapplications`  (
 -- ----------------------------
 -- Records of openiddictapplications
 -- ----------------------------
-INSERT INTO `openiddictapplications` VALUES ('3a14d1eb-2e5c-e116-05ab-c2404d6f4a39', NULL, 'Net_Web', 'AQAAAAEAACcQAAAAEMrds+Ia2sVwGNzhRW8BpyZkDTqGesQbl1u+9dtvdMeBKtqg+xCUTHikgeQAXUb/3g==', 'confidential', 'explicit', 'Net Web Application', NULL, NULL, '[\"rst:code id_token\",\"ept:logout\",\"gt:authorization_code\",\"rst:code\",\"ept:authorization\",\"ept:token\",\"ept:revocation\",\"ept:introspection\",\"gt:implicit\",\"rst:id_token\",\"gt:password\",\"gt:client_credentials\",\"gt:refresh_token\",\"gt:urn:ietf:params:oauth:grant-type:device_code\",\"ept:device\",\"gt:net\",\"scp:address\",\"scp:email\",\"scp:phone\",\"scp:profile\",\"scp:roles\",\"scp:openId\",\"scp:Net\"]', '[\"https://localhost:44392/signout-callback-oidc\"]', NULL, '[\"https://localhost:44392/signin-oidc\",\"https://www.baidu.com\"]', NULL, NULL, 'https://localhost:44392/', NULL, '{}', '8648678b25cd4a79a5459eae0ac90813', '2024-09-05 09:13:28.012112', NULL, NULL, NULL, 0, NULL, NULL);
+INSERT INTO `openiddictapplications` VALUES ('3a14d1eb-2e5c-e116-05ab-c2404d6f4a39', NULL, 'Net_Web', 'AQAAAAEAACcQAAAAEMrds+Ia2sVwGNzhRW8BpyZkDTqGesQbl1u+9dtvdMeBKtqg+xCUTHikgeQAXUb/3g==', 'confidential', 'explicit', 'Net Web Application', NULL, NULL, '[\"rst:code id_token\",\"ept:logout\",\"gt:authorization_code\",\"rst:code\",\"ept:authorization\",\"ept:token\",\"ept:revocation\",\"ept:introspection\",\"gt:implicit\",\"rst:id_token\",\"gt:password\",\"gt:client_credentials\",\"gt:refresh_token\",\"gt:urn:ietf:params:oauth:grant-type:device_code\",\"ept:device\",\"gt:net\",\"scp:address\",\"scp:email\",\"scp:phone\",\"scp:profile\",\"scp:roles\",\"scp:openId\",\"scp:Net\"]', '[\"https://localhost:44392/signout-callback-oidc\"]', NULL, '[\"https://localhost:44392/signin-oidc\",\"https://www.baidu.com\"]', NULL, NULL, 'https://localhost:44392/', NULL, '{}', 'c23e9f063892430b8be47f770a71474d', '2024-09-05 09:13:28.012112', NULL, '2025-01-23 11:15:01.095701', NULL, 0, NULL, NULL);
 INSERT INTO `openiddictapplications` VALUES ('3a14d1eb-2f28-74b2-711d-427b253ed130', NULL, 'Ad_Web', 'AQAAAAEAACcQAAAAEKbiLfm01+q5NzU3Faj1WesTJPPr9L/Av8WHaC3HE7lyPgMVH+toOrhfEZmy2hPavg==', 'confidential', 'implicit', 'Ad Web Application', NULL, NULL, '[\"rst:code id_token\",\"ept:logout\",\"gt:authorization_code\",\"rst:code\",\"ept:authorization\",\"ept:token\",\"ept:revocation\",\"ept:introspection\",\"gt:implicit\",\"rst:id_token\",\"gt:password\",\"gt:client_credentials\",\"gt:refresh_token\",\"scp:address\",\"scp:email\",\"scp:phone\",\"scp:profile\",\"scp:roles\",\"scp:openId\",\"scp:Ad\"]', '[\"https://localhost:44392/signout-callback-oidc\"]', NULL, '[\"https://localhost:44392/signin-oidc\",\"https://www.baidu.com\"]', NULL, NULL, 'https://localhost:44392/', NULL, '{}', 'f6312e9ec0d341e596adff00e82f7146', '2024-09-05 09:13:28.112849', NULL, NULL, NULL, 0, NULL, NULL);
 INSERT INTO `openiddictapplications` VALUES ('3a14d1eb-2f44-065e-4cc2-8e577705f492', NULL, 'Net_App', NULL, 'public', 'implicit', 'Console Test / Angular Application', NULL, NULL, '[\"ept:logout\",\"gt:authorization_code\",\"rst:code\",\"ept:authorization\",\"ept:token\",\"ept:revocation\",\"ept:introspection\",\"gt:password\",\"gt:client_credentials\",\"gt:refresh_token\",\"scp:address\",\"scp:email\",\"scp:phone\",\"scp:profile\",\"scp:roles\",\"scp:openId\"]', '[\"http://localhost:4200\"]', NULL, '[\"http://localhost:4200\",\"https://www.baidu.com\"]', NULL, NULL, 'http://localhost:4200', NULL, '{}', 'a948da58507046719b1cf75530930d50', '2024-09-05 09:13:28.136837', NULL, NULL, NULL, 0, NULL, NULL);
 INSERT INTO `openiddictapplications` VALUES ('3a14d1eb-2f5a-064e-002e-abf560f5d4b2', NULL, 'Net_BlazorServerTiered', 'AQAAAAEAACcQAAAAEFMMJfdfHlE424Hst58p9VxPCY4qEsbb0NT08OvXTALqFyvDacv64dJ6d2aSawHsFQ==', 'confidential', 'implicit', 'Blazor Server Application', NULL, NULL, '[\"rst:code id_token\",\"ept:logout\",\"gt:authorization_code\",\"rst:code\",\"ept:authorization\",\"ept:token\",\"ept:revocation\",\"ept:introspection\",\"gt:implicit\",\"rst:id_token\",\"scp:address\",\"scp:email\",\"scp:phone\",\"scp:profile\",\"scp:roles\",\"scp:openId\"]', '[\"https://localhost:44393/signout-callback-oidc\"]', NULL, '[\"https://localhost:44393/signin-oidc\",\"https://www.baidu.com\"]', NULL, NULL, 'https://localhost:44393/', NULL, '{}', 'b398735a1f1a48ff81c9a73a4481b887', '2024-09-05 09:13:28.162639', NULL, NULL, NULL, 0, NULL, NULL);
@@ -1109,13 +1311,6 @@ CREATE TABLE `openiddictauthorizations`  (
   `Type` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `CreationTime` datetime(6) NOT NULL,
-  `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `LastModificationTime` datetime(6) NULL DEFAULT NULL,
-  `LastModifierId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `IsDeleted` tinyint(1) NOT NULL DEFAULT 0,
-  `DeleterId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `DeletionTime` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`Id`) USING BTREE,
   INDEX `IX_OpenIddictAuthorizations_ApplicationId_Status_Subject_Type`(`ApplicationId` ASC, `Status` ASC, `Subject` ASC, `Type` ASC) USING BTREE,
   CONSTRAINT `FK_OpenIddictAuthorizations_OpenIddictApplications_ApplicationId` FOREIGN KEY (`ApplicationId`) REFERENCES `openiddictapplications` (`Id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -1124,6 +1319,7 @@ CREATE TABLE `openiddictauthorizations`  (
 -- ----------------------------
 -- Records of openiddictauthorizations
 -- ----------------------------
+INSERT INTO `openiddictauthorizations` VALUES ('3a17a354-c6f5-62be-019d-54fd0d3f0373', '3a14d1eb-2e5c-e116-05ab-c2404d6f4a39', '2025-01-23 03:15:00.972260', NULL, '[\"Net\",\"offline_access\"]', 'valid', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'ad-hoc', '{}', '39f36995c8f04583b221f973ddf64ed2');
 
 -- ----------------------------
 -- Table structure for openiddictscopes
@@ -1176,13 +1372,6 @@ CREATE TABLE `openiddicttokens`  (
   `Type` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `ExtraProperties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ConcurrencyStamp` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `CreationTime` datetime(6) NOT NULL,
-  `CreatorId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `LastModificationTime` datetime(6) NULL DEFAULT NULL,
-  `LastModifierId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `IsDeleted` tinyint(1) NOT NULL DEFAULT 0,
-  `DeleterId` char(36) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
-  `DeletionTime` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`Id`) USING BTREE,
   INDEX `IX_OpenIddictTokens_ApplicationId_Status_Subject_Type`(`ApplicationId` ASC, `Status` ASC, `Subject` ASC, `Type` ASC) USING BTREE,
   INDEX `IX_OpenIddictTokens_AuthorizationId`(`AuthorizationId` ASC) USING BTREE,
@@ -1194,5 +1383,7 @@ CREATE TABLE `openiddicttokens`  (
 -- ----------------------------
 -- Records of openiddicttokens
 -- ----------------------------
+INSERT INTO `openiddicttokens` VALUES ('3a17a354-ced9-bb4e-5b5c-2abcee5c34e4', '3a14d1eb-2e5c-e116-05ab-c2404d6f4a39', '3a17a354-c6f5-62be-019d-54fd0d3f0373', '2025-01-23 03:15:02.000000', '2025-01-23 04:15:02.000000', NULL, NULL, NULL, NULL, 'valid', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'access_token', '{}', 'cc1269c0364641019b9c66b875561d5f');
+INSERT INTO `openiddicttokens` VALUES ('3a17a354-d05f-e11e-9c6f-cb7c63f48656', '3a14d1eb-2e5c-e116-05ab-c2404d6f4a39', '3a17a354-c6f5-62be-019d-54fd0d3f0373', '2025-01-23 03:15:02.000000', '2025-02-06 03:15:02.000000', NULL, NULL, NULL, NULL, 'valid', '3a14d1eb-2496-a30a-7efc-fa75cd5b9ee2', 'refresh_token', '{}', '9ee3480907894633831029aa64d9718e');
 
 SET FOREIGN_KEY_CHECKS = 1;

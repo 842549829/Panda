@@ -264,3 +264,4 @@ src/Panda.Net.Blazor.Server.Tiered/Logs/*
 # Use abp install-libs to restore.
 **/wwwroot/libs/*
 /src/Panda.Net.HttpApi.Host/wwwroot
+/module/net/Panda.Net.AuthServer/Logs/logs.txt
