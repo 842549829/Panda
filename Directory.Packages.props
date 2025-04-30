@@ -1,4 +1,4 @@
-<Project>
+﻿<Project>
 	<PropertyGroup>
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
@@ -18,7 +18,7 @@
 		<PackageVersion Include="Volo.Abp.Ddd.Domain" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.Ddd.Application.Contracts" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.EntityFrameworkCore" Version="$(AbpVersion)" />
-		<PackageVersion Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="$(AbpVersion)" />
+		<PackageVersion Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="9.0.0-preview.3.efcore.9.0.0" />
 		<PackageVersion Include="Volo.Abp.Emailing" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.EventBus.RabbitMQ" Version="$(AbpVersion)" />
 		<PackageVersion Include="Volo.Abp.Http.Client" Version="$(AbpVersion)" />

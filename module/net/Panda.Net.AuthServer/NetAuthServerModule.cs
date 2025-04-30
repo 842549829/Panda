@@ -77,12 +77,12 @@ public class NetAuthServerModule : AbpModule
         {
             builder.Configure(options =>
             {
-                // ×¢²áĞÂµÄGrantTypesÄ£Ê½
+                // æ³¨å†Œæ–°çš„GrantTypesæ¨¡å¼
                 options.GrantTypes.Add("net");
 
-                //// ÉèAccessTokenÓĞĞ§ÆÚ2Ğ¡Ê±
+                //// è®¾AccessTokenæœ‰æ•ˆæœŸ2å°æ—¶
                 //options.AccessTokenLifetime = TimeSpan.FromHours(2);
-                //// ÉèRefreshTokenÓĞĞ§ÆÚ30Ìì
+                //// è®¾RefreshTokenæœ‰æ•ˆæœŸ30å¤©
                 //options.RefreshTokenLifetime = TimeSpan.FromDays(30);
 
             });
@@ -94,24 +94,24 @@ public class NetAuthServerModule : AbpModule
         var hostingEnvironment = context.Services.GetHostingEnvironment();
         var configuration = context.Services.GetConfiguration();
 
-        // ×¢ÈëÍ³Ò»Ìí¼ÓClaims
+        // æ³¨å…¥ç»Ÿä¸€æ·»åŠ Claims
         Configure<AbpOpenIddictClaimsPrincipalOptions>(options =>
         {
             options.ClaimsPrincipalHandlers.Remove<AbpDefaultOpenIddictClaimsPrincipalHandler>();
             options.ClaimsPrincipalHandlers.Add<NetDefaultOpenIddictClaimsPrincipalHandler>();
 
-            // ±ØĞë·ÅÔÚ¼¯ºÏµÚÒ»¸öÎ»ÖÃÖ´ĞĞÒòÎªÊÇÈ«¾Ö×¢²á ÏÂÃæµÄNetDefaultOpenIddictClaimsPrincipalHandler ²ÅÄÜ×¢²átoken³É¹¦
+            // å¿…é¡»æ”¾åœ¨é›†åˆç¬¬ä¸€ä¸ªä½ç½®æ‰§è¡Œå› ä¸ºæ˜¯å…¨å±€æ³¨å†Œ ä¸‹é¢çš„NetDefaultOpenIddictClaimsPrincipalHandler æ‰èƒ½æ³¨å†ŒtokenæˆåŠŸ
             options.ClaimsPrincipalHandlers.Insert(0, typeof(UnifiedClaimsPrincipalExtension));
         });
 
 
-        // ×¢ÈëÉè±¸´úÂëÈÏÖ¤µØÖ·
+        // æ³¨å…¥è®¾å¤‡ä»£ç è®¤è¯åœ°å€
         //Configure<RazorViewEngineOptions>(options =>
         //{
         //    options.ViewLocationFormats.Add("/Views/{1}/{0}.cshtml");
         //});
 
-        // ×¢²áĞÂµÄGrantTypesÄ£Ê½ÊµÏÖ·½°¸
+        // æ³¨å†Œæ–°çš„GrantTypesæ¨¡å¼å®ç°æ–¹æ¡ˆ
         context.Services.AddScoped<NetTokenExtensionGrant>();
         Configure<AbpOpenIddictExtensionGrantsOptions>(options =>
         {
@@ -206,7 +206,7 @@ public class NetAuthServerModule : AbpModule
             });
         });
 
-        // ×â»§½âÎöÅäÖÃ²»´ÓcookieÀïÃæ½âÎö
+        // ç§Ÿæˆ·è§£æé…ç½®ä¸ä»cookieé‡Œé¢è§£æ
         Configure<AbpTenantResolveOptions>(options =>
         {
             var cookieTenantResolve = options.TenantResolvers.FirstOrDefault(d => d.Name == CookieTenantResolveContributor.ContributorName);
