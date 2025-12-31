@@ -20,10 +20,11 @@ public class PermissionRepository : EfCoreRepository<IPermissionManagementDbCont
 
     public async Task<List<PermissionGrant>> GetPermissionListAsync(string providerName, string[] providerKey, CancellationToken cancellationToken = default)
     {
+        var providerKeyList = providerKey.ToList();
         return await (await GetDbSetAsync())
             .Where(s =>
                 s.ProviderName == providerName &&
-                providerKey.Contains(s.ProviderKey)
+                providerKeyList.Contains(s.ProviderKey)
             )
             .Distinct()
             .ToListAsync(GetCancellationToken(cancellationToken));

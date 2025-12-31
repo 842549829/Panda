@@ -87,10 +87,10 @@ public class NetPermissionManager : NetDomainService, INetPermissionManager
         var rolePermission =
             await _permissionRepository.GetPermissionListAsync(RolePermissionValueProvider.ProviderName, providerKey);
         var user = await GetPermissionGrantListAsync(UserPermissionValueProvider.ProviderName, userId.ToString());
-        var permissionGrants = rolePermission.Union(user).Select(a => a.Name).Distinct();
+        var permissionGrants = rolePermission.Union(user).Select(a => a.Name).Distinct().ToList();
         var permissionDefinitionRecords =
             await _permissionDefinitionRecordRepository.GetListAsync(d => permissionGrants.Contains(d.Name));
-        var groupNames = permissionDefinitionRecords.Select(a => a.GroupName).Distinct().ToArray();
+        var groupNames = permissionDefinitionRecords.Select(a => a.GroupName).Distinct().ToList();
         var permissionGroupDefinitionRecords =
             await _permissionGroupDefinitionRecordRepository.GetListAsync(d => groupNames.Contains(d.Name));
         var permissions = CreatePermissionTree(permissionGroupDefinitionRecords, permissionDefinitionRecords);
